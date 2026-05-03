@@ -1,0 +1,37 @@
+[03-May-2026 13:38:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 5 database is locked in /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-connection.php:116
+Stack trace:
+#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-connection.php(116): PDOStatement->execute(Array)
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(1049): WP_SQLite_Connection->query('BEGIN IMMEDIATE', Array)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(1096): WP_SQLite_Driver->execute_sqlite_query('BEGIN IMMEDIATE')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(812): WP_SQLite_Driver->begin_transaction()
+#4 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(102): WP_SQLite_Driver->query('SELECT @@SESSIO...')
+#5 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(356): WP_SQLite_DB->set_sql_mode()
+#6 /wordpress/wp-includes/class-wpdb.php(772): WP_SQLite_DB->db_connect()
+#7 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(55): wpdb->__construct('', Object(SensitiveParameterValue), 'database_name_h...', '')
+#8 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/db.php(84): WP_SQLite_DB->__construct('database_name_h...')
+#9 /wordpress/wp-content/db.php(37): require_once('/wordpress/wp-c...')
+#10 /wordpress/wp-includes/load.php(712): require_once('/wordpress/wp-c...')
+#11 /wordpress/wp-settings.php(136): require_wp_db()
+#12 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-blog-header.php(13): require_once('/wordpress/wp-l...')
+#15 /wordpress/index.php(17): require('/wordpress/wp-b...')
+#16 {main}
+
+Next WP_SQLite_Driver_Exception: SQLSTATE[HY000]: General error: 5 database is locked in /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php:5663
+Stack trace:
+#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(832): WP_SQLite_Driver->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(102): WP_SQLite_Driver->query('SELECT @@SESSIO...')
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(356): WP_SQLite_DB->set_sql_mode()
+#3 /wordpress/wp-includes/class-wpdb.php(772): WP_SQLite_DB->db_connect()
+#4 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(55): wpdb->__construct('', Object(SensitiveParameterValue), 'database_name_h...', '')
+#5 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/db.php(84): WP_SQLite_DB->__construct('database_name_h...')
+#6 /wordpress/wp-content/db.php(37): require_once('/wordpress/wp-c...')
+#7 /wordpress/wp-includes/load.php(712): require_once('/wordpress/wp-c...')
+#8 /wordpress/wp-settings.php(136): require_wp_db()
+#9 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#10 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#11 /wordpress/wp-blog-header.php(13): require_once('/wordpress/wp-l...')
+#12 /wordpress/index.php(17): require('/wordpress/wp-b...')
+#13 {main}
+  thrown in /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php on line 5663
