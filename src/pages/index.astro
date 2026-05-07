@@ -2,6 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'home');
+const { hero, problem, method, offer, audience, why, cta } = page.data;
 ---
 
 <BaseLayout title="Van ruis naar signaal">
@@ -14,12 +18,12 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="hero-inner">
           <div class="hero-text">
-            <p class="eyebrow">Narrative positioning · Brand storytelling · Story systems</p>
-            <h1>Van ruis<br />naar signaal.</h1>
-            <p class="lead">Chief Story helpt groeiende organisaties hun strategische verhaal scherp te krijgen en werkend te maken in merk, marketing, sales en AI.</p>
+            <p class="eyebrow">{hero.eyebrow}</p>
+            <h1 set:html={hero.h1.replace('\n', '<br />')} />
+            <p class="lead">{hero.lead}</p>
             <div class="hero-cta">
-              <a href="/contact" class="btn-primary">Plan een Signal Call</a>
-              <a href="/methode" class="btn-ghost">Bekijk de methode</a>
+              <a href="/contact" class="btn-primary">{hero.cta_primary}</a>
+              <a href="/methode" class="btn-ghost">{hero.cta_secondary}</a>
             </div>
           </div>
           <div class="hero-image">
@@ -34,16 +38,12 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="problem-grid">
           <div class="problem-text">
-            <h2>Je organisatie groeit.<br />Je verhaal niet altijd.</h2>
-            <p>Er komen nieuwe diensten bij. Nieuwe markten. Nieuwe mensen. Nieuwe ambities. Wat ooit helder voelde, wordt langzaam diffuus.</p>
-            <p>Sales vertelt het ene verhaal. Marketing het andere. De website voelt te klein. Content wordt geproduceerd, maar mist richting, persoonlijkheid en scherpte. En AI maakt de output sneller, maar niet automatisch beter.</p>
-            <p class="signal-line">Dat is ruis.<br /><strong>Chief Story helpt je het signaal te vinden en te versterken.</strong></p>
+            <h2 set:html={problem.heading.replace('\n', '<br />')} />
+            {problem.body.map((p) => <p>{p}</p>)}
+            <p class="signal-line">{problem.signal_line}<br /><strong>{problem.signal_emphasis}</strong></p>
           </div>
           <div class="problem-quotes">
-            <blockquote>"We zijn niet meer wie we drie jaar geleden waren."</blockquote>
-            <blockquote>"Iedereen begrijpt ons pas na een uur praten."</blockquote>
-            <blockquote>"Sales, marketing en directie vertellen niet hetzelfde verhaal."</blockquote>
-            <blockquote>"We produceren veel, maar het voelt versnipperd."</blockquote>
+            {problem.quotes.map((q) => <blockquote>"{q}"</blockquote>)}
           </div>
         </div>
       </div>
@@ -53,31 +53,21 @@ import Footer from '../components/Footer.astro';
     <section class="section-method">
       <div class="container">
         <div class="section-header">
-          <span class="label">De methode</span>
-          <h2>In 3 stappen van ruis naar signaal</h2>
+          <span class="label">{method.label}</span>
+          <h2>{method.heading}</h2>
         </div>
         <div class="steps">
-          <div class="step">
-            <span class="step-number">01</span>
-            <h3>Narrative Positioning</h3>
-            <p class="step-tagline">Claim the narrative</p>
-            <p>We bepalen welk grotere verhaal je merk kan claimen. Welke spanning je lost op. Welke positie nog vrij is in je markt.</p>
-          </div>
-          <div class="step">
-            <span class="step-number">02</span>
-            <h3>Brand Storytelling</h3>
-            <p class="step-tagline">Craft the story</p>
-            <p>We vertalen die positie naar een helder merkverhaal en concrete kernboodschappen. Taal die werkt in pitch, website, sales en marketing.</p>
-          </div>
-          <div class="step">
-            <span class="step-number">03</span>
-            <h3>Narrative Activation</h3>
-            <p class="step-tagline">Build the system</p>
-            <p>We bouwen het systeem waarmee je team dat verhaal consequent gebruikt in content, sales, marketing en AI-workflows.</p>
-          </div>
+          {method.steps.map((step) => (
+            <div class="step">
+              <span class="step-number">{step.number}</span>
+              <h3>{step.title}</h3>
+              <p class="step-tagline">{step.tagline}</p>
+              <p>{step.body}</p>
+            </div>
+          ))}
         </div>
         <div class="method-cta">
-          <a href="/methode" class="btn-outline">Hoe de methode werkt</a>
+          <a href="/methode" class="btn-outline">{method.cta}</a>
         </div>
       </div>
     </section>
@@ -86,63 +76,27 @@ import Footer from '../components/Footer.astro';
     <section class="section-offer">
       <div class="container">
         <div class="section-header">
-          <span class="label">Het aanbod</span>
-          <h2>Kies je route</h2>
+          <span class="label">{offer.label}</span>
+          <h2>{offer.heading}</h2>
         </div>
         <div class="offer-grid">
-          <div class="offer-card">
-            <div class="offer-header">
-              <h3>Signal Sprint</h3>
-              <span class="duration">1 maand</span>
+          {offer.cards.map((card) => (
+            <div class={`offer-card${card.featured ? ' offer-card--featured' : ''}`}>
+              {card.featured && card.badge && <div class="offer-badge">{card.badge}</div>}
+              <div class="offer-header">
+                <h3>{card.title}</h3>
+                <span class="duration">{card.duration}</span>
+              </div>
+              <p>{card.description}</p>
+              <ul class="deliverables">
+                {card.deliverables.map((d) => <li>{d}</li>)}
+              </ul>
+              <div class="offer-footer">
+                <span class="price">{card.price}</span>
+                <a href="/contact" class="btn-primary">{hero.cta_primary}</a>
+              </div>
             </div>
-            <p>Van strategische ruis naar een helder merkverhaal. Positionering, brand story en kernboodschappen in één compact Signal Document.</p>
-            <ul class="deliverables">
-              <li>Narrative positionering</li>
-              <li>Brand story</li>
-              <li>Messaging pillars</li>
-              <li>Kernzinnen voor merk, pitch en website</li>
-            </ul>
-            <div class="offer-footer">
-              <span class="price">Vanaf €8.500</span>
-              <a href="/contact" class="btn-primary">Plan een Signal Call</a>
-            </div>
-          </div>
-
-          <div class="offer-card offer-card--featured">
-            <div class="offer-badge">Meest gekozen</div>
-            <div class="offer-header">
-              <h3>Story System</h3>
-              <span class="duration">3 maanden</span>
-            </div>
-            <p>Je verhaal structureel activeren in marketing, sales, content en AI. Vaste formats, AI-workflows en story sessions voor je team.</p>
-            <ul class="deliverables">
-              <li>Content- en messagingstructuur</li>
-              <li>AI-workflows en promptsets</li>
-              <li>Formats voor posts, artikelen, campaigns</li>
-              <li>Maandelijkse story sessions</li>
-            </ul>
-            <div class="offer-footer">
-              <span class="price">Vanaf €18.500</span>
-              <a href="/contact" class="btn-primary">Plan een Signal Call</a>
-            </div>
-          </div>
-
-          <div class="offer-card">
-            <div class="offer-header">
-              <h3>Full Track</h3>
-              <span class="duration">4 maanden</span>
-            </div>
-            <p>De volledige route. Eerst het signaal vinden, daarna de versterker bouwen. Signal Sprint + Story System als één traject.</p>
-            <ul class="deliverables">
-              <li>Alles van de Signal Sprint</li>
-              <li>Alles van het Story System</li>
-              <li>Naadloze overgang tussen beide fases</li>
-            </ul>
-            <div class="offer-footer">
-              <span class="price">Vanaf €24.500</span>
-              <a href="/contact" class="btn-primary">Plan een Signal Call</a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -151,22 +105,16 @@ import Footer from '../components/Footer.astro';
     <section class="section-audience">
       <div class="container">
         <div class="section-header">
-          <span class="label">Voor wie</span>
-          <h2>Voor wie Chief Story werkt</h2>
+          <span class="label">{audience.label}</span>
+          <h2>{audience.heading}</h2>
         </div>
         <div class="audience-grid">
-          <div class="audience-card">
-            <h3>Founders en CEO's</h3>
-            <p>Je bedrijf is groter, complexer of volwassener geworden — maar je verhaal loopt achter. Je wil een narratief dat de volgende groeifase kan dragen.</p>
-          </div>
-          <div class="audience-card">
-            <h3>Marketing leaders</h3>
-            <p>Je organiseert campagnes, content en salesmateriaal, maar mist een helder narratief fundament. Je wil een systeem waarmee je team sneller en consistenter communiceert.</p>
-          </div>
-          <div class="audience-card">
-            <h3>Kennisbedrijven</h3>
-            <p>Je hebt veel expertise, maar vindt het lastig om die onderscheidend te verwoorden. Je wil autoriteit uitstralen zonder marketingpraat.</p>
-          </div>
+          {audience.cards.map((card) => (
+            <div class="audience-card">
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -176,25 +124,18 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="why-inner">
           <div class="why-text">
-            <span class="label">Waarom Chief Story</span>
-            <h2>Storytelling is geen sausje. Het is een strategisch systeem.</h2>
-            <p>Chief Story zit niet in de hoek van losse copywriting, contentproductie of merkworkshops. Het werk begint bij strategie: welk verhaal kun je claimen? Waarom is dat relevant? Hoe gebruik je het consequent?</p>
-            <p>Dat vraagt om taalgevoel én strategisch inzicht. Om creatieve ervaring én commercieel begrip. Om AI-kennis die verder gaat dan prompts genereren.</p>
-            <a href="/over" class="btn-outline">Over Joost Marsman</a>
+            <span class="label">{why.label}</span>
+            <h2>{why.heading}</h2>
+            {why.body.map((p) => <p>{p}</p>)}
+            <a href="/over" class="btn-outline">{why.cta}</a>
           </div>
           <div class="why-proof">
-            <div class="proof-item">
-              <h4>Narrative positioning</h4>
-              <p>Ervaring met positionering, merkverhalen en contentstrategie voor zakelijke dienstverleners, kennisorganisaties en scale-ups.</p>
-            </div>
-            <div class="proof-item">
-              <h4>Creatieve geloofwaardigheid</h4>
-              <p>Jarenlange ervaring als schrijver, copywriter en songwriter. Taal met ritme, spanning en betekenis — niet alleen correctheid.</p>
-            </div>
-            <div class="proof-item">
-              <h4>AI-praktijkkennis</h4>
-              <p>Ervaring met AI-workflows en custom GPT's voor contentcreatie, redactie, tone-of-voice checks en strategische messaging.</p>
-            </div>
+            {why.proof.map((item) => (
+              <div class="proof-item">
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -204,9 +145,9 @@ import Footer from '../components/Footer.astro';
     <section class="section-cta">
       <div class="container">
         <div class="cta-inner">
-          <h2>Waar zit de ruis in jouw verhaal?</h2>
-          <p>Plan een korte Signal Call. Dan kijken we waar je nu staat, waar het schuurt en welke route logisch is.</p>
-          <a href="/contact" class="btn-primary btn-large">Plan een Signal Call</a>
+          <h2>{cta.heading}</h2>
+          <p>{cta.body}</p>
+          <a href="/contact" class="btn-primary btn-large">{cta.button}</a>
         </div>
       </div>
     </section>
