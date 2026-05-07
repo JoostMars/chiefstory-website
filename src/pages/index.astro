@@ -225,7 +225,7 @@ import Footer from '../components/Footer.astro';
 
   .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 500px;
     gap: 4rem;
     align-items: center;
   }
@@ -240,10 +240,7 @@ import Footer from '../components/Footer.astro';
 
   .hero-image img {
     width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 4px;
+    height: auto;
     display: block;
   }
 
@@ -681,8 +678,8 @@ import Footer from '../components/Footer.astro';
     }
 
     .hero-image img {
-      aspect-ratio: 4 / 3;
-      object-position: center 20%;
+      width: 100%;
+      height: auto;
     }
   }
 
