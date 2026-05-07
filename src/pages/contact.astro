@@ -2,12 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'contact');
+const { meta, hero, expect } = page.data;
 ---
 
-<BaseLayout
-  title="Plan een Signal Call"
-  description="Plan een Signal Call met Chief Story. Vertel waar je nu staat en waar het schuurt — dan kijken we samen wat een logische volgende stap is."
->
+<BaseLayout title={meta.title} description={meta.description}>
   <Nav />
 
   <main>
@@ -16,11 +17,11 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="hero-grid">
           <div>
-            <span class="label">Contact</span>
-            <h1>Plan een<br />Signal Call.</h1>
-            <p class="lead">Geen verkooppraatje. Een echt gesprek — over waar je nu staat, waar het schuurt en welke route logisch is. Duurt ongeveer 30 minuten.</p>
+            <span class="label">{hero.label}</span>
+            <h1 set:html={hero.h1.replace('\n', '<br />')} />
+            <p class="lead">{hero.lead}</p>
             <div class="contact-info">
-              <a href="mailto:joost@chiefstory.nl" class="contact-link">joost@chiefstory.nl</a>
+              <a href={`mailto:${hero.email}`} class="contact-link">{hero.email}</a>
             </div>
           </div>
           <div class="form-wrapper">
@@ -82,25 +83,17 @@ import Footer from '../components/Footer.astro';
     <section class="section-expect">
       <div class="container">
         <div class="section-header">
-          <span class="label">Wat je kunt verwachten</span>
-          <h2>Hoe een Signal Call werkt</h2>
+          <span class="label">{expect.label}</span>
+          <h2>{expect.heading}</h2>
         </div>
         <div class="expect-grid">
-          <div class="expect-item">
-            <span class="expect-number">01</span>
-            <h3>Aanvraag</h3>
-            <p>Je stuurt het formulier in. Ik lees je situatie door en reageer binnen één werkdag om een moment af te stemmen.</p>
-          </div>
-          <div class="expect-item">
-            <span class="expect-number">02</span>
-            <h3>Het gesprek</h3>
-            <p>Ongeveer 30 minuten. We bespreken waar je nu staat, wat er schuurt en wat je wil bereiken. Geen verkoopscript.</p>
-          </div>
-          <div class="expect-item">
-            <span class="expect-number">03</span>
-            <h3>Voorstel of advies</h3>
-            <p>Als er een logische match is, volgt een concreet voorstel. Als dat er niet is, zeg ik dat ook — met een eerlijk advies over wat je dan het beste kunt doen.</p>
-          </div>
+          {expect.steps.map((step: any) => (
+            <div class="expect-item">
+              <span class="expect-number">{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

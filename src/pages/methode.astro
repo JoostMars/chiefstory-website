@@ -2,21 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'methode');
+const { meta, hero, intro, steps, ai, note, cta } = page.data;
 ---
 
-<BaseLayout
-  title="De methode"
-  description="Storytelling is geen sausje. Chief Story werkt in 3 stappen: Narrative Positioning, Brand Storytelling en Narrative Activation."
->
+<BaseLayout title={meta.title} description={meta.description}>
   <Nav />
 
   <main>
 
     <section class="page-hero">
       <div class="container">
-        <span class="label">De methode</span>
-        <h1>Storytelling is geen sausje.<br />Het is een strategisch systeem.</h1>
-        <p class="lead">Veel organisaties proberen hun verhaal te verbeteren door beter te schrijven. Scherper te formuleren. Meer content te maken. Maar de ruis zit dieper. Chief Story begint waar het écht begint: bij de strategische keuze welk verhaal je kunt claimen.</p>
+        <span class="label">{hero.label}</span>
+        <h1 set:html={hero.h1.replace('\n', '<br />')} />
+        <p class="lead">{hero.lead}</p>
       </div>
     </section>
 
@@ -24,12 +25,11 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="intro-grid">
           <div>
-            <h2>Waarom losse interventies niet werken</h2>
-            <p>Een nieuwe website lost het niet op als het verhaal erachter niet klopt. Een betere tone of voice lost het niet op als de positionering onduidelijk is. AI maakt content sneller — maar ook ruis sneller.</p>
-            <p>Het fundament moet kloppen. Pas dan heeft alles erboven richting, kracht en consistentie.</p>
+            <h2>{intro.heading}</h2>
+            {intro.body.map((p: string) => <p>{p}</p>)}
           </div>
           <div class="intro-aside">
-            <p class="quote-big">"Meer content lost de ruis niet op. Een scherper verhaal wel."</p>
+            <p class="quote-big">"{intro.quote}"</p>
           </div>
         </div>
       </div>
@@ -37,72 +37,25 @@ import Footer from '../components/Footer.astro';
 
     <section class="section-steps">
       <div class="container">
-
-        <div class="step-block">
-          <div class="step-meta">
-            <span class="step-number">Stap 01</span>
-            <span class="step-phase">Narrative Positioning</span>
-            <span class="step-tagline">Claim the narrative</span>
-          </div>
-          <div class="step-content">
-            <h2>Welk groter verhaal kun jij claimen?</h2>
-            <p>Positionering gaat niet over wat je doet, maar over welke spanning je oplost. Welk probleem je benoemt dat anderen nog niet scherp hebben geformuleerd. Welke positie in de markt nog vrij is — en die jij geloofwaardig kunt innemen.</p>
-            <p>In deze fase brengen we het marktlandschap in kaart, analyseren we hoe jij en je concurrenten communiceren, en bepalen we welke narrative jij kunt claimen zonder dat het hol of overdreven klinkt.</p>
-            <div class="step-output">
-              <h4>Output</h4>
-              <ul>
-                <li>Market narrative analyse</li>
-                <li>Kernspanning en positioneringskeuze</li>
-                <li>Messaging-ruimte en differentiatie</li>
-              </ul>
+        {steps.map((step: any) => (
+          <div class="step-block">
+            <div class="step-meta">
+              <span class="step-number">{step.number}</span>
+              <span class="step-phase">{step.phase}</span>
+              <span class="step-tagline">{step.tagline}</span>
+            </div>
+            <div class="step-content">
+              <h2>{step.heading}</h2>
+              {step.body.map((p: string) => <p>{p}</p>)}
+              <div class="step-output">
+                <h4>Output</h4>
+                <ul>
+                  {step.output.map((item: string) => <li>{item}</li>)}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="step-block">
-          <div class="step-meta">
-            <span class="step-number">Stap 02</span>
-            <span class="step-phase">Brand Storytelling</span>
-            <span class="step-tagline">Craft the story</span>
-          </div>
-          <div class="step-content">
-            <h2>Van positie naar verhaal naar taal</h2>
-            <p>Een scherpe positionering wordt pas bruikbaar als je hem kunt vertellen. In stap twee vertalen we de strategische keuze naar een helder merkverhaal: de logica achter je merk, de structuur van je verhaal en de concrete taal die je team kan gebruiken.</p>
-            <p>Geen abstracte merkwaarden of een dik handboek. Wél kernboodschappen die werken in een pitch, op een website, in een salesdeck en in een contentstrategie.</p>
-            <div class="step-output">
-              <h4>Output</h4>
-              <ul>
-                <li>Brand story</li>
-                <li>Messaging pillars</li>
-                <li>Kernzinnen voor merk, marketing en sales</li>
-                <li>Basiscopy voor website en pitch</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="step-block">
-          <div class="step-meta">
-            <span class="step-number">Stap 03</span>
-            <span class="step-phase">Narrative Activation</span>
-            <span class="step-tagline">Build the system</span>
-          </div>
-          <div class="step-content">
-            <h2>Het verhaal werkend maken</h2>
-            <p>Een goed verhaal dat in een document blijft liggen, is geen goed verhaal. In stap drie bouwen we de structuur waarmee je team het verhaal consequent gebruikt — in content, sales, marketing en AI-workflows.</p>
-            <p>Dat betekent formats, promptsets, redactiestructuren en vaste story sessions. Zodat het verhaal niet vervalt tot een eenmalig project, maar een levend systeem wordt dat je organisatie scherp houdt.</p>
-            <div class="step-output">
-              <h4>Output</h4>
-              <ul>
-                <li>Content- en messagingstructuur</li>
-                <li>AI-workflows en promptsets in je merkstem</li>
-                <li>Formats voor posts, artikelen en salesmateriaal</li>
-                <li>Story sessions voor je team</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+        ))}
       </div>
     </section>
 
@@ -110,24 +63,17 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="ai-inner">
           <div>
-            <span class="label">AI en storytelling</span>
-            <h2>AI vergroot ruis — tenzij het verhaal klopt</h2>
-            <p>AI maakt het mogelijk om meer content te produceren dan ooit. Maar zonder een helder narratief fundament maakt AI-output je communicatie generiek, niet scherper. Het verdubbelt de ruis.</p>
-            <p>Chief Story gebruikt AI als hefboom, niet als vervanging. Custom GPT's, promptsets en AI-workflows die zijn gecalibreerd op jouw merkstem — zodat snelheid en scherpte samengaan.</p>
+            <span class="label">{ai.label}</span>
+            <h2>{ai.heading}</h2>
+            {ai.body.map((p: string) => <p>{p}</p>)}
           </div>
           <div class="ai-list">
-            <div class="ai-item">
-              <h4>AI-workflows</h4>
-              <p>Gestructureerde processen voor contentcreatie die aansluiten op je narratief en merkstem.</p>
-            </div>
-            <div class="ai-item">
-              <h4>Promptsets</h4>
-              <p>Specifieke prompts voor jouw gebruik — posts, artikelen, e-mails, salesmateriaal — in jouw toon.</p>
-            </div>
-            <div class="ai-item">
-              <h4>Tone-of-voice checks</h4>
-              <p>AI-tools die bewaken dat output consistent blijft met je merkverhaal en positionering.</p>
-            </div>
+            {ai.items.map((item: any) => (
+              <div class="ai-item">
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -136,10 +82,9 @@ import Footer from '../components/Footer.astro';
     <section class="section-note">
       <div class="container">
         <div class="note-inner">
-          <h3>Waarom stap 1 en 2 niet los afgenomen kunnen worden</h3>
-          <p>Narrative Positioning en Brand Storytelling zijn in principe niet los van elkaar te kopen — ze zijn twee helften van hetzelfde fundament. Een merkverhaal zonder scherpe positionering is hol. Een positionering zonder verhaal is een strategie die niemand begrijpt.</p>
-          <p>De Signal Sprint combineert beide fases in één maand. Daarna is activatie (stap 3) als Story System beschikbaar.</p>
-          <a href="/aanbod" class="btn-outline">Bekijk het aanbod</a>
+          <h3>{note.heading}</h3>
+          {note.body.map((p: string) => <p>{p}</p>)}
+          <a href="/aanbod" class="btn-outline">{note.cta}</a>
         </div>
       </div>
     </section>
@@ -147,9 +92,9 @@ import Footer from '../components/Footer.astro';
     <section class="section-cta">
       <div class="container">
         <div class="cta-inner">
-          <h2>Klaar om van ruis naar signaal te gaan?</h2>
-          <p>Plan een Signal Call. Dan kijken we waar je nu staat en welke stap logisch is.</p>
-          <a href="/contact" class="btn-primary btn-large">Plan een Signal Call</a>
+          <h2>{cta.heading}</h2>
+          <p>{cta.body}</p>
+          <a href="/contact" class="btn-primary btn-large">{cta.button}</a>
         </div>
       </div>
     </section>

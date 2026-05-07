@@ -2,21 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'aanbod');
+const { meta, hero, signal_sprint, story_system, full_track, compare, faq, cta } = page.data;
 ---
 
-<BaseLayout
-  title="Aanbod"
-  description="Signal Sprint, Story System of Full Track — Chief Story biedt drie routes van ruis naar signaal. Bekijk het aanbod en kies je route."
->
+<BaseLayout title={meta.title} description={meta.description}>
   <Nav />
 
   <main>
 
     <section class="page-hero">
       <div class="container">
-        <span class="label">Het aanbod</span>
-        <h1>Kies je route<br />van ruis naar signaal.</h1>
-        <p class="lead">Twee hoofdproposities, één volledige track. Afhankelijk van waar je nu staat en wat je nodig hebt, kies je de route die past.</p>
+        <span class="label">{hero.label}</span>
+        <h1 set:html={hero.h1.replace('\n', '<br />')} />
+        <p class="lead">{hero.lead}</p>
       </div>
     </section>
 
@@ -26,56 +27,35 @@ import Footer from '../components/Footer.astro';
         <div class="offer-layout">
           <div class="offer-intro">
             <div class="offer-tag">
-              <span class="label">Propositie 1</span>
-              <h2>Signal Sprint</h2>
-              <p class="offer-duration">1 maand · Narrative Positioning + Brand Storytelling</p>
+              <span class="label">{signal_sprint.label}</span>
+              <h2>{signal_sprint.heading}</h2>
+              <p class="offer-duration">{signal_sprint.duration}</p>
             </div>
-            <p class="offer-lead">Voor organisaties die voelen dat hun verhaal niet meer klopt, te versnipperd is of niet meer past bij hun volgende groeifase. In de Signal Sprint brengen we je positionering, verhaal en kernboodschappen terug tot één helder signaal.</p>
-            <p>Geen dik merkdocument. Geen abstracte merkwaarden. Wél een scherp fundament waarmee directie, marketing en sales dezelfde kant op bewegen.</p>
+            <p class="offer-lead">{signal_sprint.lead}</p>
+            <p>{signal_sprint.body}</p>
             <div class="offer-for">
               <h4>Voor wie</h4>
-              <p>Founders, CEO's en organisaties die hun verhaal snel scherp willen krijgen — zonder een lang traject.</p>
+              <p>{signal_sprint.for_who}</p>
             </div>
             <div class="offer-price-block">
-              <span class="price">Vanaf €8.500 excl. btw</span>
+              <span class="price">{signal_sprint.price}</span>
               <a href="/contact" class="btn-primary">Plan een Signal Call</a>
             </div>
           </div>
           <div class="offer-details">
             <div class="deliverable-block">
               <h4>Wat je krijgt</h4>
-              <p>Na één maand heb je het Signal Document — compact, direct bruikbaar:</p>
+              <p>{signal_sprint.deliverables_intro}</p>
               <ul>
-                <li>
-                  <strong>Market narrative</strong>
-                  <span>Welke spanning lost jouw merk op? Welk verhaal kun jij claimen?</span>
-                </li>
-                <li>
-                  <strong>Kernspanning en positionering</strong>
-                  <span>De strategische keuze die alles daarna stuurt.</span>
-                </li>
-                <li>
-                  <strong>Brand story</strong>
-                  <span>Het merkverhaal in heldere, bruikbare taal.</span>
-                </li>
-                <li>
-                  <strong>Messaging pillars</strong>
-                  <span>De drie tot vijf thema's waarop je communicatie rust.</span>
-                </li>
-                <li>
-                  <strong>Kernzinnen</strong>
-                  <span>Basiscopy voor website, pitch, LinkedIn en salesmateriaal.</span>
-                </li>
+                {signal_sprint.deliverables.map((d: any) => (
+                  <li><strong>{d.title}</strong><span>{d.desc}</span></li>
+                ))}
               </ul>
             </div>
             <div class="process-block">
               <h4>Hoe het werkt</h4>
               <ol>
-                <li>Intake en merkanalyse</li>
-                <li>Markt- en concurrentieanalyse</li>
-                <li>Positioneringsworkshop</li>
-                <li>Verhaalontwikkeling en copy</li>
-                <li>Review en overdracht</li>
+                {signal_sprint.process.map((step: string) => <li>{step}</li>)}
               </ol>
             </div>
           </div>
@@ -89,56 +69,35 @@ import Footer from '../components/Footer.astro';
         <div class="offer-layout">
           <div class="offer-intro">
             <div class="offer-tag">
-              <span class="label">Propositie 2</span>
-              <h2>Story System</h2>
-              <p class="offer-duration">3 maanden · Narrative Activation</p>
+              <span class="label">{story_system.label}</span>
+              <h2>{story_system.heading}</h2>
+              <p class="offer-duration">{story_system.duration}</p>
             </div>
-            <p class="offer-lead">Voor marketingteams, founders en commerciële teams die het verhaal niet alleen willen hebben, maar structureel willen gebruiken. In het Story System vertalen we je verhaal naar een werkende communicatie- en contentstructuur.</p>
-            <p>Met vaste formats, overlegmomenten, feedbackloops en AI-workflows waarmee je team sneller, consistenter en scherper communiceert.</p>
+            <p class="offer-lead">{story_system.lead}</p>
+            <p>{story_system.body}</p>
             <div class="offer-for">
               <h4>Voor wie</h4>
-              <p>Organisaties die al een helder verhaal hebben (of de Signal Sprint hebben gedaan) en dat verhaal nu structureel willen activeren.</p>
+              <p>{story_system.for_who}</p>
             </div>
             <div class="offer-price-block">
-              <span class="price">Vanaf €18.500 excl. btw</span>
+              <span class="price">{story_system.price}</span>
               <a href="/contact" class="btn-primary">Plan een Signal Call</a>
             </div>
           </div>
           <div class="offer-details">
             <div class="deliverable-block">
               <h4>Wat je krijgt</h4>
-              <p>Na drie maanden heb je het Story System — een werkende infrastructuur:</p>
+              <p>{story_system.deliverables_intro}</p>
               <ul>
-                <li>
-                  <strong>Story activation roadmap</strong>
-                  <span>Een plan voor hoe het verhaal gebruikt wordt in marketing, sales en content.</span>
-                </li>
-                <li>
-                  <strong>Content- en messagingstructuur</strong>
-                  <span>Pijlers, formats en redactieflow die aansluiten op je narratief.</span>
-                </li>
-                <li>
-                  <strong>AI-workflows en promptsets</strong>
-                  <span>Gecalibreerd op jouw merkstem — voor posts, artikelen, campagnes en sales.</span>
-                </li>
-                <li>
-                  <strong>Formats voor elk kanaal</strong>
-                  <span>Vaste structuren voor LinkedIn, nieuwsbrieven, salesdecks en meer.</span>
-                </li>
-                <li>
-                  <strong>Maandelijkse story sessions</strong>
-                  <span>Vaste overlegmomenten om richting te houden en het systeem bij te sturen.</span>
-                </li>
+                {story_system.deliverables.map((d: any) => (
+                  <li><strong>{d.title}</strong><span>{d.desc}</span></li>
+                ))}
               </ul>
             </div>
             <div class="process-block">
               <h4>Hoe het werkt</h4>
               <ol>
-                <li>Narratief audit en startpunt</li>
-                <li>Contentstrategie en messagingstructuur</li>
-                <li>AI-workflow en promptset ontwikkeling</li>
-                <li>Formats en redactiehandleiding</li>
-                <li>Maandelijkse story sessions (3x)</li>
+                {story_system.process.map((step: string) => <li>{step}</li>)}
               </ol>
             </div>
           </div>
@@ -151,13 +110,12 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="full-track-inner">
           <div class="full-track-text">
-            <span class="label">De volledige route</span>
-            <h2>Full Track</h2>
-            <p class="offer-duration">4 maanden · Signal Sprint + Story System</p>
-            <p>Voor organisaties die niet alleen hun verhaal willen aanscherpen, maar ook willen activeren. Eerst vinden we het signaal. Daarna bouwen we het systeem waarmee je team dat signaal blijft uitzenden.</p>
-            <p>De naadloze overgang tussen Signal Sprint en Story System zorgt ervoor dat de activatie direct voortbouwt op het fundament — geen herhaling, geen vertaalslag.</p>
+            <span class="label">{full_track.label}</span>
+            <h2>{full_track.heading}</h2>
+            <p class="offer-duration">{full_track.duration}</p>
+            {full_track.body.map((p: string) => <p>{p}</p>)}
             <div class="offer-price-block">
-              <span class="price">Vanaf €24.500 excl. btw</span>
+              <span class="price">{full_track.price}</span>
               <a href="/contact" class="btn-primary">Plan een Signal Call</a>
             </div>
           </div>
@@ -167,21 +125,13 @@ import Footer from '../components/Footer.astro';
               <div>
                 <p class="includes-title">Signal Sprint</p>
                 <ul>
-                  <li>Market narrative</li>
-                  <li>Positionering</li>
-                  <li>Brand story</li>
-                  <li>Messaging pillars</li>
-                  <li>Kernzinnen</li>
+                  {full_track.sprint_includes.map((item: string) => <li>{item}</li>)}
                 </ul>
               </div>
               <div>
                 <p class="includes-title">Story System</p>
                 <ul>
-                  <li>Story activation roadmap</li>
-                  <li>Contentstructuur</li>
-                  <li>AI-workflows</li>
-                  <li>Formats</li>
-                  <li>Story sessions (3x)</li>
+                  {full_track.system_includes.map((item: string) => <li>{item}</li>)}
                 </ul>
               </div>
             </div>
@@ -194,8 +144,8 @@ import Footer from '../components/Footer.astro';
     <section class="section-compare">
       <div class="container">
         <div class="section-header">
-          <span class="label">Vergelijking</span>
-          <h2>Wat zit er in welke route?</h2>
+          <span class="label">{compare.label}</span>
+          <h2>{compare.heading}</h2>
         </div>
         <div class="compare-table">
           <div class="compare-header">
@@ -234,30 +184,16 @@ import Footer from '../components/Footer.astro';
     <section class="section-faq">
       <div class="container">
         <div class="section-header">
-          <span class="label">Veelgestelde vragen</span>
-          <h2>Wat mensen willen weten</h2>
+          <span class="label">{faq.label}</span>
+          <h2>{faq.heading}</h2>
         </div>
         <div class="faq-list">
-          <details class="faq-item">
-            <summary>Kan ik alleen de Brand Storytelling doen, zonder de Narrative Positioning?</summary>
-            <p>In principe niet. Narrative Positioning en Brand Storytelling zijn twee helften van hetzelfde fundament. Een merkverhaal zonder scherpe positionering is hol. Vandaar dat de Signal Sprint beide combineert. Als je al een heldere positionering hebt, kunnen we dat bespreken in een Signal Call.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Moet ik de Signal Sprint hebben gedaan om het Story System af te nemen?</summary>
-            <p>Nee — maar je hebt wel een helder narratief fundament nodig. Als je al een scherpe positionering en brand story hebt, kunnen we direct met activatie beginnen. Dat beoordelen we samen tijdens de Signal Call.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Hoe intensief is de samenwerking?</summary>
-            <p>Intensief aan het begin, daarna meer op afstand. De eerste weken vragen om input, interviews en een gezamenlijke workshop. Daarna lever ik — met gerichte feedbackmomenten. Voor het Story System zijn er maandelijkse story sessions van circa twee uur.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Zijn de prijzen onderhandelbaar?</summary>
-            <p>De "vanaf"-prijzen zijn reële trajectprijzen, geen openingsbod. Complexiteit, omvang en organisatiegrootte kunnen de prijs beïnvloeden. Meer helderheid krijg je in een Signal Call.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Werk je ook met kleinere organisaties of zzp'ers?</summary>
-            <p>Chief Story is het meest waardevol voor organisaties die al enige complexiteit hebben — meerdere diensten, groeiende teams, of een verhaal dat niet meer meegroeit. Voor zzp'ers is de investering doorgaans niet in verhouding. Twijfel je? Plan een Signal Call, dan zijn we er snel uit.</p>
-          </details>
+          {faq.items.map((item: any) => (
+            <details class="faq-item">
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
@@ -265,9 +201,9 @@ import Footer from '../components/Footer.astro';
     <section class="section-cta">
       <div class="container">
         <div class="cta-inner">
-          <h2>Waar zit de ruis in jouw verhaal?</h2>
-          <p>Plan een Signal Call. Dan kijken we waar je nu staat en welke route logisch is.</p>
-          <a href="/contact" class="btn-primary btn-large">Plan een Signal Call</a>
+          <h2>{cta.heading}</h2>
+          <p>{cta.body}</p>
+          <a href="/contact" class="btn-primary btn-large">{cta.button}</a>
         </div>
       </div>
     </section>

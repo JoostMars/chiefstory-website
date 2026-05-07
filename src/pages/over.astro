@@ -2,12 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'over');
+const { meta, hero, story, perspective, manifesto, cta } = page.data;
 ---
 
-<BaseLayout
-  title="Over"
-  description="Chief Story is het werk van Joost Marsman — copywriter, merkstrateeg en verhalenbouwer. Lees meer over de achtergrond en aanpak."
->
+<BaseLayout title={meta.title} description={meta.description}>
   <Nav />
 
   <main>
@@ -16,9 +17,9 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="hero-grid">
           <div class="hero-text">
-            <span class="label">Over Chief Story</span>
-            <h1>Ik help organisaties scherper te kiezen wat er gezegd moet worden.</h1>
-            <p class="lead">Chief Story is het werk van Joost Marsman. Copywriter, merkstrateeg en verhalenbouwer — met een achtergrond die loopt van reclamebureaus tot songwriting, van scale-ups tot kennisbedrijven.</p>
+            <span class="label">{hero.label}</span>
+            <h1>{hero.h1}</h1>
+            <p class="lead">{hero.lead}</p>
           </div>
           <div class="hero-image">
             <div class="image-placeholder">
@@ -33,30 +34,18 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="story-grid">
           <div class="story-main">
-            <h2>Hoe Chief Story is ontstaan</h2>
-            <p>Ik ben begonnen als copywriter — en merkte al snel dat de beste copy zelden het echte probleem oploste. Het probleem zat dieper: organisaties wisten niet meer precies waar ze voor stonden, waarom dat relevant was en hoe ze dat consequent moesten zeggen.</p>
-            <p>Nieuwe diensten kwamen erbij. Teams groeiden. Markten verschoven. En het verhaal groeide niet mee. Dat is niet een communicatieprobleem. Het is een strategisch probleem.</p>
-            <p>Chief Story is ontstaan vanuit de overtuiging dat goede communicatie begint bij strategische scherpte — en dat taal het instrument is om die scherpte zichtbaar te maken. Niet als sausje achteraf, maar als fundament.</p>
+            <h2>{story.heading}</h2>
+            {story.body.map((p: string) => <p>{p}</p>)}
           </div>
           <div class="story-aside">
-            <div class="credential">
-              <h4>Achtergrond</h4>
-              <ul>
-                <li>Copywriter en merkstrateeg</li>
-                <li>Ervaring bij reclamebureaus en als zelfstandige</li>
-                <li>Songwriter en creatief schrijver</li>
-                <li>Oprichter van Chief Story</li>
-              </ul>
-            </div>
-            <div class="credential">
-              <h4>Werkgebied</h4>
-              <ul>
-                <li>Zakelijke dienstverleners</li>
-                <li>Kennisorganisaties</li>
-                <li>Scale-ups en groeibedrijven</li>
-                <li>Founders en directies</li>
-              </ul>
-            </div>
+            {story.credentials.map((cred: any) => (
+              <div class="credential">
+                <h4>{cred.title}</h4>
+                <ul>
+                  {cred.items.map((item: string) => <li>{item}</li>)}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -65,24 +54,14 @@ import Footer from '../components/Footer.astro';
     <section class="section-perspective">
       <div class="container">
         <div class="perspective-inner">
-          <span class="label">Mijn perspectief</span>
+          <span class="label">{perspective.label}</span>
           <div class="perspective-grid">
-            <div class="perspective-item">
-              <h3>Strategie voor taal</h3>
-              <p>Storytelling begint niet bij de vraag "hoe zeggen we dit?" maar bij "wat kiezen we te zeggen?" Die vraag is strategisch. Chief Story begint daar altijd.</p>
-            </div>
-            <div class="perspective-item">
-              <h3>Taal die werkt</h3>
-              <p>Goede tekst heeft ritme, spanning en betekenis. Niet alleen correctheid. Mijn achtergrond als songwriter en creatief schrijver zit in elk woord dat ik schrijf — ook in B2B-context.</p>
-            </div>
-            <div class="perspective-item">
-              <h3>AI als hefboom</h3>
-              <p>AI is pas waardevol als het verhaal klopt. Ik gebruik AI-workflows en promptsets om snelheid en consistentie te combineren — nooit als vervanging van strategisch denken.</p>
-            </div>
-            <div class="perspective-item">
-              <h3>Commercieel begrip</h3>
-              <p>Als ondernemer begrijp ik de druk van groei, focus en keuzes maken. Chief Story werkt altijd vanuit commerciële realiteit — niet vanuit merktheorie.</p>
-            </div>
+            {perspective.items.map((item: any) => (
+              <div class="perspective-item">
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -92,8 +71,8 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="manifesto-inner">
           <blockquote>
-            <p>"Meer content lost de ruis niet op. Een scherper verhaal wel. Organisaties die weten wat ze willen claimen, communiceren niet alleen beter — ze kiezen ook beter, prioriteren beter en groeien consistenter."</p>
-            <cite>Joost Marsman, Chief Story</cite>
+            <p>"{manifesto.quote}"</p>
+            <cite>{manifesto.cite}</cite>
           </blockquote>
         </div>
       </div>
@@ -102,9 +81,9 @@ import Footer from '../components/Footer.astro';
     <section class="section-cta">
       <div class="container">
         <div class="cta-inner">
-          <h2>Kennismaken?</h2>
-          <p>Plan een Signal Call. Geen verkooppraatje — een echt gesprek over waar jouw verhaal nu staat en wat logisch is als volgende stap.</p>
-          <a href="/contact" class="btn-primary btn-large">Plan een Signal Call</a>
+          <h2>{cta.heading}</h2>
+          <p>{cta.body}</p>
+          <a href="/contact" class="btn-primary btn-large">{cta.button}</a>
         </div>
       </div>
     </section>
