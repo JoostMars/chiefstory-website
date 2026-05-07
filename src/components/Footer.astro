@@ -1,0 +1,95 @@
+---
+---
+
+<footer>
+  <div class="container">
+    <div class="top">
+      <div class="brand">
+        <span class="logo">Chief Story</span>
+        <p>Van ruis naar signaal.</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/methode">Methode</a></li>
+          <li><a href="/aanbod">Aanbod</a></li>
+          <li><a href="/cases">Cases</a></li>
+          <li><a href="/over">Over</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bottom">
+      <span>&copy; {new Date().getFullYear()} Chief Story</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    margin-top: 8rem;
+  }
+
+  .container {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: color 0.15s;
+  }
+
+  nav a:hover {
+    color: var(--text);
+  }
+
+  .bottom {
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 640px) {
+    .top {
+      flex-direction: column;
+    }
+
+    nav ul {
+      justify-content: flex-start;
+    }
+  }
+</style>

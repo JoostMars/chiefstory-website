@@ -1,0 +1,289 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Cases"
+  description="Hoe Chief Story organisaties helpt van strategische ruis naar een helder signaal. Bekijk de cases."
+>
+  <Nav />
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="label">Cases</span>
+        <h1>Wat scherper worden<br />er concreet uitziet.</h1>
+        <p class="lead">Geen portfolio van mooie zinnen. Maar voorbeelden van wat er verandert als een organisatie haar verhaal terugbrengt tot één helder signaal.</p>
+      </div>
+    </section>
+
+    <section class="cases-placeholder">
+      <div class="container">
+        <div class="placeholder-inner">
+          <div class="placeholder-icon">
+            <span>→</span>
+          </div>
+          <h2>Cases worden binnenkort toegevoegd</h2>
+          <p>De eerste cases zijn in voorbereiding. Wil je in de tussentijd weten wat Chief Story voor jouw organisatie kan betekenen?</p>
+          <a href="/contact" class="btn-primary">Plan een Signal Call</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-format">
+      <div class="container">
+        <div class="section-header">
+          <span class="label">Het caseformat</span>
+          <h2>Zo lezen de cases</h2>
+          <p>Elke case volgt dezelfde structuur — niet om indruk te maken, maar om duidelijk te maken wat er strategisch veranderd is.</p>
+        </div>
+        <div class="format-grid">
+          <div class="format-item">
+            <span class="format-number">01</span>
+            <h3>Situatie</h3>
+            <p>Waar zat de ruis? Wat was de aanleiding om het verhaal aan te pakken?</p>
+          </div>
+          <div class="format-item">
+            <span class="format-number">02</span>
+            <h3>Vraag</h3>
+            <p>Wat moest scherper? Welk strategisch probleem lag eronder?</p>
+          </div>
+          <div class="format-item">
+            <span class="format-number">03</span>
+            <h3>Aanpak</h3>
+            <p>Wat hebben we gedaan? Welke route — en waarom die?</p>
+          </div>
+          <div class="format-item">
+            <span class="format-number">04</span>
+            <h3>Signaal</h3>
+            <p>Wat werd de kern? Welk verhaal kon de organisatie daarna claimen?</p>
+          </div>
+          <div class="format-item">
+            <span class="format-number">05</span>
+            <h3>Resultaat</h3>
+            <p>Wat kon de klant daarna beter doen — in marketing, sales, content of intern?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta-inner">
+          <h2>Benieuwd wat dit voor jou betekent?</h2>
+          <p>Plan een Signal Call. Dan kijken we samen waar de ruis zit en wat een logische eerste stap is.</p>
+          <a href="/contact" class="btn-primary btn-large">Plan een Signal Call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* Placeholder */
+  .cases-placeholder {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .placeholder-inner {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .placeholder-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--surface);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  .placeholder-inner h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .placeholder-inner p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  /* Format */
+  .section-format {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+    max-width: 560px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+  }
+
+  .format-item {
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+  }
+
+  .format-item:last-child {
+    border-right: none;
+  }
+
+  .format-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .format-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .format-item p {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .section-cta {
+    padding: 6rem 0;
+  }
+
+  .cta-inner {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 4rem;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .cta-inner p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.65;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: var(--text);
+    color: var(--bg);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: opacity 0.15s;
+  }
+
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-primary.btn-large { font-size: 1.05rem; padding: 0.9rem 2rem; }
+
+  @media (max-width: 900px) {
+    .format-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .format-item:nth-child(3) {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-hero,
+    .cases-placeholder,
+    .section-format,
+    .section-cta {
+      padding: 3.5rem 0;
+    }
+
+    .format-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .format-item:nth-child(2n) {
+      border-right: none;
+    }
+
+    .cta-inner {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+</style>

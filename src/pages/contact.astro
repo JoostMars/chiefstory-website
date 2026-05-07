@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Plan een Signal Call"
+  description="Plan een Signal Call met Chief Story. Vertel waar je nu staat en waar het schuurt — dan kijken we samen wat een logische volgende stap is."
+>
+  <Nav />
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="label">Contact</span>
+            <h1>Plan een<br />Signal Call.</h1>
+            <p class="lead">Geen verkooppraatje. Een echt gesprek — over waar je nu staat, waar het schuurt en welke route logisch is. Duurt ongeveer 30 minuten.</p>
+            <div class="contact-info">
+              <a href="mailto:joost@chiefstory.nl" class="contact-link">joost@chiefstory.nl</a>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <form
+              name="signal-call"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="signal-call" />
+              <p class="hidden">
+                <label>Niet invullen: <input name="bot-field" /></label>
+              </p>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="naam">Naam</label>
+                  <input type="text" id="naam" name="naam" required placeholder="Joost Marsman" />
+                </div>
+                <div class="field">
+                  <label for="organisatie">Organisatie</label>
+                  <input type="text" id="organisatie" name="organisatie" required placeholder="Chief Story" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="rol">Rol</label>
+                  <input type="text" id="rol" name="rol" placeholder="CEO, Head of Marketing, ..." />
+                </div>
+                <div class="field">
+                  <label for="website">Website</label>
+                  <input type="url" id="website" name="website" placeholder="https://..." />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required placeholder="joost@example.com" />
+              </div>
+
+              <div class="field">
+                <label for="ruis">Wat voelt nu als ruis?</label>
+                <textarea id="ruis" name="ruis" rows="4" placeholder="Beschrijf in een paar zinnen waar het schuurt. In je verhaal, je communicatie of je positionering." required></textarea>
+              </div>
+
+              <div class="field">
+                <label for="signaal">Waar wil je naartoe?</label>
+                <textarea id="signaal" name="signaal" rows="3" placeholder="Wat is je ideale uitkomst? Wat moet er veranderen?"></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Verstuur aanvraag</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-expect">
+      <div class="container">
+        <div class="section-header">
+          <span class="label">Wat je kunt verwachten</span>
+          <h2>Hoe een Signal Call werkt</h2>
+        </div>
+        <div class="expect-grid">
+          <div class="expect-item">
+            <span class="expect-number">01</span>
+            <h3>Aanvraag</h3>
+            <p>Je stuurt het formulier in. Ik lees je situatie door en reageer binnen één werkdag om een moment af te stemmen.</p>
+          </div>
+          <div class="expect-item">
+            <span class="expect-number">02</span>
+            <h3>Het gesprek</h3>
+            <p>Ongeveer 30 minuten. We bespreken waar je nu staat, wat er schuurt en wat je wil bereiken. Geen verkoopscript.</p>
+          </div>
+          <div class="expect-item">
+            <span class="expect-number">03</span>
+            <h3>Voorstel of advies</h3>
+            <p>Als er een logische match is, volgt een concreet voorstel. Als dat er niet is, zeg ik dat ook — met een eerlijk advies over wat je dan het beste kunt doen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 440px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+  }
+
+  .contact-link {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 2px;
+    transition: border-color 0.15s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--text);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* Form */
+  .form-wrapper {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    transition: border-color 0.15s;
+    outline: none;
+    resize: vertical;
+    width: 100%;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.6;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--text);
+  }
+
+  .btn-submit {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-top: 0.25rem;
+  }
+
+  .btn-submit:hover {
+    opacity: 0.85;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Expect */
+  .section-expect {
+    padding: 5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .expect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .expect-item {
+    padding: 2.5rem 2rem 2.5rem 0;
+    border-right: 1px solid var(--border);
+    padding-right: 2rem;
+    margin-right: 0;
+  }
+
+  .expect-item:last-child {
+    border-right: none;
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
+  .expect-item:not(:first-child):not(:last-child) {
+    padding-left: 2rem;
+  }
+
+  .expect-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .expect-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .expect-item p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .expect-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .expect-item {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+    }
+
+    .expect-item:last-child {
+      padding-left: 0;
+      border-bottom: none;
+    }
+
+    .expect-item:not(:first-child):not(:last-child) {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-hero,
+    .section-expect {
+      padding: 3.5rem 0;
+    }
+
+    .form-wrapper {
+      padding: 1.75rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

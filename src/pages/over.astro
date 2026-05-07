@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Over"
+  description="Chief Story is het werk van Joost Marsman — copywriter, merkstrateeg en verhalenbouwer. Lees meer over de achtergrond en aanpak."
+>
+  <Nav />
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="label">Over Chief Story</span>
+            <h1>Ik help organisaties scherper te kiezen wat er gezegd moet worden.</h1>
+            <p class="lead">Chief Story is het werk van Joost Marsman. Copywriter, merkstrateeg en verhalenbouwer — met een achtergrond die loopt van reclamebureaus tot songwriting, van scale-ups tot kennisbedrijven.</p>
+          </div>
+          <div class="hero-image">
+            <div class="image-placeholder">
+              <span>Foto volgt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-main">
+            <h2>Hoe Chief Story is ontstaan</h2>
+            <p>Ik ben begonnen als copywriter — en merkte al snel dat de beste copy zelden het echte probleem oploste. Het probleem zat dieper: organisaties wisten niet meer precies waar ze voor stonden, waarom dat relevant was en hoe ze dat consequent moesten zeggen.</p>
+            <p>Nieuwe diensten kwamen erbij. Teams groeiden. Markten verschoven. En het verhaal groeide niet mee. Dat is niet een communicatieprobleem. Het is een strategisch probleem.</p>
+            <p>Chief Story is ontstaan vanuit de overtuiging dat goede communicatie begint bij strategische scherpte — en dat taal het instrument is om die scherpte zichtbaar te maken. Niet als sausje achteraf, maar als fundament.</p>
+          </div>
+          <div class="story-aside">
+            <div class="credential">
+              <h4>Achtergrond</h4>
+              <ul>
+                <li>Copywriter en merkstrateeg</li>
+                <li>Ervaring bij reclamebureaus en als zelfstandige</li>
+                <li>Songwriter en creatief schrijver</li>
+                <li>Oprichter van Chief Story</li>
+              </ul>
+            </div>
+            <div class="credential">
+              <h4>Werkgebied</h4>
+              <ul>
+                <li>Zakelijke dienstverleners</li>
+                <li>Kennisorganisaties</li>
+                <li>Scale-ups en groeibedrijven</li>
+                <li>Founders en directies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-perspective">
+      <div class="container">
+        <div class="perspective-inner">
+          <span class="label">Mijn perspectief</span>
+          <div class="perspective-grid">
+            <div class="perspective-item">
+              <h3>Strategie voor taal</h3>
+              <p>Storytelling begint niet bij de vraag "hoe zeggen we dit?" maar bij "wat kiezen we te zeggen?" Die vraag is strategisch. Chief Story begint daar altijd.</p>
+            </div>
+            <div class="perspective-item">
+              <h3>Taal die werkt</h3>
+              <p>Goede tekst heeft ritme, spanning en betekenis. Niet alleen correctheid. Mijn achtergrond als songwriter en creatief schrijver zit in elk woord dat ik schrijf — ook in B2B-context.</p>
+            </div>
+            <div class="perspective-item">
+              <h3>AI als hefboom</h3>
+              <p>AI is pas waardevol als het verhaal klopt. Ik gebruik AI-workflows en promptsets om snelheid en consistentie te combineren — nooit als vervanging van strategisch denken.</p>
+            </div>
+            <div class="perspective-item">
+              <h3>Commercieel begrip</h3>
+              <p>Als ondernemer begrijp ik de druk van groei, focus en keuzes maken. Chief Story werkt altijd vanuit commerciële realiteit — niet vanuit merktheorie.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-manifesto">
+      <div class="container">
+        <div class="manifesto-inner">
+          <blockquote>
+            <p>"Meer content lost de ruis niet op. Een scherper verhaal wel. Organisaties die weten wat ze willen claimen, communiceren niet alleen beter — ze kiezen ook beter, prioriteren beter en groeien consistenter."</p>
+            <cite>Joost Marsman, Chief Story</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta-inner">
+          <h2>Kennismaken?</h2>
+          <p>Plan een Signal Call. Geen verkooppraatje — een echt gesprek over waar jouw verhaal nu staat en wat logisch is als volgende stap.</p>
+          <a href="/contact" class="btn-primary btn-large">Plan een Signal Call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .image-placeholder {
+    aspect-ratio: 3/4;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+
+  /* Story */
+  .section-story {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .story-main h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .story-main p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  .credential {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .credential:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .credential h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .credential ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .credential li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .credential li::before {
+    content: '\2192';
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  /* Perspective */
+  .section-perspective {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .perspective-inner .label {
+    margin-bottom: 2.5rem;
+  }
+
+  .perspective-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .perspective-item {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+
+  .perspective-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .perspective-item:nth-child(3),
+  .perspective-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .perspective-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .perspective-item p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* Manifesto */
+  .section-manifesto {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .manifesto-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 2rem;
+  }
+
+  blockquote p {
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+
+  cite {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-style: normal;
+  }
+
+  /* CTA */
+  .section-cta {
+    padding: 6rem 0;
+  }
+
+  .cta-inner {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 4rem;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .cta-inner p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.65;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: var(--text);
+    color: var(--bg);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: opacity 0.15s;
+  }
+
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-primary.btn-large { font-size: 1.05rem; padding: 0.9rem 2rem; }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .image-placeholder {
+      aspect-ratio: 16/9;
+      max-width: 400px;
+    }
+
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-hero,
+    .section-story,
+    .section-perspective,
+    .section-manifesto,
+    .section-cta {
+      padding: 3.5rem 0;
+    }
+
+    .perspective-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .perspective-item {
+      border-right: none;
+    }
+
+    .perspective-item:last-child {
+      border-bottom: none;
+    }
+
+    .cta-inner {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+</style>

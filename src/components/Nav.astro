@@ -1,0 +1,104 @@
+---
+const navItems = [
+  { label: 'Methode', href: '/methode' },
+  { label: 'Aanbod', href: '/aanbod' },
+  { label: 'Cases', href: '/cases' },
+  { label: 'Over', href: '/over' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <nav class="container">
+    <a href="/" class="logo">Chief Story</a>
+    <ul>
+      {navItems.map(item => (
+        <li>
+          <a href={item.href} class={currentPath.startsWith(item.href) ? 'active' : ''}>
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a href="/contact" class="cta-nav">Plan een Signal Call</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 64px;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    margin-left: auto;
+  }
+
+  ul a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  ul a:hover,
+  ul a.active {
+    color: var(--text);
+    background: var(--surface);
+  }
+
+  .cta-nav {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    background: var(--text);
+    color: var(--bg);
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+  }
+
+  .cta-nav:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      display: none;
+    }
+
+    nav {
+      gap: 1rem;
+    }
+
+    .cta-nav {
+      margin-left: auto;
+    }
+  }
+</style>
