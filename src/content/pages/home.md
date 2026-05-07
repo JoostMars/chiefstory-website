@@ -1,10 +1,10 @@
 ---
 hero:
-  eyebrow: "Narrative positioning · Brand storytelling · Story systems"
-  h1: "Van ruis\nnaar signaal."
-  lead: "Chief Story helpt groeiende organisaties hun strategische verhaal scherp te krijgen en werkend te maken in merk, marketing, sales en AI."
-  cta_primary: "Plan een Signal Call"
-  cta_secondary: "Bekijk de methode"
+  eyebrow: "Positioning · Brand storytelling · Story systems"
+  h1: "Van ruis naar signaal"
+  lead: "Van een vaag of versnipperd verhaal naar een helder narratief en een systeem dat richting geeft aan merk, marketing en sales."
+  cta_primary: "Vertel"
+  cta_secondary: "Ontdek hoe"
 
 problem:
   heading: "Je organisatie groeit.\nJe verhaal niet altijd."
