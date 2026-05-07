@@ -25,16 +25,11 @@ const { meta, hero, expect } = page.data;
             </div>
           </div>
           <div class="form-wrapper">
-            <form
-              name="signal-call"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="signal-call" />
-              <p class="hidden">
-                <label>Niet invullen: <input name="bot-field" /></label>
-              </p>
+            <form id="signal-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="b2eb9a05-3e76-42f7-89a8-251af95ae3f8" />
+              <input type="hidden" name="subject" value="Nieuwe Signal Call aanvraag" />
+              <input type="hidden" name="from_name" value="Chief Story Website" />
+              <input type="checkbox" name="botcheck" style="display:none" />
 
               <div class="form-row">
                 <div class="field">
@@ -74,6 +69,7 @@ const { meta, hero, expect } = page.data;
               </div>
 
               <button type="submit" class="btn-submit">Verstuur aanvraag</button>
+              <div id="form-result" class="form-result" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -232,6 +228,15 @@ const { meta, hero, expect } = page.data;
     margin-top: 0.25rem;
   }
 
+  .form-result {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .form-result--success { color: #2d6a2d; }
+  .form-result--error { color: var(--accent); }
+
   .btn-submit:hover {
     opacity: 0.85;
   }
@@ -339,3 +344,31 @@ const { meta, hero, expect } = page.data;
     }
   }
 </style>
+
+<script>
+  const form = document.getElementById('signal-form') as HTMLFormElement;
+  const result = document.getElementById('form-result') as HTMLElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = 'Versturen...';
+
+    const data = new FormData(form);
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+
+    if (json.success) {
+      form.reset();
+      result.textContent = 'Bedankt! Ik neem binnen één werkdag contact op.';
+      result.className = 'form-result form-result--success';
+    } else {
+      result.textContent = 'Er ging iets mis. Stuur een mail naar joost@chiefstory.nl.';
+      result.className = 'form-result form-result--error';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Verstuur aanvraag';
+  });
+</script>
