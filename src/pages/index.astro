@@ -13,12 +13,17 @@ import Footer from '../components/Footer.astro';
     <section class="hero">
       <div class="container">
         <div class="hero-inner">
-          <p class="eyebrow">Narrative positioning · Brand storytelling · Story systems</p>
-          <h1>Van ruis<br />naar signaal.</h1>
-          <p class="lead">Chief Story helpt groeiende organisaties hun strategische verhaal scherp te krijgen en werkend te maken in merk, marketing, sales en AI.</p>
-          <div class="hero-cta">
-            <a href="/contact" class="btn-primary">Plan een Signal Call</a>
-            <a href="/methode" class="btn-ghost">Bekijk de methode</a>
+          <div class="hero-text">
+            <p class="eyebrow">Narrative positioning · Brand storytelling · Story systems</p>
+            <h1>Van ruis<br />naar signaal.</h1>
+            <p class="lead">Chief Story helpt groeiende organisaties hun strategische verhaal scherp te krijgen en werkend te maken in merk, marketing, sales en AI.</p>
+            <div class="hero-cta">
+              <a href="/contact" class="btn-primary">Plan een Signal Call</a>
+              <a href="/methode" class="btn-ghost">Bekijk de methode</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/joost.jpg" alt="Joost Marsman – Chief Story" />
           </div>
         </div>
       </div>
@@ -219,7 +224,27 @@ import Footer from '../components/Footer.astro';
   }
 
   .hero-inner {
-    max-width: 720px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 4px;
+    display: block;
   }
 
   .eyebrow {
@@ -646,6 +671,18 @@ import Footer from '../components/Footer.astro';
     .offer-grid,
     .audience-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hero-image img {
+      aspect-ratio: 4 / 3;
+      object-position: center 20%;
     }
   }
 
