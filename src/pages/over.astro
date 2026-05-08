@@ -22,9 +22,7 @@ const { meta, hero, story, perspective, manifesto, cta } = page.data;
             <p class="lead">{hero.lead}</p>
           </div>
           <div class="hero-image">
-            <div class="image-placeholder">
-              <span>Foto volgt</span>
-            </div>
+            <img src="/joost2.jpg" alt="Joost Marsman – Chief Story" />
           </div>
         </div>
       </div>
@@ -132,16 +130,10 @@ const { meta, hero, story, perspective, manifesto, cta } = page.data;
     align-items: center;
   }
 
-  .image-placeholder {
-    aspect-ratio: 3/4;
-    background: var(--surface);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    font-size: 0.875rem;
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* Story */
@@ -326,11 +318,6 @@ const { meta, hero, story, perspective, manifesto, cta } = page.data;
   @media (max-width: 900px) {
     .hero-grid {
       grid-template-columns: 1fr;
-    }
-
-    .image-placeholder {
-      aspect-ratio: 16/9;
-      max-width: 400px;
     }
 
     .story-grid {

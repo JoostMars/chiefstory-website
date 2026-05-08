@@ -1,4 +1,32 @@
 ---
+# ✏️ COPY BEWERKEN — YAML TIPS
+#
+# TEKST AANPASSEN:
+#   Vervang de tekst tussen de aanhalingstekens. Laat de aanhalingstekens staan.
+#   ✅ goed:  heading: "Nieuwe tekst hier"
+#   ❌ fout:  heading: "Nieuwe tekst hier    ← sluitend " vergeten
+#
+# AANHALINGSTEKENS IN TEKST:
+#   Gebruik een apostrof (') in plaats van aanhalingstekens ("):
+#   ✅ goed:  body: "Dat is 't probleem"
+#   ❌ fout:  body: "Dat is "het" probleem"   ← breekt de YAML
+#
+# LIJSTJES (regels met een streepje):
+#   Elke regel begint met twee spaties en een streepje:
+#   ✅ goed:
+#     - "Eerste item"
+#     - "Tweede item"
+#   ❌ fout:
+#     - "Eerste item"    ← streepje of spaties vergeten op volgende regel
+#     "Tweede item"
+#
+# REGELAFBREKING IN TEKST:
+#   Gebruik \n voor een harde regelafbreking:
+#   ✅ goed:  h1: "Regel één\nRegel twee"
+#
+# INSPRINGING:
+#   Gebruik altijd spaties, nooit tabs. De inspringing moet kloppen.
+
 hero:
   eyebrow: "Positioning · Brand storytelling · Story systems"
   h1: "Van ruis naar signaal"
@@ -9,9 +37,12 @@ hero:
 problem:
   heading: "Vind je verhaal.\nVertel het goed."
   body:
-    - "Als iedereen iets anders vertelt over je merk of organisatie. Als veranderingen sneller gaan dan je mensen kunnen bijbenen. Als de complexiteit toeneemt. Of verwarring op de loer ligt. Als je content richting en focus mist. En je genoeg hebt van die AI-copy eenheidsworst."
+    - "Als iedereen iets anders vertelt over je merk of organisatie."
+    - "Als veranderingen sneller gaan dan je mensen kunnen bijbenen."
+    - "Als de complexiteit toeneemt. Of verwarring op de loer ligt."
+    - "Als je content richting en focus mist."
+    - "En je genoeg hebt van die AI-copy eenheidsworst."
   signal_line: "Dan heb je een beter verhaal nodig."
-  \n
   signal_emphasis: "Chief Story helpt je het signaal in de ruis te vinden en te versterken."
   quotes:
     - "We zijn niet meer wie we drie jaar geleden waren."
