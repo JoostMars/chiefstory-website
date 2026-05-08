@@ -7,7 +7,7 @@ hero:
   cta_secondary: "Ontdek hoe"
 
 problem:
-  heading: "Vind je verhaal.\Vertel het goed."
+  heading: "Vind je verhaal.\nVertel het goed."
   body:
     - "Als iedereen iets anders vertelt over je merk of organisatie. Als iedereen iets anders vertelt over je merk of organisatie. Als veranderingen sneller gaan dan je mensen kunnen bijbenen. Als de complexiteit toeneemt. Of verwarring op de loer ligt. Als je content richting en focus mist. En je genoeg hebt van die AI-copy eenheidsworst."
   signal_line: "Dan heb je een beter verhaal nodig."
