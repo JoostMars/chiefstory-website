@@ -7,17 +7,17 @@ hero:
   cta_secondary: "Ontdek hoe"
 
 problem:
-  heading: "Je organisatie groeit.\nJe verhaal niet altijd."
+  heading: "Vind je verhaal.\nvertel het goed."
   body:
-    - "Er komen nieuwe diensten bij. Nieuwe markten. Nieuwe mensen. Nieuwe ambities. Wat ooit helder voelde, wordt langzaam diffuus."
-    - "Sales vertelt het ene verhaal. Marketing het andere. De website voelt te klein. Content wordt geproduceerd, maar mist richting, persoonlijkheid en scherpte. En AI maakt de output sneller, maar niet automatisch beter."
-  signal_line: "Dat is ruis."
-  signal_emphasis: "Chief Story helpt je het signaal te vinden en te versterken."
+    - "Als iedereen iets anders vertelt over je merk of organisatie. Als iedereen iets anders vertelt over je merk of organisatie. Als veranderingen sneller gaan dan je mensen kunnen bijbenen. Als de complexiteit toeneemt. Of verwarring op de loer ligt. Als je content richting en focus mist. En je genoeg hebt van die AI-copy eenheidsworst."
+  signal_line: "Dan heb je een beter verhaal nodig."
+  signal_emphasis: "Chief Story helpt je het signaal in de ruis te vinden en te versterken."
   quotes:
     - "We zijn niet meer wie we drie jaar geleden waren."
     - "Iedereen begrijpt ons pas na een uur praten."
     - "Sales, marketing en directie vertellen niet hetzelfde verhaal."
-    - "We produceren veel, maar het voelt versnipperd."
+    - "We produceren veel content, maar het voelt versnipperd."
+    - "Onze mensen weten niet waar ons bedrijf voor staat en waarom."
 
 method:
   label: "De methode"
