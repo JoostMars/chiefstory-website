@@ -11,8 +11,8 @@ problem:
   body:
     - "Als iedereen iets anders vertelt over je merk of organisatie." 
     - "Als veranderingen sneller gaan dan je mensen kunnen bijbenen." 
-    - "Als de complexiteit toeneemt. Of verwarring op de loer ligt. 
-    - "Als je content richting en focus mist. 
+    - "Als de complexiteit toeneemt. Of verwarring op de loer ligt."
+    - "Als je content richting en focus mist."
     - "En je genoeg hebt van die AI-copy eenheidsworst."
   signal_line: "Dan heb je een beter verhaal nodig."
   signal_emphasis: "Chief Story helpt je het signaal in de ruis te vinden en te versterken."
