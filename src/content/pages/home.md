@@ -7,7 +7,7 @@ hero:
   cta_secondary: "Ontdek hoe"
 
 problem:
-  heading: "Vind je verhaal.\nvertel het goed."
+  heading: "Vind je verhaal.\Vertel het goed."
   body:
     - "Als iedereen iets anders vertelt over je merk of organisatie. Als iedereen iets anders vertelt over je merk of organisatie. Als veranderingen sneller gaan dan je mensen kunnen bijbenen. Als de complexiteit toeneemt. Of verwarring op de loer ligt. Als je content richting en focus mist. En je genoeg hebt van die AI-copy eenheidsworst."
   signal_line: "Dan heb je een beter verhaal nodig."
@@ -22,12 +22,12 @@ problem:
 method:
   label: "De methode"
   heading: "In 3 stappen van ruis naar signaal"
-  cta: "Hoe de methode werkt"
+  cta: "Hoe Chief Story werkt"
   steps:
     - number: "01"
       title: "Narrative Positioning"
       tagline: "Claim the narrative"
-      body: "We bepalen welk grotere verhaal je merk kan claimen. Welke spanning je lost op. Welke positie nog vrij is in je markt."
+      body: "We bepalen welk grotere verhaal je merk kan claimen. Welke spanning je oplost. Welke positie nog vrij is in je markt."
     - number: "02"
       title: "Brand Storytelling"
       tagline: "Craft the story"
@@ -35,7 +35,7 @@ method:
     - number: "03"
       title: "Narrative Activation"
       tagline: "Build the system"
-      body: "We bouwen het systeem waarmee je team dat verhaal consequent gebruikt in content, sales, marketing en AI-workflows."
+      body: "We beslissen wat we kunnen automatiseren en bouwen het systeem waarmee je team het verhaal consequent gebruikt in content, sales, marketing en AI-workflows."
 
 offer:
   label: "Het aanbod"
