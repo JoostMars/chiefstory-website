@@ -54,8 +54,8 @@ method:
   steps:
     - number: "01"
       title: "Narrative Positioning"
-      tagline: "Claim the narrative"
-      body: "We bepalen welk grotere verhaal je merk kan claimen. Welke spanning je oplost. Welke positie nog vrij is in je markt."
+      tagline: "Claim your position"
+      body: "We bepalen welke positionering je merk kan claimen. Welke spanning je oplost. Welke positie nog vrij is in je markt en de hoofden van je publiek."
     - number: "02"
       title: "Brand Storytelling"
       tagline: "Craft the story"
@@ -73,7 +73,7 @@ offer:
       duration: "1 maand"
       description: "Van strategische ruis naar een helder merkverhaal. Positionering, brand story en kernboodschappen in één compact Signal Document."
       deliverables:
-        - "Narrative positionering"
+        - "Narratieve positionering"
         - "Brand story"
         - "Messaging pillars"
         - "Kernzinnen voor merk, pitch en website"
