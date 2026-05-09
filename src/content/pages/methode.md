@@ -5,64 +5,65 @@ meta:
 
 hero:
   label: "De methode"
-  h1: "Storytelling is geen sausje.\nHet is een strategisch systeem."
-  lead: "Veel organisaties proberen hun verhaal te verbeteren door beter te schrijven. Scherper te formuleren. Meer content te maken. Maar de ruis zit dieper. Chief Story begint waar het écht begint: bij de strategische keuze welk verhaal je kunt claimen."
+  h1: "Find your story.\nTell it well."
+  lead: "Dat is de essentie van Chief Story: je verhaal vinden, vangen (in woord en beeld) en je helpen het goed te vertellen. Zodat jouw publiek je weet te vinden. En fan worden."
 
 intro:
   heading: "Waarom losse interventies niet werken"
   body:
-    - "Een nieuwe website lost het niet op als het verhaal erachter niet klopt. Een betere tone of voice lost het niet op als de positionering onduidelijk is. AI maakt content sneller — maar ook ruis sneller."
-    - "Het fundament moet kloppen. Pas dan heeft alles erboven richting, kracht en consistentie."
-  quote: "Meer content lost de ruis niet op. Een scherper verhaal wel."
+    - "Een betere tone of voice helpt niet als je positionering onduidelijk is. Een nieuwe website zonder helder verhaal is weggegooid geld.  AI maakt contentproductie makkelijker en sneller, maar niet vanzelf beter."
+    - "Het fundament moet kloppen. Dat geeft alles daarna richting, kracht en consistentie."
+  quote: "Meer content leidt niet tot snellere groei. Een scherper verhaal wel."
 
 steps:
   - number: "Stap 01"
     phase: "Narrative Positioning"
-    tagline: "Claim the narrative"
+    tagline: "Claim your narrative"
     heading: "Welk groter verhaal kun jij claimen?"
     body:
-      - "Positionering gaat niet over wat je doet, maar over welke spanning je oplost. Welk probleem je benoemt dat anderen nog niet scherp hebben geformuleerd. Welke positie in de markt nog vrij is — en die jij geloofwaardig kunt innemen."
-      - "In deze fase brengen we het marktlandschap in kaart, analyseren we hoe jij en je concurrenten communiceren, en bepalen we welke narrative jij kunt claimen zonder dat het hol of overdreven klinkt."
+      - "Positionering gaat niet over wat je doet, maar over welke spanning je oplost. Welk probleem je aanpakt dat anderen nog niet scherp hebben geformuleerd. Welke markt- en breinpositie jij geloofwaardig kunt claimen bij je publiek."
+      - "We brengen jouw markt en doelgroepen in kaart, analyseren we hoe jij en je concurrenten communiceren, en bepalen we welk narratief en welke tone of voice nodig zijn om je positie te verankeren."
     output:
-      - "Market narrative analyse"
-      - "Kernspanning en positioneringskeuze"
+      - "Markt- en doelgroepanalyse"
+      - "Kernspanning en positionering"
       - "Messaging-ruimte en differentiatie"
+      - "Tone-of-voice guidelines"
   - number: "Stap 02"
     phase: "Brand Storytelling"
-    tagline: "Craft the story"
+    tagline: "Craft your story"
     heading: "Van positie naar verhaal naar taal"
     body:
-      - "Een scherpe positionering wordt pas bruikbaar als je hem kunt vertellen. In stap twee vertalen we de strategische keuze naar een helder merkverhaal: de logica achter je merk, de structuur van je verhaal en de concrete taal die je team kan gebruiken."
+      - "Een scherpe positionering wordt pas tastbaar als je hem kunt vertellen. In stap twee vertalen we de strategische keuze naar een helder merkverhaal: de logica achter je merk, de structuur van je verhaal en de concrete taal die je team kan gebruiken."
       - "Geen abstracte merkwaarden of een dik handboek. Wél kernboodschappen die werken in een pitch, op een website, in een salesdeck en in een contentstrategie."
     output:
       - "Brand story"
       - "Messaging pillars"
       - "Kernzinnen voor merk, marketing en sales"
-      - "Basiscopy voor website en pitch"
+      - "Basiscopy voor website en pitchdeck"
   - number: "Stap 03"
-    phase: "Narrative Activation"
-    tagline: "Build the system"
-    heading: "Het verhaal werkend maken"
+    phase: "Story system"
+    tagline: "Build your system"
+    heading: "Het verhaal tot leven wekken"
     body:
-      - "Een goed verhaal dat in een document blijft liggen, is geen goed verhaal. In stap drie bouwen we de structuur waarmee je team het verhaal consequent gebruikt — in content, sales, marketing en AI-workflows."
-      - "Dat betekent formats, promptsets, redactiestructuren en vaste story sessions. Zodat het verhaal niet vervalt tot een eenmalig project, maar een levend systeem wordt dat je organisatie scherp houdt."
+      - "Een goed verhaal dat in een la blijft liggen of in een hooffd blijft zitten, is geen goed verhaal. In stap drie bouwen we de structuur waarmee je team het verhaal consequent gebruikt in content, sales, marketing en AI-workflows."
+      - "Dat betekent formats, promptsets, redactiestructuren en vaste story sessions. Zodat het verhaal een levend en dynamisch systeem wordt dat je organisatie scherp houdt."
     output:
       - "Content- en messagingstructuur"
       - "AI-workflows en promptsets in je merkstem"
       - "Formats voor posts, artikelen en salesmateriaal"
-      - "Story sessions voor je team"
+      - "Story sessions voor je team" 
 
 ai:
   label: "AI en storytelling"
-  heading: "AI vergroot ruis — tenzij het verhaal klopt"
+  heading: "AI versterkt de ruis, behalve als het verhaal klopt"
   body:
-    - "AI maakt het mogelijk om meer content te produceren dan ooit. Maar zonder een helder narratief fundament maakt AI-output je communicatie generiek, niet scherper. Het verdubbelt de ruis."
-    - "Chief Story gebruikt AI als hefboom, niet als vervanging. Custom GPT's, promptsets en AI-workflows die zijn gecalibreerd op jouw merkstem — zodat snelheid en scherpte samengaan."
+    - "AI maakt het mogelijk om meer content te produceren dan ooit. Maar zonder een helder narratief fundament maakt AI-output je communicatie generieker, niet scherper. Het verdubbelt de ruis."
+    - "Chief Story gebruikt AI als hefboom. Custom GPT's, promptsets en AI-workflows die zijn gecalibreerd op jouw merkstem, zodat snelheid en inhoudelijke scherpte samengaan."
   items:
     - title: "AI-workflows"
       body: "Gestructureerde processen voor contentcreatie die aansluiten op je narratief en merkstem."
     - title: "Promptsets"
-      body: "Specifieke prompts voor jouw gebruik — posts, artikelen, e-mails, salesmateriaal — in jouw toon."
+      body: "Specifieke prompts voor jouw gebruik: posts, artikelen, e-mails, salesmateriaal, alles met jouw stem."
     - title: "Tone-of-voice checks"
       body: "AI-tools die bewaken dat output consistent blijft met je merkverhaal en positionering."
 
