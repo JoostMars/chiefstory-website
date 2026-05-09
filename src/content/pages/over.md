@@ -5,8 +5,8 @@ meta:
 
 hero:
   label: "Over Chief Story"
-  h1: "Ik help organisaties scherper te kiezen wat er gezegd moet worden."
-  lead: "Chief Story is het werk van Joost Marsman. Copywriter, merkstrateeg en verhalenbouwer — met een achtergrond die loopt van reclamebureaus tot songwriting, van scale-ups tot kennisbedrijven."
+  h1: "'Schrijven is simpel. Wat moeilijk is, is simpel schrijven.'"
+  lead: "Chief Story is het werk van Joost Marsman. Copywriter en strateeg met een obesessie voor merken, muziek en de kracht van verhalen."
 
 story:
   heading: "Hoe Chief Story is ontstaan"
