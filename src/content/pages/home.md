@@ -107,7 +107,7 @@ audience:
   heading: "Voor wie Chief Story werkt"
   cards:
     - title: "Founders en CEO's"
-      body: "Je bedrijf is groter, complexer of volwassener geworden — maar je merkverhaal loopt achter. Je wil een narratief dat de volgende groeifase kan dragen."
+      body: "Je bedrijf is groter, complexer of volwassener geworden maar je merkverhaal loopt achter. Je wil een narratief dat de volgende groeifase kan dragen."
     - title: "Marketing leaders"
       body: "Je organiseert campagnes, content en salesmateriaal, maar mist een helder narratief fundament. Je wil een systeem waarmee je team sneller, scherper en consistenter communiceert."
     - title: "Kennisbedrijven"
@@ -117,7 +117,7 @@ why:
   label: "Waarom Chief Story"
   heading: "Storytelling is geen trucje. Het is een strategisch systeem."
   body:
-    - "Chief Story levert geen losse copywriting, contentproductie of eenmalige merkworkshops. Het begint altijd bij strategie: wat maakt jou uniek? Voor wie en waarom is dat relevant? Wat vertel je en hoe vertel je het?"
+    - "Chief Story levert geen losse copywriting, contentproductie of eenmalige merkworkshops. Het begint altijd strategisch: wat maakt jou uniek? Voor wie en waarom is dat relevant? Wat vertel je en hoe vertel je het?"
     - "Dat vraagt om taalgevoel én strategisch inzicht. Om creatieve energie én commercieel denken. Om AI-kennis en expertise die verder gaat dan prompts genereren."
   cta: "Over Joost Marsman"
   proof:
