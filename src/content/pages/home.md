@@ -81,11 +81,11 @@ offer:
       featured: false
     - title: "Story System"
       duration: "3 maanden"
-      description: "Je verhaal structureel activeren in marketing, sales, content en AI. Vaste formats, AI-workflows en story sessions voor je team."
+      description: "Je verhaal structureel activeren in content, marketing, sales en AI. Vaste formats, AI-workflows en story sessions voor je team."
       deliverables:
         - "Content- en messagingstructuur"
         - "AI-workflows en promptsets"
-        - "Formats voor posts, artikelen, campaigns"
+        - "Formats voor posts, artikelen, campagnes"
         - "Maandelijkse story sessions"
       price: "Vanaf €18.500"
       featured: true
@@ -97,6 +97,7 @@ offer:
         - "Alles van de Signal Sprint"
         - "Alles van het Story System"
         - "Naadloze overgang tussen beide fases"
+        - "Solide fundament voor structurele groei"
       price: "Vanaf €24.500"
       featured: false
 
