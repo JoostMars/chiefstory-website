@@ -81,11 +81,10 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
         </div>
         <div class="offer-grid">
           {offer.cards.map((card) => (
-            <div class={`offer-card${card.featured ? ' offer-card--featured' : ''}`}>
-              {card.featured && card.badge && <div class="offer-badge">{card.badge}</div>}
+            <div class="offer-card offer-card--featured">
+              <div class="offer-badge">{card.duration}</div>
               <div class="offer-header">
                 <h3>{card.title}</h3>
-                <span class="duration">{card.duration}</span>
               </div>
               <p>{card.description}</p>
               <ul class="deliverables">
