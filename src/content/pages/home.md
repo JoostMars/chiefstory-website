@@ -30,7 +30,7 @@
 hero:
   eyebrow: "Positioning · Brand storytelling · Story systems"
   h1: "Van ruis naar signaal"
-  lead: "Van een vaag of versnipperd verhaal naar een helder narratief en een systeem dat focus richting geeft aan merk, marketing en sales."
+  lead: "Van een vaag of versnipperd verhaal naar een helder narratief en een systeem dat focus en richting geeft aan merk, marketing en sales."
   cta_primary: "Vertel"
   cta_secondary: "Ontdek hoe"
 
