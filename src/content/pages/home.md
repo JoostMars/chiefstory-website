@@ -30,7 +30,7 @@
 hero:
   eyebrow: "Positioning · Brand storytelling · Story systems"
   h1: "Van ruis naar signaal"
-  lead: "Van een vaag of versnipperd verhaal naar een helder narratief en een systeem dat richting geeft aan merk, marketing en sales."
+  lead: "Van een vaag of versnipperd verhaal naar een helder narratief en een systeem dat focus richting geeft aan merk, marketing en sales."
   cta_primary: "Vertel"
   cta_secondary: "Ontdek hoe"
 
@@ -58,11 +58,11 @@ method:
       body: "We bepalen welke positionering je merk kan claimen. Welke spanning je oplost. Welke positie nog vrij is in je markt en de hoofden van je publiek."
     - number: "02"
       title: "Brand Storytelling"
-      tagline: "Craft the story"
+      tagline: "Craft your story"
       body: "We vertalen die positie naar een helder merkverhaal en concrete kernboodschappen. Taal die werkt in pitch, website, sales en marketing."
     - number: "03"
       title: "Narrative Activation"
-      tagline: "Build the system"
+      tagline: "Build your system"
       body: "We beslissen wat we kunnen automatiseren en bouwen het systeem waarmee je team het verhaal consequent gebruikt in content, sales, marketing en AI-workflows."
 
 offer:
@@ -81,7 +81,7 @@ offer:
       featured: false
     - title: "Story System"
       duration: "3 maanden"
-      description: "Je verhaal structureel activeren in content, marketing, sales en AI. Vaste formats, AI-workflows en story sessions voor je team."
+      description: "Je verhaal structureel activeren in content, marketing, sales en AI. Vaste formats, AI-workflows en creatieve story sessions voor je team."
       deliverables:
         - "Content- en messagingstructuur"
         - "AI-workflows en promptsets"
@@ -106,9 +106,9 @@ audience:
   heading: "Voor wie Chief Story werkt"
   cards:
     - title: "Founders en CEO's"
-      body: "Je bedrijf is groter, complexer of volwassener geworden — maar je verhaal loopt achter. Je wil een narratief dat de volgende groeifase kan dragen."
+      body: "Je bedrijf is groter, complexer of volwassener geworden — maar je merkverhaal loopt achter. Je wil een narratief dat de volgende groeifase kan dragen."
     - title: "Marketing leaders"
-      body: "Je organiseert campagnes, content en salesmateriaal, maar mist een helder narratief fundament. Je wil een systeem waarmee je team sneller en consistenter communiceert."
+      body: "Je organiseert campagnes, content en salesmateriaal, maar mist een helder narratief fundament. Je wil een systeem waarmee je team sneller, scherper en consistenter communiceert."
     - title: "Kennisbedrijven"
       body: "Je hebt veel expertise, maar vindt het lastig om die onderscheidend te verwoorden. Je wil autoriteit uitstralen zonder marketing-blabla of ingewikkeld jargon."
 
@@ -120,15 +120,15 @@ why:
     - "Dat vraagt om taalgevoel én strategisch inzicht. Om creatieve energie én commercieel denken. Om AI-kennis en expertise die verder gaat dan prompts genereren."
   cta: "Over Joost Marsman"
   proof:
-    - title: "Narrative positioning"
-      body: "Ervaring met positionering, merkverhalen en contentstrategie voor zakelijke dienstverleners, kennisorganisaties en scale-ups."
-    - title: "Creatieve geloofwaardigheid"
-      body: "Jarenlange ervaring als schrijver, copywriter en songwriter. Taal met ritme, spanning en betekenis. Teksten die iets losmaken."
-    - title: "AI-praktijkkennis"
-      body: "Ervaring met AI-workflows en custom GPT's voor contentcreatie, redactie, tone-of-voice checks en strategische messaging."
+    - title: "Strategie & executie"
+      body: "15+ jaar ervaring met positionering, merkverhalen en contentstrategie voor zakelijke dienstverleners, kennisorganisaties en scale-ups."
+    - title: "Copy & creatie"
+      body: "25+ jaar ervaring als schrijver, copywriter en songwriter. Taal met ritme, spanning en betekenis. Teksten die iets losmaken."
+    - title: "AI & vibecoding"
+      body: "Hands-on ervaring met AI-workflows en custom GPT's voor contentcreatie, (eind)redactie, tone-of-voice en strategische messaging."
 
 cta:
   heading: "Waar zit de ruis in jouw verhaal?"
-  body: "Plan een korte Signal Call. Dan kijken we waar je nu staat, waar het schuurt en welke route voor jou logisch is."
-  button: "Plan een Call"
+  body: "Plan een korte Signal Call. Dan ontdekken we waar je nu staat, waar het schuurt en welke route voor jou logisch is."
+  button: "Plan nu een Call"
 ---
