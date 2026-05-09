@@ -45,7 +45,7 @@ problem:
     - "Iedereen begrijpt ons pas na een uur praten."
     - "Sales, marketing en directie vertellen niet hetzelfde verhaal."
     - "We produceren veel content, maar het voelt versnipperd."
-    - "Onze mensen weten niet waar ons bedrijf voor staat en waarom."
+    - "Onze mensen weten niet waar ons bedrijf voor staat en waarom we doen wat we doen."
 
 method:
   label: "De methode"
@@ -110,25 +110,25 @@ audience:
     - title: "Marketing leaders"
       body: "Je organiseert campagnes, content en salesmateriaal, maar mist een helder narratief fundament. Je wil een systeem waarmee je team sneller en consistenter communiceert."
     - title: "Kennisbedrijven"
-      body: "Je hebt veel expertise, maar vindt het lastig om die onderscheidend te verwoorden. Je wil autoriteit uitstralen zonder marketingpraat."
+      body: "Je hebt veel expertise, maar vindt het lastig om die onderscheidend te verwoorden. Je wil autoriteit uitstralen zonder marketing-blabla of ingewikkeld jargon."
 
 why:
   label: "Waarom Chief Story"
-  heading: "Storytelling is geen sausje. Het is een strategisch systeem."
+  heading: "Storytelling is geen trucje. Het is een strategisch systeem."
   body:
-    - "Chief Story zit niet in de hoek van losse copywriting, contentproductie of merkworkshops. Het werk begint bij strategie: welk verhaal kun je claimen? Waarom is dat relevant? Hoe gebruik je het consequent?"
-    - "Dat vraagt om taalgevoel én strategisch inzicht. Om creatieve ervaring én commercieel begrip. Om AI-kennis die verder gaat dan prompts genereren."
+    - "Chief Story levert geen losse copywriting, contentproductie of eenmalige merkworkshops. Het begint altijd bij strategie: wat maakt jou uniek? Voor wie en waarom is dat relevant? Wat vertel je en hoe vertel je het?"
+    - "Dat vraagt om taalgevoel én strategisch inzicht. Om creatieve energie én commercieel denken. Om AI-kennis en expertise die verder gaat dan prompts genereren."
   cta: "Over Joost Marsman"
   proof:
     - title: "Narrative positioning"
       body: "Ervaring met positionering, merkverhalen en contentstrategie voor zakelijke dienstverleners, kennisorganisaties en scale-ups."
     - title: "Creatieve geloofwaardigheid"
-      body: "Jarenlange ervaring als schrijver, copywriter en songwriter. Taal met ritme, spanning en betekenis — niet alleen correctheid."
+      body: "Jarenlange ervaring als schrijver, copywriter en songwriter. Taal met ritme, spanning en betekenis. Teksten die iets losmaken."
     - title: "AI-praktijkkennis"
       body: "Ervaring met AI-workflows en custom GPT's voor contentcreatie, redactie, tone-of-voice checks en strategische messaging."
 
 cta:
   heading: "Waar zit de ruis in jouw verhaal?"
-  body: "Plan een korte Signal Call. Dan kijken we waar je nu staat, waar het schuurt en welke route logisch is."
-  button: "Plan een Signal Call"
+  body: "Plan een korte Signal Call. Dan kijken we waar je nu staat, waar het schuurt en welke route voor jou logisch is."
+  button: "Plan een Call"
 ---
