@@ -6,7 +6,7 @@ meta:
 hero:
   label: "De methode"
   h1: "Find your story.\nTell it well."
-  lead: "Dat is de essentie van Chief Story: je verhaal vinden, vangen (in woord en beeld) en je helpen het goed te vertellen. Zodat jouw publiek je weet te vinden. En fan worden."
+  lead: "Dat is de essentie van Chief Story: je verhaal vinden, vangen (in woord en beeld) en je helpen het goed te vertellen. Zodat jouw publiek je weet te vinden. En fan wordt."
 
 intro:
   heading: "Waarom losse interventies niet werken"
