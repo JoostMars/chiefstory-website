@@ -68,6 +68,7 @@ method:
 offer:
   label: "Het aanbod"
   heading: "Kies je route"
+  cta: "Bekijk het volledige aanbod"
   cards:
     - title: "Signal Sprint"
       duration: "1 maand"
