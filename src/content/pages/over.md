@@ -5,7 +5,7 @@ meta:
 
 hero:
   label: "Over Chief Story"
-  h1: "'Schrijven is simpel. maar simpel schrijven is niet makkelijk.'"
+  h1: "'Schrijven is simpel. Maar simpel schrijven is niet makkelijk.'"
   lead: "Chief Story is het werk van Joost Marsman. Copywriter en strateeg met een obesessie voor merken, muziek en de kracht van verhalen."
 
 story:
