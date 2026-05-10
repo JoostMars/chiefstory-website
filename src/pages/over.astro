@@ -18,7 +18,7 @@ const { meta, hero, story, perspective, manifesto, cta } = page.data;
         <div class="hero-grid">
           <div class="hero-text">
             <span class="label">{hero.label}</span>
-            <h1>{hero.h1}</h1>
+            <h1 set:html={hero.h1.replace('\n', '<br />')} />
             <p class="lead">{hero.lead}</p>
           </div>
           <div class="hero-image">
