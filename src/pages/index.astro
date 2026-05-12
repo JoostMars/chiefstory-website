@@ -91,8 +91,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
                 {card.deliverables.map((d) => <li>{d}</li>)}
               </ul>
               <div class="offer-footer">
-                <span class="price">{card.price}</span>
-                <a href="/contact" class="btn-primary">{hero.cta_primary}</a>
+                <a href={`/aanbod#${card.title.toLowerCase().replace(/ /g, '-')}`} class="btn-outline">Lees meer</a>
               </div>
             </div>
           ))}
@@ -482,16 +481,8 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
 
   .offer-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .price {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1rem;
   }
 
   /* Voor wie */
