@@ -47,12 +47,6 @@ const { meta, hero, intro, steps, ai, note, cta } = page.data;
             <div class="step-content">
               <h2>{step.heading}</h2>
               {step.body.map((p: string) => <p>{p}</p>)}
-              <div class="step-output">
-                <h4>Output</h4>
-                <ul>
-                  {step.output.map((item: string) => <li>{item}</li>)}
-                </ul>
-              </div>
             </div>
           </div>
         ))}
@@ -233,43 +227,6 @@ const { meta, hero, intro, steps, ai, note, cta } = page.data;
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1rem;
-  }
-
-  .step-output {
-    margin-top: 1.5rem;
-    background: var(--surface);
-    border-radius: 10px;
-    padding: 1.5rem;
-  }
-
-  .step-output h4 {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    margin-bottom: 0.75rem;
-  }
-
-  .step-output ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .step-output li {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .step-output li::before {
-    content: '\2192';
-    color: var(--accent);
-    font-size: 0.8rem;
   }
 
   /* AI */
