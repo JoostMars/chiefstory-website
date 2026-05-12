@@ -12,16 +12,16 @@ intro:
   heading: "Waarom losse interventies niet werken"
   body:
     - "Een betere tone of voice helpt niet als je positionering onduidelijk is. Een nieuwe website zonder helder verhaal is weggegooid geld.  AI maakt contentproductie makkelijker en sneller, maar niet vanzelf beter."
-    - "Het fundament moet kloppen. Dat geeft alles daarna richting, kracht en consistentie."
-  quote: "Meer content leidt niet tot snellere groei. Een scherper verhaal wel."
+    - "Het fundament moet kloppen. Dat geeft alles daarna richting, kracht en consistentie. Chief story helpt je in drie stappen van ruis naar signaal."
+  quote: "Meer content leidt niet tot snellere groei. Een beter verhaal wel."
 
 steps:
   - number: "Stap 01"
     phase: "Narrative Positioning"
     tagline: "Claim your narrative"
-    heading: "Welk groter verhaal kun jij claimen?"
+    heading: "Welk probleem los op en voor wie?"
     body:
-      - "Positionering gaat niet over wat je doet, maar over welke spanning je oplost. Welk probleem je aanpakt dat anderen nog niet scherp hebben geformuleerd. Welke markt- en breinpositie jij geloofwaardig kunt claimen bij je publiek."
+      - "Positionering gaat niet over wat je doet, maar over welke spanning je oplost. Welk probleem je aanpakt en hoe je dat anders doet dan de rest. Welke markt- en breinpositie jij geloofwaardig kunt claimen."
       - "We brengen jouw markt en doelgroepen in kaart, analyseren we hoe jij en je concurrenten communiceren, en bepalen we welk narratief en welke tone of voice nodig zijn om je positie te verankeren."
     output:
       - "Markt- en doelgroepanalyse"
