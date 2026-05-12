@@ -13,7 +13,6 @@ signal_sprint:
   heading: "Signal Sprint"
   duration: "1 maand · Narrative Positioning + Brand Storytelling"
   lead: "Voor organisaties die voelen dat hun verhaal niet meer klopt, te versnipperd is of niet meer past bij hun volgende groeifase. In de Signal Sprint brengen we je positionering, merkverhaal en kernboodschappen samen tot één helder signaal."
-  body: "Een solide fundament waarmee directie, marketing en sales dezelfde kant op bewegen."
   for_who: "Founders, CEO's en organisaties die hun verhaal snel scherp willen krijgen, zonder een maandenlang traject."
   price: "Vanaf €7.500 excl. btw"
   deliverables_intro: "Na één maand heb je het Signal Document — compact, direct bruikbaar:"
