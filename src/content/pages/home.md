@@ -78,7 +78,7 @@ offer:
         - "Brand story"
         - "Messaging pillars"
         - "Kernzinnen voor merk, pitch en website"
-      price: "Vanaf €8.500"
+      price: "Vanaf €7.500"
       featured: false
     - title: "Story System"
       duration: "3 maanden"
@@ -88,7 +88,7 @@ offer:
         - "AI-workflows en promptsets"
         - "Formats voor posts, artikelen, campagnes"
         - "Maandelijkse story sessions"
-      price: "Vanaf €18.500"
+      price: "Vanaf €17.500"
       featured: true
       badge: "Meest gekozen"
     - title: "Full Track"
