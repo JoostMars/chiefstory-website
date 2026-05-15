@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-**Chief Story** — een statische website gebouwd met Astro. Geen database, geen CMS, geen server nodig. Alles wordt gebouwd naar statische HTML en gedeployed via Netlify.
+**Chief Story** — een statische website gebouwd met Astro. Geen database, geen CMS, geen server nodig. Alles wordt gebouwd naar statische HTML en gedeployed via Cloudflare Pages.
 
 ## Stack
 
 - **Astro** — statische site generator
 - **TypeScript** — strict mode
 - **GitHub** — versiebeheer
-- **Netlify** — automatische deployment bij elke push naar `main`
+- **Cloudflare Pages** — automatische deployment bij elke push naar `main`
 
 ## Lokaal draaien
 
@@ -43,4 +43,4 @@ Stories en blogposts zijn Markdown-bestanden in `src/content/`. Claude Code schr
 
 ## Deployment
 
-Push naar `main` → Netlify pikt het automatisch op → site is live binnen ~30 seconden.
+Push naar `main` → Cloudflare Pages pikt het automatisch op → site is live binnen ~30 seconden. Commit en push altijd direct naar `main`, geen feature branches.
