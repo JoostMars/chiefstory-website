@@ -42,8 +42,19 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
             {problem.body.map((p) => <p>{p}</p>)}
             <p class="signal-line">{problem.signal_line}<br /><strong>{problem.signal_emphasis}</strong></p>
           </div>
-          <div class="problem-quotes">
-            {problem.quotes.map((q) => <blockquote>"{q}"</blockquote>)}
+          <div class="quote-slider" id="quoteSlider">
+            <div class="quote-track">
+              {problem.quotes.map((q, i) => (
+                <blockquote class={`quote-slide${i === 0 ? ' is-active' : ''}`} data-index={i}>
+                  <span class="quote-mark">"</span>{q}<span class="quote-mark">"</span>
+                </blockquote>
+              ))}
+            </div>
+            <div class="quote-dots">
+              {problem.quotes.map((_, i) => (
+                <button class={`quote-dot${i === 0 ? ' is-active' : ''}`} data-index={i} aria-label={`Quote ${i + 1}`} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -311,14 +322,70 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     gap: 1rem;
   }
 
-  blockquote {
-    background: var(--color-2);
-    border-radius: 8px;
-    padding: 1.1rem 1.25rem;
-    font-size: 0.95rem;
+  .quote-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+  }
+
+  .quote-track {
+    position: relative;
+    flex: 1;
+  }
+
+  .quote-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    font-family: 'Fraunces', serif;
     font-style: italic;
-    color: var(--text-secondary);
-    border-left: 2px solid var(--accent);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+    font-variation-settings: 'opsz' 72;
+  }
+
+  .quote-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+  }
+
+  .quote-mark {
+    font-size: 1.5em;
+    line-height: 0;
+    vertical-align: -0.25em;
+    color: var(--accent);
+    font-style: normal;
+    margin: 0 0.1em;
+  }
+
+  .quote-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .quote-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .quote-dot.is-active {
+    background: var(--accent);
+    transform: scale(1.4);
   }
 
   /* Methode */
@@ -626,3 +693,36 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     }
   }
 </style>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.quote-slide');
+  const dots = document.querySelectorAll<HTMLButtonElement>('.quote-dot');
+  let current = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function goTo(index: number) {
+    slides[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    current = index;
+    slides[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function startTimer() {
+    timer = setInterval(next, 4000);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(i);
+      startTimer();
+    });
+  });
+
+  startTimer();
+</script>
