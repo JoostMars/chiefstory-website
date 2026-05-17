@@ -43,12 +43,15 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
             <p class="signal-line">{problem.signal_line}<br /><strong>{problem.signal_emphasis}</strong></p>
           </div>
           <div class="quote-slider" id="quoteSlider">
-            <div class="quote-track">
-              {problem.quotes.map((q, i) => (
-                <blockquote class={`quote-slide${i === 0 ? ' is-active' : ''}`} data-index={i}>
-                  <span class="quote-mark">"</span>{q}<span class="quote-mark">"</span>
-                </blockquote>
-              ))}
+            <div class="quote-viewport">
+              <div class="quote-track">
+                {problem.quotes.map((q, i) => (
+                  <blockquote class="quote-slide" data-index={i}>
+                    <span class="quote-open">"</span>
+                    <span class="quote-text">{q}</span>
+                  </blockquote>
+                ))}
+              </div>
             </div>
             <div class="quote-dots">
               {problem.quotes.map((_, i) => (
@@ -325,51 +328,50 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .quote-slider {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 220px;
+    gap: 1.5rem;
+  }
+
+  .quote-viewport {
+    overflow: hidden;
   }
 
   .quote-track {
-    position: relative;
-    flex: 1;
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .quote-slide {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    pointer-events: none;
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .quote-open {
+    display: block;
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 0.75;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-variation-settings: 'opsz' 144;
+  }
+
+  .quote-text {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.45;
     color: var(--text);
     font-variation-settings: 'opsz' 72;
   }
 
-  .quote-slide.is-active {
-    opacity: 1;
-    pointer-events: auto;
-    position: relative;
-  }
-
-  .quote-mark {
-    font-size: 1.5em;
-    line-height: 0;
-    vertical-align: -0.25em;
-    color: var(--accent);
-    font-style: normal;
-    margin: 0 0.1em;
-  }
-
   .quote-dots {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
-    margin-top: 1.5rem;
   }
 
   .quote-dot {
@@ -695,25 +697,20 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
 </style>
 
 <script>
-  const slides = document.querySelectorAll<HTMLElement>('.quote-slide');
+  const track = document.querySelector<HTMLElement>('.quote-track');
   const dots = document.querySelectorAll<HTMLButtonElement>('.quote-dot');
+  const total = dots.length;
   let current = 0;
   let timer: ReturnType<typeof setInterval>;
 
   function goTo(index: number) {
-    slides[current].classList.remove('is-active');
-    dots[current].classList.remove('is-active');
     current = index;
-    slides[current].classList.add('is-active');
-    dots[current].classList.add('is-active');
-  }
-
-  function next() {
-    goTo((current + 1) % slides.length);
+    track!.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
   }
 
   function startTimer() {
-    timer = setInterval(next, 4000);
+    timer = setInterval(() => goTo((current + 1) % total), 4000);
   }
 
   dots.forEach((dot, i) => {
