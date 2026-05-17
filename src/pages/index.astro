@@ -72,6 +72,28 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
       </div>
     </section>
 
+    <!-- Waarom Chief Story -->
+    <section class="section-why">
+      <div class="container">
+        <div class="why-inner">
+          <div class="why-text">
+            <span class="label">{why.label}</span>
+            <h2>{why.heading}</h2>
+            {why.body.map((p) => <p>{p}</p>)}
+            <a href="/over" class="btn-outline">{why.cta}</a>
+          </div>
+          <div class="why-proof">
+            {why.proof.map((item) => (
+              <div class="proof-item">
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Aanbod -->
     <section class="section-offer">
       <div class="container">
@@ -98,46 +120,6 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
         </div>
         <div class="method-cta">
           <a href="/aanbod" class="btn-outline">{offer.cta}</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Voor wie -->
-    <section class="section-audience">
-      <div class="container">
-        <div class="section-header">
-          <span class="label">{audience.label}</span>
-          <h2>{audience.heading}</h2>
-        </div>
-        <div class="audience-grid">
-          {audience.cards.map((card) => (
-            <div class="audience-card">
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Waarom Chief Story -->
-    <section class="section-why">
-      <div class="container">
-        <div class="why-inner">
-          <div class="why-text">
-            <span class="label">{why.label}</span>
-            <h2>{why.heading}</h2>
-            {why.body.map((p) => <p>{p}</p>)}
-            <a href="/over" class="btn-outline">{why.cta}</a>
-          </div>
-          <div class="why-proof">
-            {why.proof.map((item) => (
-              <div class="proof-item">
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
@@ -397,7 +379,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .section-offer {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
-    background: var(--color-1);
+    background: var(--color-3);
   }
 
   .offer-grid {
@@ -517,6 +499,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .section-why {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
+    background: var(--color-1);
   }
 
   .why-inner {

@@ -68,7 +68,7 @@ note:
   heading: "Waarom stap 1 en 2 niet los afgenomen kunnen worden"
   body:
     - "Narrative Positioning en Brand Storytelling zijn in principe niet los van elkaar te kopen — ze zijn twee helften van hetzelfde fundament. Een merkverhaal zonder scherpe positionering is hol. Een positionering zonder verhaal is een strategie die niemand begrijpt."
-    - "De Signal Sprint combineert beide fases in één maand. Daarna is activatie (stap 3) als Story System beschikbaar."
+    - "De Story Sprint combineert beide fases in één maand. Daarna is activatie (stap 3) als Story System beschikbaar."
   cta: "Bekijk het aanbod"
 
 cta:

@@ -1,7 +1,7 @@
 ---
 meta:
   title: "Aanbod"
-  description: "Signal Sprint, Story System of Full Track — Drie routes van ruis naar signaal. Bekijk het aanbod en kies je route."
+  description: "Story Sprint, Story System of The Full Story — Drie routes van ruis naar signaal. Bekijk het aanbod en kies je route."
 
 hero:
   label: "Het aanbod"
@@ -10,9 +10,9 @@ hero:
 
 signal_sprint:
   label: "Het fundament"
-  heading: "Signal Sprint"
+  heading: "Story Sprint"
   duration: "1 maand · Narrative Positioning + Brand Storytelling"
-  lead: "Voor organisaties die voelen dat hun verhaal niet meer klopt, te versnipperd is of niet meer past bij hun volgende groeifase. In de Signal Sprint brengen we je positionering, merkverhaal en kernboodschappen samen tot één helder signaal."
+  lead: "Voor organisaties die voelen dat hun verhaal niet meer klopt, te versnipperd is of niet meer past bij hun volgende groeifase. In de Story Sprint brengen we je positionering, merkverhaal en kernboodschappen samen tot één helder signaal."
   for_who: "Founders, CEO's en organisaties die hun verhaal snel scherp willen krijgen, zonder een maandenlang traject."
   price: "Vanaf €7.500 excl. btw"
   deliverables_intro: "Na één maand heb je het Signal Document — compact, direct bruikbaar:"
@@ -40,7 +40,7 @@ story_system:
   duration: "3 maanden · Narrative Activation"
   lead: "Voor marketingteams, founders en commerciële teams die het verhaal niet alleen willen hebben, maar ook structureel willen gebruiken. In het Story System vertalen we je verhaal naar een werkende communicatie- en contentstructuur."
   body: "Met vaste formats, overlegmomenten, feedbackloops en AI-workflows waarmee je team sneller, consistenter en scherper communiceert."
-  for_who: "Organisaties die al een helder verhaal hebben (of de Signal Sprint hebben gedaan) en dat verhaal nu structureel willen activeren."
+  for_who: "Organisaties die al een helder verhaal hebben (of de Story Sprint hebben gedaan) en dat verhaal nu structureel willen activeren."
   price: "Vanaf €17.500 excl. btw"
   deliverables_intro: "Na drie maanden heb je een werkende infrastructuur voor je communicatie:"
   deliverables:
@@ -63,11 +63,11 @@ story_system:
 
 full_track:
   label: "De volledige route"
-  heading: "Full Track"
-  duration: "4 maanden · Signal Sprint + Story System"
+  heading: "The Full Story"
+  duration: "4 maanden · Story Sprint + Story System"
   body:
     - "Voor organisaties die niet alleen hun verhaal willen aanscherpen, maar ook willen activeren. Eerst vinden we het signaal. Daarna bouwen we het systeem waarmee je team dat signaal blijft uitzenden."
-    - "De naadloze overgang tussen Signal Sprint en Story System zorgt ervoor dat de activatie direct voortbouwt op het fundament."
+    - "De naadloze overgang tussen Story Sprint en Story System zorgt ervoor dat de activatie direct voortbouwt op het fundament."
   price: "Vanaf €24.500 excl. btw"
   sprint_includes:
     - "Market narrative"
@@ -91,8 +91,8 @@ faq:
   heading: "Wat mensen willen weten"
   items:
     - question: "Kan ik alleen de Brand Storytelling doen, zonder de Narrative Positioning?"
-      answer: "In principe niet. Narrative Positioning en Brand Storytelling zijn twee helften van hetzelfde fundament. Een merkverhaal zonder scherpe positionering leidt to ruis. Met een goede positionering zonder sterk merkverhaal zul je nooit opvallen. Vandaar dat de Signal Sprint beide combineert. Als je al een heldere positionering hebt, kunnen we maatwerk bespreken."
-    - question: "Moet ik de Signal Sprint hebben gedaan om het Story System af te nemen?"
+      answer: "In principe niet. Narrative Positioning en Brand Storytelling zijn twee helften van hetzelfde fundament. Een merkverhaal zonder scherpe positionering leidt to ruis. Met een goede positionering zonder sterk merkverhaal zul je nooit opvallen. Vandaar dat de Story Sprint beide combineert. Als je al een heldere positionering hebt, kunnen we maatwerk bespreken."
+    - question: "Moet ik de Story Sprint hebben gedaan om het Story System af te nemen?"
       answer: "Nee, maar je hebt wel een helder narratief fundament nodig. Als je al een scherpe positionering en brand story hebt, kunnen we direct met activatie beginnen. Dat beoordelen we samen tijdens de call."
     - question: "Hoe intensief is de samenwerking?"
       answer: "Intensief aan het begin, daarna meer op afstand. De eerste weken vragen om input, interviews en een gezamenlijke workshop. Daarna lever ik — met gerichte feedbackmomenten. Voor het Story System zijn er maandelijkse story sessions van circa twee uur. Daarin werken we ook aan de AI workflows."
