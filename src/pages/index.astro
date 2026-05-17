@@ -297,7 +297,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    align-items: start;
+    align-items: stretch;
   }
 
   .problem-text h2 {
@@ -329,10 +329,12 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    height: 100%;
   }
 
   .quote-viewport {
     overflow: hidden;
+    flex: 1;
   }
 
   .quote-track {
