@@ -93,7 +93,7 @@ faq:
     - question: "Kan ik alleen de Brand Storytelling doen, zonder de Narrative Positioning?"
       answer: "In principe niet. Narrative Positioning en Brand Storytelling zijn twee helften van hetzelfde fundament. Een merkverhaal zonder scherpe positionering leidt to ruis. Met een goede positionering zonder sterk merkverhaal zul je nooit opvallen. Vandaar dat de Signal Sprint beide combineert. Als je al een heldere positionering hebt, kunnen we maatwerk bespreken."
     - question: "Moet ik de Signal Sprint hebben gedaan om het Story System af te nemen?"
-      answer: "Nee, maar je hebt wel een helder narratief fundament nodig. Als je al een scherpe positionering en brand story hebt, kunnen we direct met activatie beginnen. Dat beoordelen we samen tijdens de Signal Call."
+      answer: "Nee, maar je hebt wel een helder narratief fundament nodig. Als je al een scherpe positionering en brand story hebt, kunnen we direct met activatie beginnen. Dat beoordelen we samen tijdens de call."
     - question: "Hoe intensief is de samenwerking?"
       answer: "Intensief aan het begin, daarna meer op afstand. De eerste weken vragen om input, interviews en een gezamenlijke workshop. Daarna lever ik — met gerichte feedbackmomenten. Voor het Story System zijn er maandelijkse story sessions van circa twee uur. Daarin werken we ook aan de AI workflows."
     - question: "Zijn de prijzen onderhandelbaar?"
@@ -103,6 +103,6 @@ faq:
 
 cta:
   heading: "Waar zit de ruis in jouw verhaal?"
-  body: "Plan een Signal Call. Dan kijken we waar je nu staat en welke route logisch is."
+  body: "Plan een call. Dan kijken we waar je nu staat en welke route logisch is."
   button: "Let's talk story"
 ---

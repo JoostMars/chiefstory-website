@@ -46,6 +46,6 @@ manifesto:
 
 cta:
   heading: "Kennismaken?"
-  body: "Plan een Signal Call. Geen verkooppraatje — een echt gesprek over waar jouw verhaal nu staat en wat logisch is als volgende stap."
-  button: "Plan een Signal Call"
+  body: "Plan een call. Geen verkooppraatje — een echt gesprek over waar jouw verhaal nu staat en wat logisch is als volgende stap."
+  button: "Plan een call"
 ---

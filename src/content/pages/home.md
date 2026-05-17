@@ -130,6 +130,6 @@ why:
 
 cta:
   heading: "Waar zit de ruis in jouw verhaal?"
-  body: "Plan een korte Signal Call. Dan ontdekken we waar je nu staat, waar het schuurt en welke route voor jou logisch is."
+  body: "Plan een korte call. Dan ontdekken we waar je nu staat, waar het schuurt en welke route voor jou logisch is."
   button: "Plan nu een Call"
 ---

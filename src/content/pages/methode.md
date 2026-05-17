@@ -73,6 +73,6 @@ note:
 
 cta:
   heading: "Klaar om van ruis naar signaal te gaan?"
-  body: "Plan een Signal Call. Dan kijken we waar je nu staat en welke stap logisch is."
-  button: "Plan een Signal Call"
+  body: "Plan een call. Dan kijken we waar je nu staat en welke stap logisch is."
+  button: "Plan een call"
 ---
