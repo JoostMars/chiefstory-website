@@ -222,8 +222,8 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    background: var(--text);
-    color: var(--bg);
+    background: var(--accent);
+    color: #fff;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.95rem;
@@ -294,6 +294,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .section-problem {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
+    background: var(--color-1);
   }
 
   .problem-grid {
@@ -329,19 +330,20 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   }
 
   blockquote {
-    background: var(--surface);
+    background: var(--color-2);
     border-radius: 8px;
     padding: 1.1rem 1.25rem;
     font-size: 0.95rem;
     font-style: italic;
     color: var(--text-secondary);
-    border-left: 2px solid var(--border);
+    border-left: 2px solid var(--accent);
   }
 
   /* Methode */
   .section-method {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
+    background: var(--color-3);
   }
 
   .steps {
@@ -353,7 +355,8 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
 
   .step {
     padding: 2rem;
-    background: var(--surface);
+    background: var(--color-2);
+    border: 1.5px solid var(--border);
     border-radius: 12px;
   }
 
@@ -394,6 +397,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .section-offer {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
+    background: var(--color-1);
   }
 
   .offer-grid {
@@ -409,12 +413,12 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     display: flex;
     flex-direction: column;
     position: relative;
-    background: var(--surface);
+    background: var(--color-2);
   }
 
   .offer-card--featured {
     border-color: var(--text);
-    background: var(--surface);
+    background: var(--color-2);
   }
 
   .offer-badge {
@@ -489,6 +493,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   .section-audience {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
+    background: var(--color-3);
   }
 
   .audience-grid {
