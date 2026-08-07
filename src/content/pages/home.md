@@ -118,7 +118,7 @@ why:
   heading: "Storytelling is geen franje. Het is de kern."
   body:
     - "Ik maak al dertig jaar verhalen. Als copywriter, merkstrateeg, songwriter en ondernemer. Voor scale-ups die willen groeien. Voor gevestigde merken die hun verhaal kwijt zijn. En voor artiesten die de woorden niet vinden."
-    - "Dit is wat ik heb geleerd: er is geen krachtiger middel om je boodschap over te brengen dan een verhaal. Niks, nada, noppes. En dit: een bedrijf zonder verhaal is zielloos en stuurloos. En een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal in de ruis te worden, maar ook dat signaal te versterken. Zodat iedereen het hoort, snapt en voelt."
+    - "Dit is wat ik heb geleerd: er is geen krachtiger middel om je boodschap over te brengen dan een verhaal. En dit: een bedrijf zonder verhaal is zielloos en zielloos. En een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal in de ruis te vinden, maar ook dat signaal te versterken. Zodat iedereen het hoort, snapt en voelt."
   cta: "Mijn verhaal"
   proof:
     - title: "Strategie & executie"
