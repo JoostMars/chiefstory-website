@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { getEntry } from 'astro:content';
 
 const page = await getEntry('pages', 'home');
-const { hero, problem, method, offer, audience, why, cta } = page.data;
+const { hero, problem, method, offer, why, contact } = page.data;
 ---
 
 <BaseLayout title="Van ruis naar signaal">
@@ -22,8 +22,8 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
             <h1 set:html={hero.h1.replace('\n', '<br />')} />
             <p class="lead">{hero.lead}</p>
             <div class="hero-cta">
-              <a href="/contact" class="btn-primary">{hero.cta_primary}</a>
-              <a href="/methode" class="btn-ghost">{hero.cta_secondary}</a>
+              <a href="#contact" class="btn-primary">{hero.cta_primary}</a>
+              <a href="#aanbod" class="btn-ghost">{hero.cta_secondary}</a>
             </div>
           </div>
           <div class="hero-image">
@@ -69,6 +69,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
         <div class="section-header">
           <span class="label">{method.label}</span>
           <h2>{method.heading}</h2>
+          <p class="section-intro">{method.intro}</p>
         </div>
         <div class="steps">
           {method.steps.map((step) => (
@@ -79,9 +80,6 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
               <p>{step.body}</p>
             </div>
           ))}
-        </div>
-        <div class="method-cta">
-          <a href="/methode" class="btn-outline">{method.cta}</a>
         </div>
       </div>
     </section>
@@ -94,22 +92,13 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
             <span class="label">{why.label}</span>
             <h2>{why.heading}</h2>
             {why.body.map((p) => <p>{p}</p>)}
-            <a href="/over" class="btn-outline">{why.cta}</a>
-          </div>
-          <div class="why-proof">
-            {why.proof.map((item) => (
-              <div class="proof-item">
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
     </section>
 
     <!-- Aanbod -->
-    <section class="section-offer">
+    <section class="section-offer" id="aanbod">
       <div class="container">
         <div class="section-header">
           <span class="label">{offer.label}</span>
@@ -117,34 +106,66 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
         </div>
         <div class="offer-grid">
           {offer.cards.map((card) => (
-            <div class="offer-card offer-card--featured">
+            <div class="offer-card">
               <div class="offer-badge">{card.duration}</div>
               <div class="offer-header">
                 <h3>{card.title}</h3>
               </div>
               <p>{card.description}</p>
               <ul class="deliverables">
-                {card.deliverables.map((d) => <li>{d}</li>)}
+                {card.deliverables.map((d: string) => <li>{d}</li>)}
               </ul>
               <div class="offer-footer">
-                <a href={`/aanbod#${card.title.toLowerCase().replace(/ /g, '-')}`} class="btn-outline">Lees meer</a>
+                <span class="price">{card.price}</span>
               </div>
             </div>
           ))}
         </div>
-        <div class="method-cta">
-          <a href="/aanbod" class="btn-outline">{offer.cta}</a>
-        </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section-cta">
+    <!-- Contact -->
+    <section class="section-contact" id="contact">
       <div class="container">
-        <div class="cta-inner">
-          <h2>{cta.heading}</h2>
-          <p>{cta.body}</p>
-          <a href="/contact" class="btn-primary btn-large">{cta.button}</a>
+        <div class="contact-grid">
+          <div class="contact-text">
+            <span class="label">{contact.label}</span>
+            <h2>{contact.heading}</h2>
+            <p class="lead">{contact.lead}</p>
+            <a href={`mailto:${contact.email}`} class="contact-link">{contact.email}</a>
+          </div>
+          <div class="form-wrapper">
+            <form id="signal-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="b2eb9a05-3e76-42f7-89a8-251af95ae3f8" />
+              <input type="hidden" name="subject" value="Nieuwe call aanvraag" />
+              <input type="hidden" name="from_name" value="Chief Story Website" />
+              <input type="checkbox" name="botcheck" style="display:none" />
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="naam">Naam</label>
+                  <input type="text" id="naam" name="naam" required placeholder="Joost Marsman" />
+                </div>
+                <div class="field">
+                  <label for="organisatie">Organisatie</label>
+                  <input type="text" id="organisatie" name="organisatie" required placeholder="Chief Story" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required placeholder="joost@example.com" />
+              </div>
+
+              <div class="field">
+                <label for="ruis">Wat voelt nu als ruis?</label>
+                <textarea id="ruis" name="ruis" rows="4" placeholder="Beschrijf in een paar zinnen waar het schuurt." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Verstuur aanvraag</button>
+              <div id="form-result" class="form-result" aria-live="polite"></div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -270,6 +291,14 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   /* Section basics */
   .section-header {
     margin-bottom: 3rem;
+  }
+
+  .section-intro {
+    max-width: 620px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
   }
 
   .label {
@@ -439,11 +468,6 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     line-height: 1.65;
   }
 
-  .method-cta {
-    display: flex;
-    margin-top: 3rem;
-  }
-
   /* Aanbod */
   .section-offer {
     padding: 6rem 0;
@@ -464,11 +488,6 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     display: flex;
     flex-direction: column;
     position: relative;
-    background: var(--color-2);
-  }
-
-  .offer-card--featured {
-    border-color: var(--text);
     background: var(--color-2);
   }
 
@@ -496,12 +515,6 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
 
   .offer-header h3 {
     font-size: 1.25rem;
-  }
-
-  .duration {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    font-weight: 500;
   }
 
   .offer-card > p {
@@ -540,28 +553,10 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     align-items: center;
   }
 
-  /* Voor wie */
-  .section-audience {
-    padding: 6rem 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--color-3);
-  }
-
-  .audience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .audience-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .audience-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.65;
+  .price {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
   }
 
   /* Waarom */
@@ -572,10 +567,7 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   }
 
   .why-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
+    max-width: 720px;
   }
 
   .why-text .label {
@@ -598,68 +590,142 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     margin-top: 0.5rem;
   }
 
-  .why-proof {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .proof-item {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .proof-item:first-child {
-    border-top: 1px solid var(--border);
-  }
-
-  .proof-item h4 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .proof-item p {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    line-height: 1.65;
-  }
-
-  /* CTA */
-  .section-cta {
+  /* Contact */
+  .section-contact {
     padding: 6rem 0;
   }
 
-  .cta-inner {
-    background: var(--surface);
-    border-radius: 16px;
-    padding: 4rem;
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto;
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: start;
   }
 
-  .cta-inner h2 {
+  .contact-text .label {
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-text h2 {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
     margin-bottom: 1rem;
   }
 
-  .cta-inner p {
+  .contact-text .lead {
     color: var(--text-secondary);
-    margin-bottom: 2rem;
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.7;
+    margin-bottom: 2rem;
   }
+
+  .contact-link {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 2px;
+    transition: border-color 0.15s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--text);
+  }
+
+  .form-wrapper {
+    background: var(--color-2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    transition: border-color 0.15s;
+    outline: none;
+    resize: vertical;
+    width: 100%;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.6;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--text);
+  }
+
+  .btn-submit {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-top: 0.25rem;
+  }
+
+  .btn-submit:hover {
+    opacity: 0.85;
+  }
+
+  .form-result {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .form-result--success { color: #2d6a2d; }
+  .form-result--error { color: var(--accent); }
 
   /* Responsive */
   @media (max-width: 900px) {
     .problem-grid,
-    .why-inner {
+    .contact-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
     }
 
     .steps,
-    .offer-grid,
-    .audience-grid {
+    .offer-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -684,14 +750,17 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
     .section-problem,
     .section-method,
     .section-offer,
-    .section-audience,
     .section-why,
-    .section-cta {
+    .section-contact {
       padding: 4rem 0;
     }
 
-    .cta-inner {
-      padding: 2.5rem 1.5rem;
+    .form-wrapper {
+      padding: 1.75rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
     }
   }
 </style>
@@ -722,4 +791,32 @@ const { hero, problem, method, offer, audience, why, cta } = page.data;
   });
 
   startTimer();
+</script>
+
+<script>
+  const form = document.getElementById('signal-form') as HTMLFormElement;
+  const result = document.getElementById('form-result') as HTMLElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = 'Versturen...';
+
+    const data = new FormData(form);
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+
+    if (json.success) {
+      form.reset();
+      result.textContent = 'Bedankt! Ik neem binnen één werkdag contact op.';
+      result.className = 'form-result form-result--success';
+    } else {
+      result.textContent = 'Er ging iets mis. Stuur een mail naar joost@chiefstory.nl.';
+      result.className = 'form-result form-result--error';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Verstuur aanvraag';
+  });
 </script>

@@ -1,27 +1,10 @@
 ---
-const navItems = [
-  { label: 'Methode', href: '/methode' },
-  { label: 'Aanbod', href: '/aanbod' },
-  { label: 'Cases', href: '/cases' },
-  { label: 'Over', href: '/over' },
-];
-
-const currentPath = Astro.url.pathname;
 ---
 
 <header>
   <nav class="container">
     <a href="/" class="logo">Chief Story</a>
-    <ul>
-      {navItems.map(item => (
-        <li>
-          <a href={item.href} class={currentPath.startsWith(item.href) ? 'active' : ''}>
-            {item.label}
-          </a>
-        </li>
-      ))}
-    </ul>
-    <a href="/contact" class="cta-nav">Plan een call</a>
+    <a href="#contact" class="cta-nav">Plan een call</a>
   </nav>
 </header>
 
@@ -49,29 +32,8 @@ const currentPath = Astro.url.pathname;
     flex-shrink: 0;
   }
 
-  ul {
-    display: flex;
-    list-style: none;
-    gap: 0.25rem;
-    margin-left: auto;
-  }
-
-  ul a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    padding: 0.4rem 0.75rem;
-    border-radius: 6px;
-    transition: color 0.15s, background 0.15s;
-  }
-
-  ul a:hover,
-  ul a.active {
-    color: var(--text);
-    background: var(--surface);
-  }
-
   .cta-nav {
+    margin-left: auto;
     font-size: 0.875rem;
     font-weight: 600;
     font-family: var(--font-heading);
@@ -89,16 +51,8 @@ const currentPath = Astro.url.pathname;
   }
 
   @media (max-width: 768px) {
-    ul {
-      display: none;
-    }
-
     nav {
       gap: 1rem;
-    }
-
-    .cta-nav {
-      margin-left: auto;
     }
   }
 </style>
