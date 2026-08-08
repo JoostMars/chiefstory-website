@@ -30,15 +30,15 @@
 hero:
   eyebrow: "Narrative positioning · Brand storytelling · Story systems"
   h1: "Van ruis naar signaal"
-  lead: "Van een versnipperd verhaal naar één scherp narratief — en een systeem waarmee je team het elke dag vertelt. Groeien? Get your story straight."
+  lead: "Van een versnipperd verhaal naar één scherp narratief. En een systeem waarmee je team het elke dag vertelt. Groeien? Get your story straight."
   cta_primary: "Plan een call"
   cta_secondary: "Bekijk het aanbod"
 
 problem:
   heading: "Vind je verhaal.\nVertel het goed."
   body:
-    - "Iedereen vertelt iets anders over je merk. Je content mist een rode draad. En AI maakt het alleen maar sneller hetzelfde als de rest."
-  signal_line: "Chief Story helpt je het signaal in de ruis te vinden — en te versterken. Met een scherpe positionering, een merkverhaal dat klopt, en een systeem waarmee je team het elke dag verspreidt."
+    - "Iedereen zegt iets anders over je merk. Je content mist een rode draad. Je vertelt hetzelfde verhaal als de concurrentie. En AI maakt het alleen maar erger."
+  signal_line: "Chief Story helpt je het signaal in de ruis te vinden en te versterken. Met een scherpe positionering, een merkverhaal dat klopt, en een systeem waarmee je team het elke dag verspreidt."
   signal_emphasis: "Door mensen verteld, door AI versterkt."
   quotes:
     - "Sales, marketing en directie vertellen elk een ander verhaal."
@@ -97,14 +97,14 @@ offer:
 
 why:
   label: "Over Chief Story"
-  heading: "Storytelling is geen franje. Het is de kern."
+  heading: "Storytelling is geen franje. Het is de basis."
   body:
-    - "Chief Story is het werk van Joost Marsman. Ik maak al dertig jaar verhalen — als copywriter, merkstrateeg, songwriter en ondernemer. Voor scale-ups die willen groeien en voor merken die hun verhaal kwijt zijn."
-    - "Wat ik daarvan heb geleerd: een bedrijf zonder verhaal is zielloos, en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook om het te versterken."
+    - "Als copywriter, merkstrateeg en creatief ondernemer help ik scale-ups die willen groeien en merken die hun verhaal beter willen vertellen."
+    - "Een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook om het te versterken."
 
 contact:
   label: "Plan een call"
   heading: "Waar zit de ruis in jouw verhaal?"
-  lead: "Geen verkooppraatje. Een echt gesprek van een halfuur — over waar je staat, waar het schuurt en welke route logisch is."
+  lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, waar het schuurt en welke route in jouw situatie logisch is."
   email: "joost@chiefstory.nl"
 ---
