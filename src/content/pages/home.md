@@ -64,8 +64,7 @@ method:
       body: "Formats, AI-workflows en story sessions. Zodat het verhaal gaat leven in plaats van in een la belandt."
 
 offer:
-  label: "Dit kan ik voor je doen"
-
+  heading: "Dit kan ik voor je doen"
   cards:
     - title: "Story Sprint"
       duration: "1 maand"
