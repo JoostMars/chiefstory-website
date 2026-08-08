@@ -64,8 +64,8 @@ method:
       body: "Formats, AI-workflows en story sessions. Zodat het verhaal gaat leven in plaats van in een la belandt."
 
 offer:
-  label: "Het aanbod"
-  heading: "Kies je route."
+  label: "Dit kan ik voor je doen"
+
   cards:
     - title: "Story Sprint"
       duration: "1 maand"
@@ -96,11 +96,12 @@ offer:
       price: "Vanaf €24.500"
 
 why:
-  label: "Over Chief Story"
-  heading: "Storytelling is geen franje. Het is de basis."
+  label: "Over Joost Marsman"
+  heading: "Een goed verhaal emotioneert, inspireert en activeert"
   body:
-    - "Als copywriter, merkstrateeg en creatief ondernemer help ik scale-ups die willen groeien en merken die hun verhaal beter willen vertellen."
-    - "Een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook om het te versterken."
+    - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia merken hun verhaal beter te vertellen, van startups tot multinationals."
+    - "In welke fase je ook zit; een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
+    - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. Ik gebruik AI voor inspiratie en eindredactie; nooit om te schrijven of te kiezen."
 
 contact:
   label: "Plan een call"
