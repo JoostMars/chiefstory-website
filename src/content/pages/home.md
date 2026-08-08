@@ -74,7 +74,7 @@ offer:
         - "Brand story"
         - "Messaging pillars"
         - "Kernzinnen voor deck, pitch en site"
-      price: "€5.000"
+      price: "Vanaf €5.000"
     - title: "Story System"
       duration: "3 maanden"
       description: "Je verhaal structureel activeren in content, marketing, sales en AI."
@@ -83,7 +83,7 @@ offer:
         - "Content pillars en formats"
         - "AI-workflows en promptsets"
         - "Maandelijkse story sessions"
-      price: "€12.500"
+      price: "Vanaf €12.500"
     - title: "The Full Story"
       duration: "4 maanden"
       description: "Eerst het verhaal, dan het systeem. Beide trajecten als één route."
@@ -92,7 +92,7 @@ offer:
         - "Alles van het Story System"
         - "Naadloze overgang"
         - "Fundament voor structurele groei"
-      price: "€15.000"
+      price: "Vanaf €15.000"
 
 why:
   label: "Over Joost Marsman"
