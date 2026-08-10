@@ -42,10 +42,11 @@ problem:
   signal_line: "Chief Story helpt je het signaal in de ruis te vinden en te versterken. Met een scherpe positionering, een merkverhaal dat klopt, en een systeem waarmee je team het elke dag verspreidt."
   signal_emphasis: "Door mensen verteld, door AI versterkt."
   quotes:
-    - "Sales, marketing en directie vertellen elk een ander verhaal."
-    - "We klinken precies hetzelfde als de concurrentie."
-    - "Onze mensen weten niet waar ons bedrijf voor staat."
+    # Boog: verandering → interne verwarring → buitenwereld
     - "We zijn niet meer het bedrijf van drie jaar geleden."
+    - "Sales, marketing en directie vertellen elk een ander verhaal."
+    - "Onze mensen weten niet waar ons bedrijf voor staat."
+    - "We klinken precies hetzelfde als de concurrentie."
     - "Na de pitch knikte iedereen, maar niemand kon het navertellen."
 
 method:
