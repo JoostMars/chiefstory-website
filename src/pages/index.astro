@@ -281,11 +281,13 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     font-size: 0.95rem;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
-    transition: background 0.15s;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
   }
 
   .btn-primary:hover {
-    background: var(--accent);
+    background: var(--color-2);
+    color: var(--text);
+    box-shadow: inset 0 0 0 1.5px var(--text);
   }
 
   .btn-primary.btn-large {
@@ -303,7 +305,7 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
   }
 
   .btn-ghost:hover {
-    color: var(--accent);
+    color: var(--text);
   }
 
   /* Section basics */
@@ -745,12 +747,14 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     border-radius: 8px;
     padding: 0.875rem 1.5rem;
     cursor: pointer;
-    transition: background 0.15s;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
     margin-top: 0.25rem;
   }
 
   .btn-submit:hover {
-    background: var(--accent);
+    background: var(--color-2);
+    color: var(--text);
+    box-shadow: inset 0 0 0 1.5px var(--text);
   }
 
   .form-result {
