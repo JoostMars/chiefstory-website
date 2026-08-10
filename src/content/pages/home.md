@@ -52,15 +52,12 @@ method:
   steps:
     - number: "01"
       title: "Narrative Positioning"
-      tagline: "Claim your position"
       body: "Welk probleem los je op, voor wie, en welke plek is nog vrij in het hoofd van je publiek?"
     - number: "02"
       title: "Brand Storytelling"
-      tagline: "Craft your story"
       body: "Heldere taal die de kern raakt, van pitch tot post en van site tot salesgesprek."
     - number: "03"
       title: "Narrative Activation"
-      tagline: "Build your system"
       body: "Formats, AI-workflows en story sessions. Zodat je jouw verhaal consistent en consequent blijft vertellen."
 
 offer:
