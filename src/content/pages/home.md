@@ -57,11 +57,11 @@ method:
     - number: "02"
       title: "Brand Storytelling"
       tagline: "Craft your story"
-      body: "Waarom doe je wat je doet? Taal die werkt, van pitch tot post tot salesgesprek."
+      body: "Heldere taal die de kern raakt, van pitch tot post en van site tot salesgesprek."
     - number: "03"
       title: "Narrative Activation"
       tagline: "Build your system"
-      body: "Formats, AI-workflows en story sessions. Zodat het verhaal gaat leven in plaats van in een la belandt."
+      body: "Formats, AI-workflows en story sessions. Zodat je jouw verhaal consistent en consequent blijft vertellen."
 
 offer:
   heading: "Dit kan ik voor je doen"
@@ -100,7 +100,7 @@ why:
   body:
     - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia merken hun verhaal beter te vertellen, van startups tot multinationals."
     - "In welke fase je ook zit; een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
-    - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. Ik gebruik AI voor inspiratie en eindredactie; nooit om te schrijven of te kiezen."
+    - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. En je verhaal klopt pas als het echt onderscheidend is. Ik gebruik AI daarom voor inspiratie en eindredactie; nooit om te schrijven of te kiezen."
 
 contact:
   label: "Plan een call"
