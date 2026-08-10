@@ -6,7 +6,7 @@ import { getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 const page = await getEntry('pages', 'home');
-const { hero, problem, method, offer, why, contact } = page.data;
+const { meta, hero, problem, method, offer, why, contact } = page.data;
 
 // Foto's staan in src/assets zodat Astro ze schaalt en naar WebP omzet.
 // In home.md staat alleen de bestandsnaam, bijvoorbeeld "/joost.jpg".
@@ -30,7 +30,7 @@ const beeld = (pad: string) => {
 };
 ---
 
-<BaseLayout title="Van ruis naar signaal">
+<BaseLayout title={meta.title} description={meta.description}>
   <Nav />
 
   <main>
@@ -186,7 +186,12 @@ const beeld = (pad: string) => {
             <a href={`mailto:${contact.email}`} class="contact-link">{contact.email}</a>
           </div>
           <div class="form-wrapper">
-            <form id="signal-form" action="https://api.web3forms.com/submit" method="POST">
+            <form
+              id="signal-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              data-terugval-email={contact.email}
+            >
               <input type="hidden" name="access_key" value="b2eb9a05-3e76-42f7-89a8-251af95ae3f8" />
               <input type="hidden" name="subject" value="Nieuwe call aanvraag" />
               <input type="hidden" name="from_name" value="Chief Story Website" />
@@ -223,7 +228,7 @@ const beeld = (pad: string) => {
 
   </main>
 
-  <Footer />
+  <Footer email={contact.email} />
 </BaseLayout>
 
 <style>
@@ -883,7 +888,8 @@ const beeld = (pad: string) => {
       result.className = 'form-result form-result--success';
     } catch {
       // Netwerkfout, geblokkeerd verzoek of een antwoord dat geen JSON is.
-      result.textContent = 'Er ging iets mis. Stuur een mail naar joost@chiefstory.nl.';
+      const adres = form.dataset.terugvalEmail ?? '';
+      result.textContent = `Er ging iets mis. Stuur een mail naar ${adres}.`;
       result.className = 'form-result form-result--error';
     } finally {
       // Hoe het ook afloopt: de knop moet weer bruikbaar zijn.

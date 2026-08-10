@@ -9,6 +9,11 @@ import { glob } from 'astro/loaders';
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
+    meta: z.object({
+      title: z.string(),
+      description: z.string(),
+    }),
+
     hero: z.object({
       eyebrow: z.string(),
       image: z.string(),

@@ -27,6 +27,12 @@
 # INSPRINGING:
 #   Gebruik altijd spaties, nooit tabs. De inspringing moet kloppen.
 
+# De titel verschijnt in het browsertabblad en als kop in Google.
+# De omschrijving is de grijze tekst eronder in de zoekresultaten.
+meta:
+  title: "Van ruis naar signaal"
+  description: "Chief Story helpt groeiende organisaties hun verhaal scherp te krijgen en werkend te maken in merk, marketing, sales en AI."
+
 hero:
   eyebrow: "Positionering · Merkverhaal · Systeem"
   image: "/joost.jpg"
