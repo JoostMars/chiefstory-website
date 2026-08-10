@@ -43,8 +43,10 @@ problem:
   signal_emphasis: "Door mensen verteld, door AI versterkt."
   quotes:
     - "Sales, marketing en directie vertellen elk een ander verhaal."
-    - "Waarom klinken we hetzelfde als iedereen?"
+    - "We klinken precies hetzelfde als de concurrentie."
     - "Onze mensen weten niet waar ons bedrijf voor staat."
+    - "We zijn niet meer het bedrijf van drie jaar geleden."
+    - "Na de pitch knikte iedereen, maar niemand kon het navertellen."
 
 method:
   heading: "In drie stappen van ruis naar signaal."

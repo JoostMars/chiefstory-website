@@ -411,6 +411,9 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    /* Zonder dit duwt de quote-track (alle slides naast elkaar) de
+       rechterkolom breder en drukt hij de tekstkolom plat. */
+    min-width: 0;
   }
 
   .quote-viewport {
