@@ -354,6 +354,16 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
 
   .section-offer .section-header {
     text-align: center;
+    margin-bottom: 4.5rem;
+  }
+
+  .section-offer .section-header::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin: 2rem auto 0;
+    background: var(--accent);
   }
 
   .section-offer .section-header h2 {
