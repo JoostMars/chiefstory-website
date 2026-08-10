@@ -118,7 +118,7 @@ contact:
 
   # Het adres dat op de site staat: in de contactsectie, in de footer en in
   # de foutmelding van het formulier.
-  email: "joost@chiefstory.nl"
+  email: "joostmarsman@me.com"
 
   # De sleutel van web3forms bepaalt wáár ingevulde formulieren aankomen.
   # Die is bij web3forms gekoppeld aan één e-mailadres — verander je het
