@@ -122,5 +122,5 @@ contact:
   # Die is bij web3forms gekoppeld aan één e-mailadres — verander je het
   # bezorgadres, dan hoort hier een nieuwe sleutel. Haal hem op via
   # web3forms.com. Geen geheim: hij staat gewoon in de HTML van de pagina.
-  web3forms_key: "b2eb9a05-3e76-42f7-89a8-251af95ae3f8"
+  web3forms_key: "1c03268a-f812-4011-b075-98b12b9355d7"
 ---
