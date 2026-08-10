@@ -28,7 +28,7 @@
 #   Gebruik altijd spaties, nooit tabs. De inspringing moet kloppen.
 
 hero:
-  eyebrow: "Narrative positioning · Brand storytelling · Story systems"
+  eyebrow: "Positionering · Merkverhaal · Systeem"
   image: "/joost.jpg"
   h1: "Van ruis naar signaal"
   lead: "Van een versnipperd verhaal naar één scherp narratief. En een systeem waarmee je team het elke dag vertelt. Groeien? Get your story straight."
@@ -51,13 +51,13 @@ method:
   intro: "Een betere tone of voice helpt niet als je positionering onduidelijk is. Een nieuwe website zonder helder verhaal is weggegooid geld. Het fundament moet eerst kloppen."
   steps:
     - number: "01"
-      title: "Narrative Positioning"
+      title: "Positionering"
       body: "Welk probleem los je op, voor wie, en welke plek is nog vrij in het hoofd van je publiek?"
     - number: "02"
-      title: "Brand Storytelling"
+      title: "Merkverhaal"
       body: "Heldere taal die de kern raakt, van pitchdeck tot post en van site tot salesgesprek."
     - number: "03"
-      title: "Narrative Activation"
+      title: "Systeem"
       body: "Formats, AI-workflows en story sessions. Zodat je jouw verhaal consistent en consequent blijft vertellen."
 
 offer:
@@ -68,8 +68,8 @@ offer:
       description: "Positionering, merkverhaal en kernboodschappen in één document."
       deliverables:
         - "Positionering"
-        - "Brand story"
-        - "Messaging pillars"
+        - "Merkverhaal"
+        - "Kernboodschappen"
         - "Kernzinnen voor deck, pitch en site"
       price: "Vanaf €5.000"
     - title: "Story System"
