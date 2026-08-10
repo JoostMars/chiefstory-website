@@ -47,7 +47,6 @@ problem:
     - "Onze mensen weten niet waar ons bedrijf voor staat."
 
 method:
-  label: "De methode"
   heading: "In drie stappen van ruis naar signaal."
   intro: "Een betere tone of voice helpt niet als je positionering onduidelijk is. Een nieuwe website zonder helder verhaal is weggegooid geld. Het fundament moet eerst kloppen."
   steps:
