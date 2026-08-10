@@ -116,7 +116,6 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
             />
           </div>
           <div class="why-text">
-            <span class="label">{why.label}</span>
             <h2>{why.heading}</h2>
             {why.body.map((p) => <p>{p}</p>)}
             <a
@@ -166,7 +165,6 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
       <div class="container">
         <div class="contact-grid">
           <div class="contact-text">
-            <span class="label">{contact.label}</span>
             <h2>{contact.heading}</h2>
             <p class="lead">{contact.lead}</p>
             <a href={`mailto:${contact.email}`} class="contact-link">{contact.email}</a>
@@ -336,16 +334,6 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     font-size: 0.95rem;
     color: var(--text-secondary);
     line-height: 1.7;
-  }
-
-  .label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    margin-bottom: 0.75rem;
   }
 
   .section-header h2 {
@@ -627,10 +615,6 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     display: block;
   }
 
-  .why-text .label {
-    margin-bottom: 0.75rem;
-  }
-
   .why-text h2 {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     margin-bottom: 1.25rem;
@@ -667,13 +651,18 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     align-items: start;
   }
 
-  .contact-text .label {
-    margin-bottom: 0.75rem;
-  }
-
   .contact-text h2 {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
     margin-bottom: 1rem;
+  }
+
+  .contact-text h2::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: 1.5rem;
+    background: var(--accent);
   }
 
   .contact-text .lead {

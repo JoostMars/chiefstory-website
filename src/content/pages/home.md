@@ -92,7 +92,6 @@ offer:
       price: "Vanaf €16.500"
 
 why:
-  label: "Over Joost Marsman"
   image: "/joost2.jpg"
   linkedin: "https://www.linkedin.com/in/joost-marsman-4684b1"
   heading: "Een goed verhaal emotioneert, inspireert en activeert"
@@ -102,7 +101,6 @@ why:
     - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. En je verhaal klopt pas als het echt onderscheidend is. Ik gebruik AI daarom voor techniek, inspiratie en eindredactie; nooit om te schrijven, te denken of te kiezen."
 
 contact:
-  label: "Plan een call"
   heading: "Waar zit de ruis in jouw verhaal?"
   lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, wat je nodig hebt en of ik je daarbij kan helpen."
   email: "joost@chiefstory.nl"
