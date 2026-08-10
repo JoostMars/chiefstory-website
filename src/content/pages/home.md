@@ -113,5 +113,14 @@ why:
 contact:
   heading: "Waar zit de ruis in jouw verhaal?"
   lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, wat je nodig hebt en of ik je daarbij kan helpen."
+
+  # Het adres dat op de site staat: in de contactsectie, in de footer en in
+  # de foutmelding van het formulier.
   email: "joost@chiefstory.nl"
+
+  # De sleutel van web3forms bepaalt wáár ingevulde formulieren aankomen.
+  # Die is bij web3forms gekoppeld aan één e-mailadres — verander je het
+  # bezorgadres, dan hoort hier een nieuwe sleutel. Haal hem op via
+  # web3forms.com. Geen geheim: hij staat gewoon in de HTML van de pagina.
+  web3forms_key: "b2eb9a05-3e76-42f7-89a8-251af95ae3f8"
 ---

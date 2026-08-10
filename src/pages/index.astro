@@ -192,7 +192,7 @@ const beeld = (pad: string) => {
               method="POST"
               data-terugval-email={contact.email}
             >
-              <input type="hidden" name="access_key" value="b2eb9a05-3e76-42f7-89a8-251af95ae3f8" />
+              <input type="hidden" name="access_key" value={contact.web3forms_key} />
               <input type="hidden" name="subject" value="Nieuwe call aanvraag" />
               <input type="hidden" name="from_name" value="Chief Story Website" />
               <input type="checkbox" name="botcheck" style="display:none" />

@@ -72,6 +72,7 @@ const pages = defineCollection({
       heading: z.string(),
       lead: z.string(),
       email: z.string().email(),
+      web3forms_key: z.string().min(1),
     }),
   }),
 });
