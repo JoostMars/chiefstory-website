@@ -462,21 +462,32 @@ const beeld = (pad: string) => {
   .quote-dots {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
   }
 
+  /* De knop is 24x24 zodat hij op een telefoon te raken is; het zichtbare
+     bolletje blijft 6px en wordt als pseudo-element in het midden getekend. */
   .quote-dot {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .quote-dot::before {
+    content: '';
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: none;
     background: var(--border);
-    cursor: pointer;
-    padding: 0;
     transition: background 0.2s, transform 0.2s;
   }
 
-  .quote-dot.is-active {
+  .quote-dot.is-active::before {
     background: var(--text);
     transform: scale(1.4);
   }

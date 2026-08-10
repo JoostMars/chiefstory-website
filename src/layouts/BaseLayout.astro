@@ -46,7 +46,9 @@ const { title, description = 'Chief Story helpt groeiende organisaties hun strat
         background: var(--bg);
         color: var(--text);
         font-family: var(--font-body);
-        font-size: 16px;
+        /* Geen vaste pixelmaat: dan blijft de lettergrootte-instelling van de
+           bezoeker werken. Alle rem-waarden schalen daarmee mee. */
+        font-size: 100%;
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
       }
