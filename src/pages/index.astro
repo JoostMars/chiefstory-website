@@ -437,7 +437,7 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     font-size: clamp(4rem, 8vw, 6rem);
     font-weight: 700;
     line-height: 0.75;
-    color: var(--text-secondary);
+    color: var(--accent);
     margin-bottom: 0.5rem;
     font-variation-settings: 'opsz' 144;
   }
@@ -552,7 +552,7 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
 
   .offer-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
     margin-bottom: 1rem;
   }
@@ -566,6 +566,7 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     color: var(--text-secondary);
     margin-bottom: 1.25rem;
     line-height: 1.65;
+    text-align: center;
   }
 
   .deliverables {
