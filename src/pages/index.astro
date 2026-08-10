@@ -10,8 +10,24 @@ const { hero, problem, method, offer, why, contact } = page.data;
 
 // Foto's staan in src/assets zodat Astro ze schaalt en naar WebP omzet.
 // In home.md staat alleen de bestandsnaam, bijvoorbeeld "/joost.jpg".
-const assets = import.meta.glob('/src/assets/*.{jpg,jpeg,png}', { eager: true });
-const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] as any).default;
+const assets = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/*.{jpg,jpeg,png,webp,avif}',
+  { eager: true }
+);
+
+const beeld = (pad: string) => {
+  const sleutel = `/src/assets/${pad.replace(/^\//, '')}`;
+  const bestand = assets[sleutel];
+  if (!bestand) {
+    const beschikbaar = Object.keys(assets).map((k) => k.replace('/src/assets/', ''));
+    throw new Error(
+      `Afbeelding "${pad}" bestaat niet in src/assets/.\n` +
+        `Beschikbaar: ${beschikbaar.join(', ') || '(map is leeg)'}\n` +
+        `Pas de bestandsnaam aan in src/content/pages/home.md.`
+    );
+  }
+  return bestand.default;
+};
 ---
 
 <BaseLayout title="Van ruis naar signaal">
@@ -775,6 +791,13 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
       gap: 3rem;
     }
 
+    /* Hoort bij de rest: op een tablet in portret bleef de tekstkolom
+       anders naast een foto van 500px staan en werd hij onleesbaar smal. */
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
     .steps,
     .offer-grid {
       grid-template-columns: 1fr;
@@ -782,11 +805,6 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
   }
 
   @media (max-width: 768px) {
-    .hero-inner {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
     .hero-image img {
       width: 100%;
       height: auto;
@@ -854,20 +872,23 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
     btn.disabled = true;
     btn.textContent = 'Versturen...';
 
-    const data = new FormData(form);
-    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-    const json = await res.json();
+    try {
+      const data = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const json = await res.json();
+      if (!json.success) throw new Error(json.message ?? 'onbekende fout');
 
-    if (json.success) {
       form.reset();
       result.textContent = 'Bedankt! Ik neem binnen één werkdag contact op.';
       result.className = 'form-result form-result--success';
-    } else {
+    } catch {
+      // Netwerkfout, geblokkeerd verzoek of een antwoord dat geen JSON is.
       result.textContent = 'Er ging iets mis. Stuur een mail naar joost@chiefstory.nl.';
       result.className = 'form-result form-result--error';
+    } finally {
+      // Hoe het ook afloopt: de knop moet weer bruikbaar zijn.
+      btn.disabled = false;
+      btn.textContent = 'Verstuur aanvraag';
     }
-
-    btn.disabled = false;
-    btn.textContent = 'Verstuur aanvraag';
   });
 </script>
