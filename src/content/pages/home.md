@@ -92,6 +92,7 @@ offer:
       price: "Vanaf €16.500"
 
 why:
+  label: "Over Joost Marsman"
   image: "/joost2.jpg"
   linkedin: "https://www.linkedin.com/in/joost-marsman-4684b1"
   heading: "Een goed verhaal emotioneert, inspireert en activeert"

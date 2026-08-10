@@ -116,6 +116,7 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
             />
           </div>
           <div class="why-text">
+            <span class="label">{why.label}</span>
             <h2>{why.heading}</h2>
             {why.body.map((p) => <p>{p}</p>)}
             <a
@@ -326,6 +327,16 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
   /* Section basics */
   .section-header {
     margin-bottom: 3rem;
+  }
+
+  .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
   }
 
   .section-intro {
