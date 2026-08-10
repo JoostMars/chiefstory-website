@@ -69,15 +69,15 @@ offer:
       deliverables:
         - "Positionering"
         - "Merkverhaal"
-        - "Kernboodschappen"
+        - "Boodschappen"
         - "Kernzinnen voor deck, pitch en site"
       price: "Vanaf €5.000"
     - title: "Story System"
       duration: "3 maanden"
       description: "Je verhaal structureel activeren in content, marketing, sales en AI."
       deliverables:
-        - "Activation roadmap"
-        - "Content pillars en formats"
+        - "Contentstrategie"
+        - "Contentpijlers en formats"
         - "AI-workflows en promptsets"
         - "Maandelijkse story sessions"
       price: "Vanaf €12.500"
