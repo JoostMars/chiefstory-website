@@ -87,6 +87,9 @@ const { hero, problem, method, offer, why, contact } = page.data;
     <section class="section-why">
       <div class="container">
         <div class="why-inner">
+          <div class="why-image">
+            <img src={why.image} alt="Joost Marsman – Chief Story" />
+          </div>
           <div class="why-text">
             <span class="label">{why.label}</span>
             <h2>{why.heading}</h2>
@@ -569,7 +572,16 @@ const { hero, problem, method, offer, why, contact } = page.data;
   }
 
   .why-inner {
-    max-width: 720px;
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .why-image img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .why-text .label {
@@ -730,6 +742,7 @@ const { hero, problem, method, offer, why, contact } = page.data;
   /* Responsive */
   @media (max-width: 900px) {
     .problem-grid,
+    .why-inner,
     .contact-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
