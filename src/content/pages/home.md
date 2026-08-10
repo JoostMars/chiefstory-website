@@ -29,6 +29,7 @@
 
 hero:
   eyebrow: "Narrative positioning · Brand storytelling · Story systems"
+  image: "/joost.jpg"
   h1: "Van ruis naar signaal"
   lead: "Van een versnipperd verhaal naar één scherp narratief. En een systeem waarmee je team het elke dag vertelt. Groeien? Get your story straight."
   cta_primary: "Plan een call"
@@ -65,7 +66,7 @@ offer:
   cards:
     - title: "Story Sprint"
       duration: "1 maand"
-      description: "Positionering, merkverhaal en kernboodschappen in één document. Zodat iedereen hetzelfde vertelt."
+      description: "Positionering, merkverhaal en kernboodschappen in één document."
       deliverables:
         - "Positionering"
         - "Brand story"
@@ -89,7 +90,7 @@ offer:
         - "Alles van het Story System"
         - "Naadloze overgang"
         - "Fundament voor structurele groei"
-      price: "Vanaf €15.000"
+      price: "Vanaf €16.500"
 
 why:
   label: "Over Joost Marsman"
@@ -99,11 +100,11 @@ why:
   body:
     - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia merken hun verhaal beter te vertellen, van startups tot multinationals."
     - "In welke fase je ook zit; een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
-    - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. En je verhaal klopt pas als het echt onderscheidend is. Ik gebruik AI daarom voor inspiratie en eindredactie; nooit om te schrijven of te kiezen."
+    - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. En je verhaal klopt pas als het echt onderscheidend is. Ik gebruik AI daarom voor techniek, inspiratie en eindredactie; nooit om te schrijven, te denken of te kiezen."
 
 contact:
   label: "Plan een call"
   heading: "Waar zit de ruis in jouw verhaal?"
-  lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, waar het schuurt en welke route in jouw situatie logisch is."
+  lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, wat je nodig hebt en of ik je daarbij kan helpen."
   email: "joost@chiefstory.nl"
 ---
