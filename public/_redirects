@@ -1,7 +1,4 @@
-# De oude pagina's bestaan niet meer sinds de site één pagina werd.
-# Zonder deze regels leveren oude links en zoekresultaten een 404 op.
-/methode   /          301
-/cases     /          301
-/over      /          301
-/aanbod    /#aanbod   301
-/contact   /#contact  301
+# Korte adressen om te delen. chiefstory.nl/aanbod leest prettiger in een
+# bericht dan chiefstory.nl/#aanbod, en komt op dezelfde plek uit.
+/aanbod    /#aanbod    301
+/contact   /#contact   301
