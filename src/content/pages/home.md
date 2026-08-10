@@ -55,7 +55,7 @@ method:
       body: "Welk probleem los je op, voor wie, en welke plek is nog vrij in het hoofd van je publiek?"
     - number: "02"
       title: "Brand Storytelling"
-      body: "Heldere taal die de kern raakt, van pitch tot post en van site tot salesgesprek."
+      body: "Heldere taal die de kern raakt, van pitchdeck tot post en van site tot salesgesprek."
     - number: "03"
       title: "Narrative Activation"
       body: "Formats, AI-workflows en story sessions. Zodat je jouw verhaal consistent en consequent blijft vertellen."
@@ -93,6 +93,7 @@ offer:
 
 why:
   label: "Over Joost Marsman"
+  linkedin: "https://www.linkedin.com/in/joost-marsman-4684b1"
   heading: "Een goed verhaal emotioneert, inspireert en activeert"
   body:
     - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia merken hun verhaal beter te vertellen, van startups tot multinationals."
