@@ -89,8 +89,7 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
         <div class="steps">
           {method.steps.map((step) => (
             <div class="step">
-              <span class="step-number">{step.number}</span>
-              <h3>{step.title}</h3>
+              <h3><span class="step-number">{step.number}</span>{' '}{step.title}</h3>
               <p>{step.body}</p>
             </div>
           ))}
@@ -495,13 +494,8 @@ const beeld = (pad: string) => (assets[`/src/assets/${pad.replace(/^\//, '')}`] 
   }
 
   .step-number {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--text-secondary);
-    display: block;
-    margin-bottom: 1rem;
+    color: var(--accent);
+    margin-right: 0.6rem;
   }
 
   .step h3 {
