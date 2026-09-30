@@ -6,7 +6,7 @@ import { getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 const page = await getEntry('pages', 'home');
-const { meta, hero, problem, method, offer, why, contact } = page.data;
+const { meta, hero, problem, method, offer, why, reviews, contact } = page.data;
 
 // Foto's staan in src/assets zodat Astro ze schaalt en naar WebP omzet.
 // In home.md staat alleen de bestandsnaam, bijvoorbeeld "/joost.jpg".
@@ -147,6 +147,32 @@ const beeld = (pad: string) => {
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Reviews: één zin per klant; de volledige teksten staan op /reviews -->
+    <section class="section-reviews" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2>{reviews.heading}</h2>
+        </div>
+        <div class="reviews-grid">
+          {reviews.items.map((r) => (
+            <figure class="review">
+              <blockquote>
+                <span class="review-open" aria-hidden="true">"</span>
+                <p>{r.highlight}</p>
+              </blockquote>
+              <figcaption>
+                <span class="review-name">{r.name}</span>
+                <span class="review-company">{r.company}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p class="reviews-more">
+          <a href="/reviews" class="btn-ghost">{reviews.link_label} &rarr;</a>
+        </p>
       </div>
     </section>
 
@@ -664,6 +690,95 @@ const beeld = (pad: string) => {
     color: var(--accent);
   }
 
+  /* Reviews */
+  .section-reviews {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--color-3);
+  }
+
+  .section-reviews .section-header {
+    text-align: center;
+  }
+
+  .section-reviews .section-header::after {
+    content: '';
+    display: block;
+    width: 88px;
+    height: 3px;
+    margin: 2rem auto 0;
+    background: var(--accent);
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: #FFFFFF;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .review blockquote {
+    flex: 1;
+  }
+
+  /* Zelfde aanhalingsteken als in de quote-slider, een maat kleiner. */
+  .review-open {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 0.75;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-variation-settings: 'opsz' 144;
+  }
+
+  .review blockquote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    color: var(--text);
+    font-variation-settings: 'opsz' 72;
+  }
+
+  .review figcaption {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .review-name {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+  }
+
+  .review-company {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .reviews-more {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .reviews-more .btn-ghost {
+    display: inline-block;
+  }
+
   /* Contact */
   .section-contact {
     padding: 4rem 0;
@@ -814,7 +929,8 @@ const beeld = (pad: string) => {
     }
 
     .steps,
-    .offer-grid {
+    .offer-grid,
+    .reviews-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -835,6 +951,7 @@ const beeld = (pad: string) => {
     .section-method,
     .section-offer,
     .section-why,
+    .section-reviews,
     .section-contact {
       padding: 3rem 0;
     }

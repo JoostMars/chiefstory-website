@@ -112,6 +112,34 @@ why:
     - "In welke fase je ook zit; een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
     - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. En je verhaal klopt pas als het echt onderscheidend is. Ik gebruik AI daarom voor techniek, inspiratie en eindredactie; nooit om te schrijven, te denken of te kiezen."
 
+# Reviews staan op twee plekken: de homepage toont per klant alleen de
+# 'highlight' (één zin), de pagina /reviews toont de volledige tekst ('full').
+# Een *woord* tussen sterretjes wordt cursief.
+reviews:
+  heading: "Wat opdrachtgevers zeggen"
+  link_label: "Lees de volledige reviews"
+  page_heading: "Wat opdrachtgevers zeggen"
+  page_lead: "Drie ondernemers over hoe het is om met Chief Story te werken. In hun eigen woorden."
+  items:
+    - name: "Derk Jan Wentink"
+      company: "Barentsz Ontdekkingshuizen"
+      highlight: "Iemand van buiten zit niet in de tunnel waarin je als ondernemer zit. Zo werk je áán je bedrijf in plaats van erin."
+      full:
+        - "We hebben Joost ingeschakeld toen Barentsz net begon, voor de vragen die ertoe doen: wat is Barentsz, welk probleem lossen we op en welk verhaal vertellen we daaromheen? Kortom: de positionering. Gaandeweg werd zijn rol vooral die van klankbord. Periodiek herijken van waar we mee bezig zijn, wie onze doelgroep is, hoe we herkenbaar blijven als de markt verandert."
+        - "Iemand van buiten zit niet in de tunnel waarin je als ondernemer zit. Zo werk je áán je bedrijf in plaats van erin. Dat hoor je in elke *business talk*, maar er tijd voor vrijmaken is een tweede. Merkdenken is in de bouwwereld ongebruikelijk. Daarmee onderscheiden we ons, en de markt herkent dat. Onze deelname aan Provada was bijvoorbeeld een stap die we zelf niet zo snel hadden gezet. Joost wist dat we daar moesten staan. En het bleek een goede zet."
+    - name: "Richard Verbeek"
+      company: "KRAGD Notarissen"
+      highlight: "Een concurrent zou ik nooit naar hem doorverwijzen. Dat zegt denk ik alles."
+      full:
+        - "We vroegen Joost om de teksten op onze website te herschrijven. Het werd een nieuwe website, een opgefrist logo én een nieuwe tekst. Maar het belangrijkste gebeurde daarnaast: we zijn zelfbewuster naar KRAGD gaan kijken en dat veel meer gaan uitdragen."
+        - "Joost probeert eerst je bedrijf en wat jou anders maakt heel goed te begrijpen, stelt nieuwsgierige vragen en komt dan met heldere ideeën om de ziel van je bedrijf in woorden en beelden te gieten. Dat hadden we van tevoren niet verwacht. We opereren nu met meer zelfvertrouwen en maken duidelijkere keuzes in wat we wel en niet doen. We zijn trotser op wat we doen, en dat trekt nieuwe klanten én collega's aan. Een concurrent zou ik nooit naar hem doorverwijzen. Dat zegt denk ik alles."
+    - name: "Paul Jansen"
+      company: "EBC Nederland / Ecclesia"
+      highlight: "Wil je van idee naar heldere communicatiestrategie, dan bel je Joost."
+      full:
+        - "Als vakspecialist word je blind voor de simpele vraag: hoe vertaal je wat je doet naar communicatie die mensen begrijpen? Wij lieten een buitenstaander naar onze wereld kijken. Joost stelde de juiste vragen, maar ook onverwachte vragen die een ander licht op de zaken wierpen. Vervolgens vertaalde hij dat in een heldere boodschap die een groot publiek begreep en aansprak."
+        - "Wat hij voor ons deed: moeilijke financiële zaken omzetten in communicatie die uitnodigt tot het gesprek. Wij zagen daardoor scherper dat een heldere boodschap bepalend is voor je aantrekkelijkheid en acquisitie. Wil je van idee naar heldere communicatiestrategie, dan bel je Joost. Bel je niet, dan mis je in elk geval de kans om eens anders naar je business te kijken."
+
 contact:
   heading: "Waar zit de ruis in jouw verhaal?"
   lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, wat je nodig hebt en of ik je daarbij kan helpen."

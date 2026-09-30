@@ -68,6 +68,23 @@ const pages = defineCollection({
       body: z.array(z.string()).nonempty(),
     }),
 
+    reviews: z.object({
+      heading: z.string(),
+      link_label: z.string(),
+      page_heading: z.string(),
+      page_lead: z.string(),
+      items: z
+        .array(
+          z.object({
+            name: z.string(),
+            company: z.string(),
+            highlight: z.string(),
+            full: z.array(z.string()).nonempty(),
+          })
+        )
+        .nonempty(),
+    }),
+
     contact: z.object({
       heading: z.string(),
       lead: z.string(),
