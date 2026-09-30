@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
 import { getEntry } from 'astro:content';
 
 // De volledige reviews. De copy staat in home.md onder `reviews`, naast de
@@ -39,12 +40,10 @@ const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
           ))}
         </div>
 
-        <div class="page-cta">
-          <p>Benieuwd wat er in jouw verhaal zit?</p>
-          <a href="/#contact" class="btn-primary">Plan een call</a>
-        </div>
       </div>
     </section>
+
+    <Contact contact={contact} />
   </main>
 
   <Footer email={contact.email} />
@@ -52,7 +51,7 @@ const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
 
 <style>
   .reviews-page {
-    padding: 4rem 0 5rem;
+    padding: 4rem 0;
   }
 
   .page-header {
@@ -122,38 +121,6 @@ const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
 
   blockquote p:last-child {
     margin-bottom: 0;
-  }
-
-  .page-cta {
-    margin-top: 4rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .page-cta p {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    background: var(--text);
-    color: #fff;
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 0.95rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-  }
-
-  .btn-primary:hover {
-    background: var(--color-2);
-    color: var(--text);
-    box-shadow: inset 0 0 0 1.5px var(--text);
   }
 
   @media (max-width: 768px) {

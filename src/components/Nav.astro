@@ -1,11 +1,13 @@
 ---
+// De homepage en /reviews hebben allebei een contactblok; daar scrolt de
+// knop naar beneden. Alleen de 404 heeft er geen, die stuurt naar de homepage.
+const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#contact';
 ---
 
 <header>
   <nav class="container">
     <a href="/" class="logo">Chief Story</a>
-    <!-- Met de slash ervoor werkt de knop ook vanaf /reviews en de 404. -->
-    <a href="/#contact" class="cta-nav">Plan een call</a>
+    <a href={contactHref} class="cta-nav">Plan een call</a>
   </nav>
 </header>
 

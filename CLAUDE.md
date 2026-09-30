@@ -30,10 +30,11 @@ Joost start de dev server zelf in de terminal van VS Code. Achtergrondprocessen 
 
 ```
 src/
-  pages/index.astro          # de pagina; markup, alle CSS, twee scripts
+  pages/index.astro          # de homepage; markup, CSS, het quote-slider-script
   pages/404.astro            # "Slecht verhaal." — eigen copy, niet uit home.md
   pages/reviews.astro        # volledige reviews; leest `reviews` uit home.md
   components/Nav.astro       # sticky header: logo + "Plan een call" naar #contact
+  components/Contact.astro   # contactblok + formulier + script; op / en /reviews
   components/Footer.astro    # merknaam, e-mailadres (prop), fotocredit
   layouts/BaseLayout.astro   # html-huls, kleurvariabelen, fonts, meta
   content/pages/home.md      # ALLE copy
@@ -59,11 +60,11 @@ De secties, in de volgorde waarin ze op de pagina staan:
 | `reviews` | Drie opdrachtgevers: `highlight` (één zin) op de homepage, `full` op `/reviews` |
 | `why` | Over Joost, inclusief het AI-verhaal, foto links |
 | `offer` | Drie routes met deliverables en vanaf-prijzen |
-| `contact` | Tekst, e-mailadres, web3forms-sleutel, formulier |
+| `contact` | Tekst, e-mailadres, web3forms-sleutel, formulier (`Contact.astro`, ook op `/reviews`) |
 
 **Let op: de volgorde in de markup is `reviews`, `why`, `offer`**, terwijl ze in het bestand als `offer`, `why`, `reviews` staan.
 
-`/reviews` is de enige tweede pagina met eigen verhaal. De copy staat gewoon in `home.md` onder `reviews`, zodat er één bestand met copy blijft. In `full` wordt een `*woord*` tussen sterretjes cursief; meer markdown is er bewust niet. De knop "Plan een call" in `Nav.astro` linkt naar `/#contact` (met slash), anders doet hij niets op `/reviews` en de 404.
+`/reviews` is de enige tweede pagina met eigen verhaal. De copy staat gewoon in `home.md` onder `reviews`, zodat er één bestand met copy blijft. In `full` wordt een `*woord*` tussen sterretjes cursief; meer markdown is er bewust niet. Onderaan staat hetzelfde contactblok als op de homepage (`Contact.astro`). De knop "Plan een call" in `Nav.astro` scrolt daarom op beide pagina's naar `#contact`; alleen op de 404 linkt hij naar `/#contact`.
 
 Het schema in `content.config.ts` controleert elke sleutel. Typ je er één verkeerd, dan zegt de build `offer: Required` met `home.md` als locatie — niet een onbegrijpelijke fout in `index.astro`.
 
