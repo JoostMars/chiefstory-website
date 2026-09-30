@@ -129,7 +129,7 @@ reviews:
 
 contact:
   heading: "Waar zit de ruis in jouw verhaal?"
-  lead: "Geen verkooppraatjes. Wel een goed gesprek over waar je staat, wat je nodig hebt en of ik je daarbij kan helpen."
+  lead: "Geen blablaverhalen. Wel een eerlijk gesprek over waar je staat, wat je nodig hebt en of ik je daarbij kan helpen. Zero strings attached."
 
   # Het adres dat op de site staat: in de contactsectie, in de footer en in
   # de foutmelding van het formulier.
