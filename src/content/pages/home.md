@@ -47,8 +47,7 @@ problem:
   heading: "Vind je verhaal.\nVertel het goed."
   body:
     - "Iedereen zegt iets anders over je merk. Je content mist een rode draad. Je vertelt hetzelfde verhaal als de concurrentie. En AI maakt het alleen maar erger."
-  signal_line: "Chief Story helpt je het signaal in de ruis te vinden en te versterken. Met een scherpe positionering, een merkverhaal dat klopt, en een systeem waarmee je team het elke dag verspreidt."
-  signal_emphasis: "Door mensen verteld, door AI versterkt."
+    - "Chief Story helpt je het signaal in de ruis te vinden en te versterken. Met een scherpe positionering, een merkverhaal dat klopt, en een systeem waarmee je team het elke dag verspreidt. Door mensen verteld, versterkt met AI."
   quotes:
     # Boog: verandering → interne verwarring → buitenwereld
     - "We zijn niet meer het bedrijf van drie jaar geleden."

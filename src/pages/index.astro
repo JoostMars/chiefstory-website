@@ -72,7 +72,6 @@ const beeld = (pad: string) => {
           <div class="problem-text">
             <h2 set:html={problem.heading.replace('\n', '<br />')} />
             {problem.body.map((p) => <p>{p}</p>)}
-            <p class="signal-line">{problem.signal_line}<br /><strong>{problem.signal_emphasis}</strong></p>
           </div>
           <div class="quote-slider" id="quoteSlider">
             <div class="quote-viewport">
@@ -405,14 +404,6 @@ const beeld = (pad: string) => {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.7;
-  }
-
-  .signal-line {
-    color: var(--text) !important;
-    font-size: 1.05rem;
-    border-left: 3px solid var(--accent);
-    padding-left: 1rem;
-    margin-top: 1.5rem;
   }
 
   .problem-quotes {

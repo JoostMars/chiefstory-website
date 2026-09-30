@@ -86,7 +86,7 @@ Nieuwe foto? In `src/assets/` zetten, dan de naam in `home.md` aanpassen.
 
 ## Kleur
 
-Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het streepje bij de signaalregel, het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het aanhalingsteken.
+Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het aanhalingsteken.
 
 Knoppen worden bij hover **niet rood** maar keren om — donker wordt licht met een haarlijn eromheen. Rood bij hover leest als waarschuwing op precies de plek waar je iemand wilt geruststellen.
 
