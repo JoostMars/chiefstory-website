@@ -104,7 +104,7 @@ reviews:
   heading: "Wat opdrachtgevers zeggen"
   link_label: "Lees de volledige reviews"
   page_heading: "Wat opdrachtgevers zeggen"
-  page_lead: "Drie ondernemers over hoe het is om met Chief Story te werken. In hun eigen woorden."
+  page_lead: "Hoe het is om met mij te werken? Dat laat ik graag aan de ervaringsdeskundigen over…"
   items:
     - name: "Derk Jan Wentink"
       company: "Barentsz Ontdekkingshuizen"
