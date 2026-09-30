@@ -13,7 +13,7 @@ const { reviews, contact } = page!.data;
 const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
 ---
 
-<BaseLayout title={reviews.page_heading} description={reviews.page_lead}>
+<BaseLayout title={reviews.page_heading} description={reviews.page_description}>
   <Nav />
 
   <main>

@@ -57,6 +57,7 @@ const pages = defineCollection({
       link_label: z.string(),
       page_heading: z.string(),
       page_lead: z.string(),
+      page_description: z.string(),
       items: z
         .array(
           z.object({
