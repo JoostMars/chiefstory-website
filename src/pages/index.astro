@@ -95,6 +95,32 @@ const beeld = (pad: string) => {
       </div>
     </section>
 
+    <!-- Reviews: één zin per klant; de volledige teksten staan op /reviews -->
+    <section class="section-reviews" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2>{reviews.heading}</h2>
+        </div>
+        <div class="reviews-grid">
+          {reviews.items.map((r) => (
+            <figure class="review">
+              <blockquote>
+                <span class="review-open" aria-hidden="true">"</span>
+                <p>{r.highlight}</p>
+              </blockquote>
+              <figcaption>
+                <span class="review-name">{r.name}</span>
+                <span class="review-company">{r.company}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p class="reviews-more">
+          <a href="/reviews" class="btn-ghost">{reviews.link_label} &rarr;</a>
+        </p>
+      </div>
+    </section>
+
     <!-- Waarom Chief Story -->
     <section class="section-why">
       <div class="container">
@@ -129,32 +155,6 @@ const beeld = (pad: string) => {
             </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Reviews: één zin per klant; de volledige teksten staan op /reviews -->
-    <section class="section-reviews" id="reviews">
-      <div class="container">
-        <div class="section-header">
-          <h2>{reviews.heading}</h2>
-        </div>
-        <div class="reviews-grid">
-          {reviews.items.map((r) => (
-            <figure class="review">
-              <blockquote>
-                <span class="review-open" aria-hidden="true">"</span>
-                <p>{r.highlight}</p>
-              </blockquote>
-              <figcaption>
-                <span class="review-name">{r.name}</span>
-                <span class="review-company">{r.company}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <p class="reviews-more">
-          <a href="/reviews" class="btn-ghost">{reviews.link_label} &rarr;</a>
-        </p>
       </div>
     </section>
 

@@ -56,12 +56,12 @@ De secties, in de volgorde waarin ze op de pagina staan:
 | `meta` | Paginatitel en meta-omschrijving (browsertabblad, Google) |
 | `hero` | Kop, lead, twee knoppen (`#contact` en `#aanbod`) |
 | `problem` | Probleemstelling + roterende quote-slider (5 quotes, in een bewuste boog) |
-| `why` | Over Joost, inclusief het AI-verhaal, foto links |
 | `reviews` | Drie opdrachtgevers: `highlight` (één zin) op de homepage, `full` op `/reviews` |
+| `why` | Over Joost, inclusief het AI-verhaal, foto links |
 | `offer` | Drie routes met deliverables en vanaf-prijzen |
 | `contact` | Tekst, e-mailadres, web3forms-sleutel, formulier |
 
-**Let op: `why` en `reviews` staan in de markup vóór `offer`**, ook al staan ze in het bestand erna.
+**Let op: de volgorde in de markup is `reviews`, `why`, `offer`**, terwijl ze in het bestand als `offer`, `why`, `reviews` staan.
 
 `/reviews` is de enige tweede pagina met eigen verhaal. De copy staat gewoon in `home.md` onder `reviews`, zodat er één bestand met copy blijft. In `full` wordt een `*woord*` tussen sterretjes cursief; meer markdown is er bewust niet. De knop "Plan een call" in `Nav.astro` linkt naar `/#contact` (met slash), anders doet hij niets op `/reviews` en de 404.
 
