@@ -57,20 +57,6 @@ problem:
     - "We klinken precies hetzelfde als de concurrentie."
     - "Na de pitch knikte iedereen, maar niemand kon het navertellen."
 
-method:
-  heading: "In drie stappen van ruis naar signaal."
-  intro: "Een betere tone of voice helpt niet als je positionering onduidelijk is. Een nieuwe website zonder helder verhaal is weggegooid geld. Het fundament moet eerst kloppen."
-  steps:
-    - number: "01"
-      title: "Positionering"
-      body: "Welk probleem los je op, voor wie, en welke plek is nog vrij in het hoofd van je publiek?"
-    - number: "02"
-      title: "Merkverhaal"
-      body: "Heldere taal die de kern raakt, van pitchdeck tot post en van site tot salesgesprek."
-    - number: "03"
-      title: "Systeem"
-      body: "Formats, AI-workflows en story sessions. Zodat je jouw verhaal consistent en consequent blijft vertellen."
-
 offer:
   heading: "Wat kan ik voor je doen?"
   cards:

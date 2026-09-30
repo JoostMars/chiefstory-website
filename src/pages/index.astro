@@ -6,7 +6,7 @@ import { getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 const page = await getEntry('pages', 'home');
-const { meta, hero, problem, method, offer, why, reviews, contact } = page.data;
+const { meta, hero, problem, offer, why, reviews, contact } = page.data;
 
 // Foto's staan in src/assets zodat Astro ze schaalt en naar WebP omzet.
 // In home.md staat alleen de bestandsnaam, bijvoorbeeld "/joost.jpg".
@@ -91,24 +91,6 @@ const beeld = (pad: string) => {
               ))}
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Methode -->
-    <section class="section-method">
-      <div class="container">
-        <div class="section-header">
-          <h2>{method.heading}</h2>
-          <p class="section-intro">{method.intro}</p>
-        </div>
-        <div class="steps">
-          {method.steps.map((step) => (
-            <div class="step">
-              <h3><span class="step-number">{step.number}</span>{' '}{step.title}</h3>
-              <p>{step.body}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -518,42 +500,6 @@ const beeld = (pad: string) => {
     transform: scale(1.4);
   }
 
-  /* Methode */
-  .section-method {
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--color-3);
-  }
-
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .step {
-    padding: 2rem;
-    background: #FFFFFF;
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-  }
-
-  .step-number {
-    color: var(--accent);
-    margin-right: 0.6rem;
-  }
-
-  .step h3 {
-    font-size: 1.45rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .step p:last-child {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.65;
-  }
-
   /* Aanbod */
   .section-offer {
     padding: 4rem 0;
@@ -928,7 +874,6 @@ const beeld = (pad: string) => {
       gap: 2.5rem;
     }
 
-    .steps,
     .offer-grid,
     .reviews-grid {
       grid-template-columns: 1fr;
@@ -948,7 +893,6 @@ const beeld = (pad: string) => {
     }
 
     .section-problem,
-    .section-method,
     .section-offer,
     .section-why,
     .section-reviews,
@@ -972,7 +916,6 @@ const beeld = (pad: string) => {
       font-size: 1.05rem;
     }
 
-    .step p:last-child,
     .offer-card > p,
     .deliverables li,
     .btn-primary,

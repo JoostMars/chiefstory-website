@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Chief Story** — de website van Joost Marsmans adviespraktijk. Eén statische pagina, gebouwd met Astro. Geen database, geen CMS, geen server.
 
-De site was tot 8 augustus 2026 zes pagina's en 3.215 woorden groot. Nu is het één pagina van ruim 500 woorden. De oude content staat nog in de geschiedenis: `git show f2fbe62:src/content/pages/methode.md` (en `aanbod.md`, `over.md`, `contact.md`). Dat `methode.md` bevat het AI-hoofdstuk waar Joost aan hechtte; dat is inmiddels verwerkt in de `why`-sectie.
+De site was tot 8 augustus 2026 zes pagina's en 3.215 woorden groot. Nu is het één pagina van ruim 500 woorden. De oude content staat nog in de geschiedenis: `git show f2fbe62:src/content/pages/methode.md` (en `aanbod.md`, `over.md`, `contact.md`). Dat `methode.md` bevat het AI-hoofdstuk waar Joost aan hechtte; dat is inmiddels verwerkt in de `why`-sectie. De sectie met drie stappen (Positionering, Merkverhaal, Systeem) is op 30 september 2026 geschrapt toen de reviews erbij kwamen: `git show 43e8894:src/content/pages/home.md` voor de copy.
 
 ## Stack
 
@@ -56,7 +56,6 @@ De secties, in de volgorde waarin ze op de pagina staan:
 | `meta` | Paginatitel en meta-omschrijving (browsertabblad, Google) |
 | `hero` | Kop, lead, twee knoppen (`#contact` en `#aanbod`) |
 | `problem` | Probleemstelling + roterende quote-slider (5 quotes, in een bewuste boog) |
-| `method` | Drie stappen: Positionering, Merkverhaal, Systeem |
 | `why` | Over Joost, inclusief het AI-verhaal, foto links |
 | `reviews` | Drie opdrachtgevers: `highlight` (één zin) op de homepage, `full` op `/reviews` |
 | `offer` | Drie routes met deliverables en vanaf-prijzen |
@@ -87,7 +86,7 @@ Nieuwe foto? In `src/assets/` zetten, dan de naam in `home.md` aanpassen.
 
 ## Kleur
 
-Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het streepje bij de signaalregel, het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, het aanhalingsteken en de stapnummers.
+Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het streepje bij de signaalregel, het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het aanhalingsteken.
 
 Knoppen worden bij hover **niet rood** maar keren om — donker wordt licht met een haarlijn eromheen. Rood bij hover leest als waarschuwing op precies de plek waar je iemand wilt geruststellen.
 

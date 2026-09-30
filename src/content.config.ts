@@ -31,20 +31,6 @@ const pages = defineCollection({
       quotes: z.array(z.string()).nonempty(),
     }),
 
-    method: z.object({
-      heading: z.string(),
-      intro: z.string(),
-      steps: z
-        .array(
-          z.object({
-            number: z.string(),
-            title: z.string(),
-            body: z.string(),
-          })
-        )
-        .nonempty(),
-    }),
-
     offer: z.object({
       heading: z.string(),
       cards: z
