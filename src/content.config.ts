@@ -24,7 +24,6 @@ const pages = defineCollection({
     }),
 
     problem: z.object({
-      heading: z.string(),
       body: z.array(z.string()).nonempty(),
       quotes: z.array(z.string()).nonempty(),
     }),

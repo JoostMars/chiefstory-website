@@ -71,7 +71,6 @@ const beeld = (pad: string) => {
       <div class="container">
         <div class="problem-grid">
           <div class="problem-text">
-            <h2 set:html={problem.heading.replace('\n', '<br />')} />
             {problem.body.map((p) => <p>{p}</p>)}
           </div>
           <div class="quote-slider" id="quoteSlider">
@@ -346,11 +345,6 @@ const beeld = (pad: string) => {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
-  }
-
-  .problem-text h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    margin-bottom: 1.5rem;
   }
 
   .problem-text p {

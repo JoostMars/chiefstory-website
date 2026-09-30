@@ -56,7 +56,7 @@ De secties, in de volgorde waarin ze op de pagina staan:
 |---|---|
 | `meta` | Paginatitel en meta-omschrijving (browsertabblad, Google) |
 | `hero` | Kop, lead, twee knoppen (`#contact` en `#aanbod`) |
-| `problem` | Probleemstelling + roterende quote-slider (5 quotes, in een bewuste boog) |
+| `problem` | Probleemstelling (twee alinea's, bewust zonder kop) + roterende quote-slider (5 quotes, in een bewuste boog) |
 | `reviews` | Drie opdrachtgevers: `highlight` (één zin) op de homepage, `full` op `/reviews` |
 | `why` | Over Joost, inclusief het AI-verhaal, foto links |
 | `offer` | Drie routes met deliverables en vanaf-prijzen |
