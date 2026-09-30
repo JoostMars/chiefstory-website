@@ -85,6 +85,8 @@ Nieuwe foto? In `src/assets/` zetten, dan de naam in `home.md` aanpassen.
 
 `font-synthesis-weight: none` in `BaseLayout.astro` blokkeert dat nu. DM Sans en Fraunces hebben wél echte gewichten; vet in de lopende tekst mag gewoon.
 
+**Op telefoons (tot 640px) is de basismaat 19px** in plaats van 16px: `html { font-size: 118.75% }` in `BaseLayout.astro`. Alle maten staan in rem, dus koppen, tekst, knoppen, labels en de zijmarge schalen daarmee in één keer mee. Wil Joost mobiel groter of kleiner, dan is dat de enige knop; niet per element gaan sleutelen.
+
 ## Kleur
 
 Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het aanhalingsteken.
