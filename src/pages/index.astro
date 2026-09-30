@@ -710,6 +710,15 @@ const beeld = (pad: string) => {
       font-size: 1.05rem;
     }
 
+    /* Onder elkaar gezet oogt het icoon links verloren; in het midden
+       sluit het het blok af. Breedte op de inhoud, anders wordt de hele
+       regel klikbaar. */
+    .social-link {
+      display: flex;
+      width: max-content;
+      margin: 1.25rem auto 0;
+    }
+
     .offer-card > p,
     .deliverables li,
     .btn-primary,
