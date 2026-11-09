@@ -89,6 +89,7 @@ why:
 
 # Reviews staan op twee plekken: de homepage toont per klant alleen de
 # 'highlight' (één zin), de pagina /reviews toont de volledige tekst ('full').
+# Een klant zonder 'highlight' staat alleen op /reviews, niet op de homepage.
 # Een *woord* tussen sterretjes wordt cursief.
 reviews:
   heading: "Wat opdrachtgevers zeggen"
@@ -96,11 +97,15 @@ reviews:
   page_heading: "Wat opdrachtgevers zeggen"
   page_lead: "Hoe het is om met mij te werken? Dat laat ik graag aan de ervaringsdeskundigen over…"
   # Alleen voor Google en het browsertabblad; staat niet op de pagina zelf.
-  page_description: "Drie opdrachtgevers over werken met Chief Story: positionering, merkverhaal en een systeem dat het verhaal elke dag vertelt."
+  page_description: "Vier opdrachtgevers over werken met Chief Story: positionering, merkverhaal en een systeem dat het verhaal elke dag vertelt."
   items:
+    - name: "Johan Geleijns"
+      company: "SAOZ advies in onroerende zaken"
+      highlight: "Joost kan als geen ander de kernboodschappen uit gesprekken halen, actief meepraten over de strategie en meedenken over de positionering van je bedrijf."
+      full:
+        - "De samenwerking begon met het schrijven van onze blogposts en nieuwsbrieven, en groeide uit tot een totaalpakket, van contentmarketing tot strategie en soms zelfs bijna sales. Joost kan als geen ander de kernboodschappen uit gesprekken halen, actief meepraten over de strategie en meedenken over de positionering van je bedrijf. We zijn samen zo’n tien jaar geleden begonnen met het claimen van autoriteit. Dat is ruimschoots gelukt. En we weten nog steeds met nieuwe invalshoeken ons verhaal te vertellen. Joost denkt inmiddels ook mee over AI oplossingen voor onze werkzaamheden."
     - name: "Derk Jan Wentink"
       company: "Barentsz Ontdekkingshuizen"
-      highlight: "Iemand van buiten zit niet in de tunnel waarin je als ondernemer zit. Zo werk je áán je bedrijf in plaats van erin."
       full:
         - "We hebben Joost ingeschakeld toen Barentsz net begon, voor de vragen die ertoe doen: wat is Barentsz, welk probleem lossen we op en welk verhaal vertellen we daaromheen? Kortom: de positionering. Gaandeweg werd zijn rol vooral die van klankbord. Periodiek herijken van waar we mee bezig zijn, wie onze doelgroep is, hoe we herkenbaar blijven als de markt verandert."
         - "Iemand van buiten zit niet in de tunnel waarin je als ondernemer zit. Zo werk je áán je bedrijf in plaats van erin. Dat hoor je in elke *business talk*, maar er tijd voor vrijmaken is een tweede. Merkdenken is in de bouwwereld ongebruikelijk. Daarmee onderscheiden we ons, en de markt herkent dat. Onze deelname aan Provada was bijvoorbeeld een stap die we zelf niet zo snel hadden gezet. Joost wist dat we daar moesten staan. En het bleek een goede zet."

@@ -64,7 +64,8 @@ const pages = defineCollection({
           z.object({
             name: z.string(),
             company: z.string(),
-            highlight: z.string(),
+            // Zonder highlight staat de klant alleen op /reviews.
+            highlight: z.string().optional(),
             full: z.array(z.string()).nonempty(),
           })
         )

@@ -96,7 +96,7 @@ const beeld = (pad: string) => {
           <h2>{reviews.heading}</h2>
         </div>
         <div class="reviews-grid">
-          {reviews.items.map((r) => (
+          {reviews.items.filter((r) => r.highlight).map((r) => (
             <figure class="review">
               <blockquote>
                 <span class="review-open" aria-hidden="true">"</span>
