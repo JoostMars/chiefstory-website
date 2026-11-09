@@ -1,4 +1,5 @@
 ---
+import Lockup from './Lockup.astro';
 interface Props {
   email: string;
 }
@@ -10,7 +11,7 @@ const { email } = Astro.props;
   <div class="container">
     <div class="top">
       <div class="brand">
-        <span class="logo">Chief Story</span>
+        <span class="logo"><Lockup negatief /></span>
         <p>Van ruis naar signaal.</p>
       </div>
       <nav>
@@ -49,10 +50,7 @@ const { email } = Astro.props;
   }
 
   .logo {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 1.1rem;
-    letter-spacing: -0.02em;
+    font-size: 1.25rem;
     display: block;
     margin-bottom: 0.5rem;
   }

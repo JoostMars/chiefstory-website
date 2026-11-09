@@ -8,6 +8,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 De site was tot 8 augustus 2026 zes pagina's en 3.215 woorden groot. Nu is het één pagina van ruim 500 woorden. De oude content staat nog in de geschiedenis: `git show f2fbe62:src/content/pages/methode.md` (en `aanbod.md`, `over.md`, `contact.md`). Dat `methode.md` bevat het AI-hoofdstuk waar Joost aan hechtte; dat is inmiddels verwerkt in de `why`-sectie. De sectie met drie stappen (Positionering, Merkverhaal, Systeem) is op 30 september 2026 geschrapt toen de reviews erbij kwamen: `git show 43e8894:src/content/pages/home.md` voor de copy.
 
+## Merk — `brand/` is de bron
+
+Sinds 9 november 2026 staat het merk in `brand/`: brand book (`README.md`), tokens (`tokens.json`), logo's, fonts en regels per bouwsteen. **Elke vormgevingskeuze volgt `brand/`.** Lees `brand/README.md` voordat je iets aan de vormgeving verandert.
+
+- Kleuren, letters, afstanden: wijzig ze in `brand/tokens.json`. `scripts/tokens.mjs` maakt daar vóór elke `dev` en `build` `src/styles/tokens.css` van (niet in git). De oude namen (`--bg`, `--text`, `--accent`…) in `BaseLayout.astro` verwijzen naar die tokens.
+- Het logo is `src/components/Lockup.astro` (teken + woordmerk, H1). Het woordmerk staat nooit los van het teken en altijd op één regel.
+- Het teken los is `src/components/Wig.astro`: boven citaten en als favicon.
+- De diagonaal in de hero is één `linear-gradient` op 109,5° (de lijn staat op 70,5°). Op de site ligt alleen de hoek vast.
+- Het Design System op claude.ai is een weergave van `brand/`, geen tweede bron.
+
 ## Stack
 
 - **Astro 6** — statische site generator, geen adapters
@@ -79,19 +89,27 @@ Foto's staan in `src/assets/`, niet in `public/`. Daar worden ze door Astro gesc
 
 Nieuwe foto? In `src/assets/` zetten, dan de naam in `home.md` aanpassen.
 
-## Typografie — één regel die je moet kennen
+## Typografie — twee families plus het woordmerk
+
+- **DM Serif Display rechtop**: koppen, primaire knop, prijzen — de stem van Chief Story.
+- **DM Serif Display cursief**: citaten van één zin — de stem van de ander.
+- **DM Sans**: lopende tekst, labels, ghost-knop, volledige reviews.
+- **Inter Tight 600**: alleen het woordmerk in de lockup.
+- Fraunces is op 9 november 2026 verwijderd.
+
+### Eén regel die je moet kennen
 
 **DM Serif Display heeft maar één snede (400).** Vraag nergens om `font-weight: 600` of `700` op een kop, het logo, een knop of een prijs: browsers verzinnen het vet dan zelf, en Safari tekent daarbij elke letter dubbel. Dat oogt als een schaduw achter de tekst.
 
-`font-synthesis-weight: none` in `BaseLayout.astro` blokkeert dat nu. DM Sans en Fraunces hebben wél echte gewichten; vet in de lopende tekst mag gewoon.
+`font-synthesis-weight: none` in `BaseLayout.astro` blokkeert dat nu. DM Sans heeft wél echte gewichten; vet in de lopende tekst mag gewoon.
 
 **Op telefoons (tot 640px) is de basismaat 19px** in plaats van 16px: `html { font-size: 118.75% }` in `BaseLayout.astro`. Alle maten staan in rem, dus koppen, tekst, knoppen, labels en de zijmarge schalen daarmee in één keer mee. Wil Joost mobiel groter of kleiner, dan is dat de enige knop; niet per element gaan sleutelen.
 
 ## Kleur
 
-Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het aanhalingsteken.
+Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het teken.
 
-Knoppen worden bij hover **niet rood** maar keren om — donker wordt licht met een haarlijn eromheen. Rood bij hover leest als waarschuwing op precies de plek waar je iemand wilt geruststellen.
+Knoppen worden bij hover **niet rood** maar keren om: de primaire knop (Plan een call) wordt wit met een antraciet outline, de ghost-knop (Bekijk het aanbod) wordt zwart. Rood bij hover leest als waarschuwing op precies de plek waar je iemand wilt geruststellen.
 
 ## Formulier
 

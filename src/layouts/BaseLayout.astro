@@ -1,4 +1,5 @@
 ---
+import '../styles/tokens.css';
 interface Props {
   title: string;
   description?: string;
@@ -16,7 +17,7 @@ const { title, description = 'Chief Story helpt groeiende organisaties hun strat
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Fraunces:ital,opsz,wght@1,9..144,300..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Inter+Tight:wght@600&display=swap" rel="stylesheet" />
     <title>{title} — Chief Story</title>
     <style is:global>
       *, *::before, *::after {
@@ -26,18 +27,20 @@ const { title, description = 'Chief Story helpt groeiende organisaties hun strat
       }
 
       :root {
-        --color-1: rgb(250, 249, 246);
-        --color-2: rgb(250, 249, 246);
-        --color-3: rgb(250, 249, 246);
-        --bg: var(--color-2);
-        --surface: rgb(240, 239, 235);
-        --border: rgb(213, 211, 205);
-        --text: #1E1E1C;
-        --text-secondary: #56544F;
-        --accent: #C8401E;
+        /* Kleuren en letters komen uit brand/tokens.json (via src/styles/tokens.css).
+           Deze namen blijven bestaan zodat de rest van de CSS niet hoeft te veranderen. */
+        --color-1: var(--papier);
+        --color-2: var(--papier);
+        --color-3: var(--papier);
+        --bg: var(--papier);
+        --surface: var(--vlak);
+        --border: var(--haarlijn);
+        --text: var(--inkt);
+        --text-secondary: var(--inkt-2);
+        --accent: var(--wigrood);
         --accent-light: #F5EAE6;
-        --font-heading: 'DM Serif Display', serif;
-        --font-body: 'DM Sans', sans-serif;
+        --font-heading: var(--font-serif);
+        --font-body: var(--font-sans);
         --max-width: 1120px;
         --gutter: 2rem;
       }

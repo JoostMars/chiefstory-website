@@ -6,6 +6,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "tokens": "node scripts/tokens.mjs",
+    "predev": "node scripts/tokens.mjs",
+    "prebuild": "node scripts/tokens.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

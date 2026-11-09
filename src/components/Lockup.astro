@@ -1,0 +1,32 @@
+---
+// Lockup H1: het teken vóór het woordmerk, even hoog als de kapitalen,
+// bovenaan gelijk met de C. Het woordmerk staat nooit los van het teken
+// en altijd op één regel. Regels: brand/README.md › Logo.
+import Wig from './Wig.astro';
+interface Props { negatief?: boolean }
+const { negatief = false } = Astro.props;
+---
+<span class:list={['lockup', { negatief }]}>
+  <Wig class="lockup-wig" />
+  <span class="lockup-naam">Chief Story</span>
+</span>
+<style>
+  .lockup {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.22em;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .lockup :global(.lockup-wig) {
+    width: calc(0.73em * 76 / 58);
+    margin-top: 0.15em;
+  }
+  .lockup-naam {
+    font-family: var(--font-merk);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--inkt);
+  }
+  .negatief .lockup-naam { color: var(--papier); }
+</style>

@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# gegenereerd uit brand/tokens.json
+src/styles/tokens.css

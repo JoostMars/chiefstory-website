@@ -1,4 +1,5 @@
 ---
+import Lockup from './Lockup.astro';
 // De homepage en /reviews hebben allebei een contactblok; daar scrolt de
 // knop naar beneden. Alleen de 404 heeft er geen, die stuurt naar de homepage.
 const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#contact';
@@ -6,7 +7,7 @@ const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#cont
 
 <header>
   <nav class="container">
-    <a href="/" class="logo">Chief Story</a>
+    <a href="/" class="logo" aria-label="Chief Story, naar de homepage"><Lockup /></a>
     <a href={contactHref} class="cta-nav">Plan een call</a>
   </nav>
 </header>
@@ -28,10 +29,7 @@ const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#cont
   }
 
   .logo {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 1.1rem;
-    letter-spacing: -0.02em;
+    font-size: 1.25rem;
     flex-shrink: 0;
   }
 
@@ -50,7 +48,7 @@ const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#cont
   }
 
   .cta-nav:hover {
-    background: var(--color-2);
+    background: var(--wit);
     color: var(--text);
     box-shadow: inset 0 0 0 1.5px var(--text);
   }

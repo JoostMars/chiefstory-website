@@ -12,6 +12,7 @@ const { reviews, contact } = page!.data;
 
 // *woord* in de YAML wordt cursief. Meer markdown is er bewust niet.
 const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+import Wig from '../components/Wig.astro';
 ---
 
 <BaseLayout title={reviews.page_heading} description={reviews.page_description}>
@@ -29,7 +30,7 @@ const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
           {reviews.items.map((r) => (
             <article class="review">
               <header>
-                <span class="review-open" aria-hidden="true">"</span>
+                <Wig class="review-open" />
                 <h2>{r.name}</h2>
                 <p class="review-company">{r.company}</p>
               </header>
@@ -89,16 +90,9 @@ const cursief = (tekst: string) => tekst.replace(/\*([^*]+)\*/g, '<em>$1</em>');
     border-bottom: 1px solid var(--border);
   }
 
-  .review-open {
-    display: block;
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 0.75;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-    font-variation-settings: 'opsz' 144;
+  .review :global(.review-open) {
+    width: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   .review h2 {

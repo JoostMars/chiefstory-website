@@ -1,0 +1,13 @@
+---
+// Het teken van Chief Story: twee wiggen (v05). Bron: brand/logo/.
+// Kleur via `color` op de ouder of de class; standaard wigrood.
+interface Props { class?: string; label?: string }
+const { class: cls, label } = Astro.props;
+const d = 'M10 6 Q10 0 16 0 L32 0 Q38 0 38 6 L7 58 L0 58 Z';
+---
+<svg class:list={['wig', cls]} viewBox="0 0 76 58" role={label ? 'img' : undefined} aria-label={label} aria-hidden={label ? undefined : 'true'}>
+  <path d={d} /><path d={d} transform="translate(38 0)" />
+</svg>
+<style>
+  .wig { display: block; height: auto; fill: var(--wigrood); }
+</style>
