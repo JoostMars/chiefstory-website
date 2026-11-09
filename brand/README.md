@@ -22,7 +22,7 @@ Dit systeem is gebouwd uit de website (chiefstory.nl, repo `JoostMars/chiefstory
 |---|---|---|
 | Het woord geven | Kern | Elke uiting opent met een echte zin van een ander: klant, publiek, lezer. |
 | Ruis → signaal | Kern | Twee toestanden naast elkaar: veel stemmen, dan één. Hier zit het testen. |
-| Rood in rust | Kern | `wigrood` is alleen het teken, één korte lijn en het bovenkopje. |
+| Rood in rust | Kern | `wigrood` is alleen het teken en het bovenkopje. |
 | De diagonaal | Kern | Eén lijn in de hoek van de wig deelt het vlak in `papier` en `vlak`. |
 | Zwart-wit, in een opening | Ondersteunend | Analoge portretten met filmrand, mensen in een deur of drempel. |
 
@@ -35,10 +35,10 @@ Een citaat staat in DM Serif Display Italic (`citaat`). De tekst lijnt uit op de
 1. **Open met andermans woorden.** Klantquotes, uitspraken uit de Chief Story Test, zinnen uit interviews. Nooit verzonnen quotes, nooit een eigen slogan tussen aanhalingstekens.
 2. **De wig hangt, de tekst staat.** Maximaal één wigpaar per vlak. Het teken nooit als patroon; de hoek van de wig mag wel, als diagonaal.
 3. **Eerst de ruis, dan het signaal.** Ruis: klein, `ruis`-grijs, meerstemmig, DM Sans. Signaal: groot, `inkt`, één zin, DM Serif Display Italic. Zie **RuisSignaal**.
-4. **Rood alleen in rust.** `wigrood` voor het teken, de lijn van 88 × 3 px onder een kop en het label. Geen rode knoppen, vlakken, hover of lopende tekst. Knoppen keren bij hover om: donker wordt licht met een haarlijn.
+4. **Rood alleen in rust.** `wigrood` alleen voor het teken en het label. Geen rode lijnen onder koppen, geen rode knoppen, vlakken, hover of lopende tekst. Knoppen keren bij hover om: donker wordt licht met een haarlijn.
 5. **Eén ding mag over de rand.** De wig in de marge, het zwarte kopblok over een kaart, of een foto die uit de kolom loopt. Nooit twee in één compositie.
 6. **De diagonaal deelt het vlak.** Hoek `diagonaal-hoek` (70,5°), van rand tot rand, `papier` links, `vlak` rechts. Naast de diagonaal geen andere grijze vlakken: scheiding maak je met `haarlijn` en wit.
-7. **Secties op de site wisselen van vlak.** De Vóór-sectie staat op `vlak` (#F0EFEB), de over-sectie op `vlak-donker` (#44433F) met alle tekst in `papier`. Op `vlak-donker` geen rood.
+7. **Secties op de site wisselen van vlak, zonder lijnen ertussen.** Geen haarlijnen tussen secties: de kleurwissel is de scheiding. De Vóór-sectie staat op `vlak` (#F0EFEB), de over-sectie op `vlak-donker` (#44433F) met alle tekst in `papier`. Op `vlak-donker` geen rood.
 
 ## Logo
 

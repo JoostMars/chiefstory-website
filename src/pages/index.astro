@@ -194,7 +194,6 @@ const beeld = (pad: string) => {
      Op de site ligt alleen de hoek vast, de positie niet (brand/components/Diagonaal.md). */
   .hero {
     padding: 4rem 0 3.5rem;
-    border-bottom: 1px solid var(--border);
     background: linear-gradient(109.5deg, var(--papier) 66%, var(--vlak) 66%);
   }
 
@@ -328,14 +327,6 @@ const beeld = (pad: string) => {
     margin-bottom: 4.75rem;
   }
 
-  .section-offer .section-header::after {
-    content: '';
-    display: block;
-    width: 88px;
-    height: 3px;
-    margin: 2rem auto 0;
-    background: var(--accent);
-  }
 
   .section-offer .section-header h2 {
     font-size: clamp(2.9rem, 5.5vw, 4.25rem);
@@ -344,7 +335,6 @@ const beeld = (pad: string) => {
   /* Probleem */
   .section-problem {
     padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
     background: var(--vlak);
   }
 
@@ -425,7 +415,6 @@ const beeld = (pad: string) => {
   /* Aanbod */
   .section-offer {
     padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
     background: var(--color-3);
   }
 
@@ -530,7 +519,6 @@ const beeld = (pad: string) => {
      (te weinig contrast), dus ook het label wordt licht. */
   .section-why {
     padding: 4rem 0;
-    border-bottom: 1px solid var(--vlak-donker);
     background: var(--vlak-donker);
     color: var(--papier);
   }
@@ -581,7 +569,6 @@ const beeld = (pad: string) => {
   /* Reviews */
   .section-reviews {
     padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
     background: var(--color-3);
   }
 
@@ -592,15 +579,6 @@ const beeld = (pad: string) => {
     text-align: center;
   }
 
-  .section-problem .section-header::after,
-  .section-reviews .section-header::after {
-    content: '';
-    display: block;
-    width: 88px;
-    height: 3px;
-    margin: 2rem auto 0;
-    background: var(--accent);
-  }
 
   .reviews-grid {
     display: grid;
