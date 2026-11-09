@@ -101,7 +101,7 @@ reviews:
   items:
     - name: "Johan Geleijns"
       company: "SAOZ advies in onroerende zaken"
-      highlight: "Joost kan als geen ander de kernboodschappen uit gesprekken halen, actief meepraten over de strategie en meedenken over de positionering van je bedrijf."
+      highlight: "We weten nog steeds met nieuwe invalshoeken ons verhaal te vertellen."
       full:
         - "De samenwerking begon met het schrijven van onze blogposts en nieuwsbrieven, en groeide uit tot een totaalpakket, van contentmarketing tot strategie en soms zelfs bijna sales. Joost kan als geen ander de kernboodschappen uit gesprekken halen, actief meepraten over de strategie en meedenken over de positionering van je bedrijf. We zijn samen zo’n tien jaar geleden begonnen met het claimen van autoriteit. Dat is ruimschoots gelukt. En we weten nog steeds met nieuwe invalshoeken ons verhaal te vertellen. Joost denkt inmiddels ook mee over AI oplossingen voor onze werkzaamheden."
     - name: "Derk Jan Wentink"
