@@ -59,7 +59,7 @@ De secties, in de volgorde waarin ze op de pagina staan:
 | `problem` | Probleemstelling (twee alinea's, bewust zonder kop) + roterende quote-slider (5 quotes, in een bewuste boog) |
 | `reviews` | Drie opdrachtgevers: `highlight` (één zin) op de homepage, `full` op `/reviews` |
 | `why` | Over Joost, inclusief het AI-verhaal, foto links |
-| `offer` | Drie routes met deliverables en vanaf-prijzen |
+| `offer` | De Route: drie stappen (Vinden, Vangen, Vertellen), elk met de kop in een zwart blok over de bovenrand van de kaart, een inleiding, een blok met kopje en tekst (`block`; bij stap 1 de Chief Story Test) en een vanaf-prijs |
 | `contact` | Tekst, e-mailadres, web3forms-sleutel, formulier (`Contact.astro`, ook op `/reviews`) |
 
 **Let op: de volgorde in de markup is `reviews`, `why`, `offer`**, terwijl ze in het bestand als `offer`, `why`, `reviews` staan.

@@ -55,36 +55,31 @@ problem:
     - "We klinken precies hetzelfde als de concurrentie."
     - "Na de pitch knikte iedereen, maar niemand kon het navertellen."
 
+# De Route: drie stappen die op elkaar volgen. Elke stap heeft een kop
+# ('title', in het zwarte blok boven de kaart), een inleiding
+# ('description') en een blok met een klein kopje ('label') en tekst ('body').
+# 'price_note' is de kleine regel onder de prijs; die mag je weglaten.
 offer:
   heading: "Wat kan ik voor je doen?"
   cards:
-    - title: "Story Sprint"
-      duration: "1 maand"
-      description: "Positionering, merkverhaal en kernboodschappen in één document."
-      deliverables:
-        - "Positionering"
-        - "Merkverhaal"
-        - "Boodschappen"
-        - "Kernzinnen voor deck, pitch en site"
-      price: "Vanaf €5.000"
-    - title: "Story System"
-      duration: "3 maanden"
-      description: "Je verhaal structureel activeren in content, marketing, sales en AI."
-      deliverables:
-        - "Contentstrategie"
-        - "Contentpijlers en formats"
-        - "AI-workflows en promptsets"
-        - "Maandelijkse story sessions"
-      price: "Vanaf €12.500"
-    - title: "The Full Story"
-      duration: "4 maanden"
-      description: "Eerst het verhaal, dan het systeem. Beide trajecten als één route."
-      deliverables:
-        - "Alles van de Story Sprint"
-        - "Alles van het Story System"
-        - "Naadloze overgang"
-        - "Fundament voor structurele groei"
-      price: "Vanaf €16.500"
+    - title: "Vinden"
+      description: "Je verhaal vinden begint met je positionering; de plek die jouw merk inneemt in het hoofd van de klant, ten opzichte van je concurrenten. Wat maakt jou de enige logische keuze voor hen? We beginnen niet met schrijven, maar met vragen."
+      block:
+        label: "MLS + Chief Story Test"
+        body: "Dan schrijven we een Minimum Lovable Story (MLS). Of dat verhaal klopt, testen we met de Chief Story Test, een mix van synthetische gebruikers en echte lezers. Voordat er een woord naar buiten gaat, weten we wat werkt."
+      price: "Vanaf €3.500"
+    - title: "Vangen"
+      description: "Uit je verhaal volgen je kernboodschappen, signature zinnen en tone-of-voice. Die leggen we vast, net als je contentstrategie. Herkenbare contentpijlers, formats en thema’s zorgen voor zichtbaarheid en vindbaarheid."
+      block:
+        label: "AI + Story System"
+        body: "We bouwen een AI-harnas dat je merk steeds beter leert kennen naarmate je er langer mee werkt. Ik help jullie met de inrichting, de mappenstructuur en de skills voor het Story System. Dat doen we samen, zodat het past bij jullie werkwijze en je er zelf mee verder kunt."
+      price: "Vanaf €7.500"
+    - title: "Vertellen"
+      description: "Als jullie het willen, help ik je ook je verhalen te vertellen. Dat is optioneel en kunnen we precies invullen hoe jullie willen. Met een eigen schrijver of iemand uit mijn netwerk, of met mij, in een samenwerking van 6 tot 12 maanden. En het blijft natuurlijk niet bij schrijven."
+      block:
+        label: "Creative + Direction"
+        body: "Vertellen kan ook met video, animatie, een website of een commercial. Afhankelijk van de boodschap, de doelgroep en je doelen help ik je graag met creatieve strategie en ideeën die je verhaal nog verder versterken."
+      price: "In overleg"
 
 why:
   label: "Over Joost Marsman"
