@@ -43,7 +43,7 @@ hero:
   cta_secondary: "Bekijk het aanbod"
 
 problem:
-  heading: "Voor Chief Story"
+  heading: "Vóór Chief Story"
   quotes:
     # Boog: verandering → interne verwarring → buitenwereld
     - "We zijn niet meer het bedrijf van drie jaar geleden."
