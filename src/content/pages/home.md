@@ -38,7 +38,7 @@ hero:
   # &nbsp; is een spatie waarop de regel NIET mag afbreken. Zo blijft
   # "naar signaal" bij elkaar en breekt de kop op de juiste plek.
   h1: "Van ruis naar&nbsp;signaal"
-  lead: "Van een versnipperd verhaal naar één scherp narratief. En een systeem waarmee je team het elke dag vertelt. Groeien? Get your story straight."
+  lead: "Eén scherp narratief, getest bij je publiek. En een systeem waarmee iedereen hetzelfde verhaal vertelt, ook zonder mij. Groeien? Get your story straight."
   cta_primary: "Plan een call"
   cta_secondary: "Bekijk het aanbod"
 
