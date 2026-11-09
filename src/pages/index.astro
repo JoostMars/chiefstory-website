@@ -66,9 +66,12 @@ const beeld = (pad: string) => {
       </div>
     </section>
 
-    <!-- Quotes: vijf herkenbare uitspraken, zonder begeleidende tekst -->
+    <!-- Quotes: vijf herkenbare uitspraken onder de kop "Voor"; de reviews eronder zijn "Na" -->
     <section class="section-problem">
       <div class="container">
+        <div class="section-header">
+          <h2>{problem.heading}</h2>
+        </div>
         <div class="quote-slider" id="quoteSlider">
           <div class="quote-viewport">
             <div class="quote-track">
@@ -569,10 +572,14 @@ const beeld = (pad: string) => {
     background: var(--color-3);
   }
 
+  /* "Voor" boven de quotes en "Na" boven de reviews zijn een paar:
+     dezelfde gecentreerde kop met rode lijn. */
+  .section-problem .section-header,
   .section-reviews .section-header {
     text-align: center;
   }
 
+  .section-problem .section-header::after,
   .section-reviews .section-header::after {
     content: '';
     display: block;

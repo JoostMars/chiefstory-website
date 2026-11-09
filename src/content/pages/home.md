@@ -43,6 +43,7 @@ hero:
   cta_secondary: "Bekijk het aanbod"
 
 problem:
+  heading: "Voor Chief Story"
   quotes:
     # Boog: verandering → interne verwarring → buitenwereld
     - "We zijn niet meer het bedrijf van drie jaar geleden."
@@ -92,7 +93,7 @@ why:
 # Een klant zonder 'highlight' staat alleen op /reviews, niet op de homepage.
 # Een *woord* tussen sterretjes wordt cursief.
 reviews:
-  heading: "Wat opdrachtgevers zeggen"
+  heading: "Na Chief Story"
   link_label: "Lees de volledige reviews"
   page_heading: "Wat opdrachtgevers zeggen"
   page_lead: "Hoe het is om met mij te werken? Dat laat ik graag aan de ervaringsdeskundigen over…"

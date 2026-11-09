@@ -56,8 +56,8 @@ De secties, in de volgorde waarin ze op de pagina staan:
 |---|---|
 | `meta` | Paginatitel en meta-omschrijving (browsertabblad, Google) |
 | `hero` | Kop, lead, twee knoppen (`#contact` en `#aanbod`) |
-| `problem` | Roterende quote-slider (5 quotes, in een bewuste boog), gecentreerd en zonder begeleidende tekst. De twee alinea's probleemstelling zijn op 9 november 2026 geschrapt: `git show 5db94d6:src/content/pages/home.md` |
-| `reviews` | Vier opdrachtgevers: `full` op `/reviews`; wie een `highlight` (één zin) heeft, staat ook op de homepage. Dat zijn er drie: het raster heeft drie kolommen |
+| `problem` | Kop "Voor Chief Story" met daaronder de roterende quote-slider (5 quotes, in een bewuste boog), gecentreerd en zonder begeleidende tekst. De kop vormt een paar met "Na Chief Story" boven de reviews: zelfde opmaak, samen wijzigen. De twee alinea's probleemstelling zijn op 9 november 2026 geschrapt: `git show 5db94d6:src/content/pages/home.md` |
+| `reviews` | Kop "Na Chief Story" (`heading`; `/reviews` heeft een eigen `page_heading`). Vier opdrachtgevers: `full` op `/reviews`; wie een `highlight` (één zin) heeft, staat ook op de homepage. Dat zijn er drie: het raster heeft drie kolommen |
 | `why` | Over Joost, inclusief het AI-verhaal, foto links |
 | `offer` | De Route: drie stappen (Vinden, Vangen, Vertellen), elk met de kop in een zwart blok over de bovenrand van de kaart, een inleiding, een blok met kopje en tekst (`block`; bij stap 1 de Chief Story Test) en een vanaf-prijs |
 | `contact` | Tekst, e-mailadres, web3forms-sleutel, formulier (`Contact.astro`, ook op `/reviews`) |
