@@ -25,11 +25,12 @@ const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#cont
     display: flex;
     align-items: center;
     gap: 2rem;
-    height: 64px;
+    height: 80px;
   }
 
+  /* Lockup op 36px; op een telefoon kleiner, anders past hij niet naast de knop. */
   .logo {
-    font-size: 1.25rem;
+    font-size: 36px;
     flex-shrink: 0;
   }
 
@@ -56,6 +57,16 @@ const contactHref = Astro.url.pathname.startsWith('/404') ? '/#contact' : '#cont
   @media (max-width: 768px) {
     nav {
       gap: 1rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 24px;
     }
   }
 </style>
