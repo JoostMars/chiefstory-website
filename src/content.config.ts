@@ -15,7 +15,8 @@ const pages = defineCollection({
     }),
 
     hero: z.object({
-      eyebrow: z.string(),
+      // Het regeltje boven de kop; staat er nu niet, mag terugkomen.
+      eyebrow: z.string().optional(),
       image: z.string(),
       h1: z.string(),
       lead: z.string(),

@@ -41,7 +41,7 @@ const beeld = (pad: string) => {
       <div class="container">
         <div class="hero-inner">
           <div class="hero-text">
-            <p class="eyebrow">{hero.eyebrow}</p>
+            {hero.eyebrow && <p class="eyebrow">{hero.eyebrow}</p>}
             <h1 set:html={hero.h1.replace('\n', '<br />')} />
             <p class="lead">{hero.lead}</p>
             <div class="hero-cta">

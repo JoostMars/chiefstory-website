@@ -34,7 +34,6 @@ meta:
   description: "Chief Story helpt groeiende organisaties hun verhaal scherp te krijgen en werkend te maken in merk, marketing, sales en AI."
 
 hero:
-  eyebrow: "Positionering · Merkverhaal · Systeem"
   image: "/joost.jpg"
   # &nbsp; is een spatie waarop de regel NIET mag afbreken. Zo blijft
   # "naar signaal" bij elkaar en breekt de kop op de juiste plek.
