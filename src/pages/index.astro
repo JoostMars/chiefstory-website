@@ -345,7 +345,7 @@ const beeld = (pad: string) => {
   .section-problem {
     padding: 4rem 0;
     border-bottom: 1px solid var(--border);
-    background: var(--color-1);
+    background: var(--vlak);
   }
 
   /* De quotes staan alleen in de sectie: één gecentreerde kolom. */
@@ -526,10 +526,18 @@ const beeld = (pad: string) => {
   }
 
   /* Waarom */
+  /* Over Joost: donker vlak, alle tekst in papier. Geen rood op dit vlak
+     (te weinig contrast), dus ook het label wordt licht. */
   .section-why {
     padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--color-1);
+    border-bottom: 1px solid var(--vlak-donker);
+    background: var(--vlak-donker);
+    color: var(--papier);
+  }
+
+  .section-why .label,
+  .section-why h2 {
+    color: var(--papier);
   }
 
   .why-inner {
@@ -552,7 +560,7 @@ const beeld = (pad: string) => {
 
   .why-text p {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: var(--papier);
     line-height: 1.7;
     margin-bottom: 1rem;
   }
@@ -560,13 +568,14 @@ const beeld = (pad: string) => {
   .social-link {
     display: inline-flex;
     margin-top: 0.75rem;
-    color: var(--text-secondary);
-    transition: color 0.15s;
+    color: var(--papier);
+    opacity: 0.75;
+    transition: opacity 0.15s;
   }
 
   .social-link:hover,
   .social-link:focus-visible {
-    color: var(--accent);
+    opacity: 1;
   }
 
   /* Reviews */

@@ -38,6 +38,7 @@ Een citaat staat in DM Serif Display Italic (`citaat`). De tekst lijnt uit op de
 4. **Rood alleen in rust.** `wigrood` voor het teken, de lijn van 88 × 3 px onder een kop en het label. Geen rode knoppen, vlakken, hover of lopende tekst. Knoppen keren bij hover om: donker wordt licht met een haarlijn.
 5. **Eén ding mag over de rand.** De wig in de marge, het zwarte kopblok over een kaart, of een foto die uit de kolom loopt. Nooit twee in één compositie.
 6. **De diagonaal deelt het vlak.** Hoek `diagonaal-hoek` (70,5°), van rand tot rand, `papier` links, `vlak` rechts. Naast de diagonaal geen andere grijze vlakken: scheiding maak je met `haarlijn` en wit.
+7. **Secties op de site wisselen van vlak.** De Vóór-sectie staat op `vlak` (#F0EFEB), de over-sectie op `vlak-donker` (#44433F) met alle tekst in `papier`. Op `vlak-donker` geen rood.
 
 ## Logo
 
@@ -64,7 +65,8 @@ Bijna-wit papier, antraciet inkt, grijze haarlijnen en één rood. Rood draagt h
 | Token | Licht | Gebruik |
 |---|---|---|
 | `papier` | #FAF9F6 | Ondergrond |
-| `vlak` | #F0EFEB | Alleen het tweede vlak achter de diagonaal |
+| `vlak` | #F0EFEB | Het tweede vlak achter de diagonaal; op de site de Vóór-sectie |
+| `vlak-donker` | #44433F | Over-sectie op de site, tekst in `papier`, geen rood |
 | `wit` | #FFFFFF | Kaarten, met haarlijn |
 | `haarlijn` | #D5D3CD | Scheiding |
 | `inkt` | #1E1E1C | Tekst, primaire knop, kopblok |
