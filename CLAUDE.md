@@ -107,7 +107,7 @@ Nieuwe foto? In `src/assets/` zetten, dan de naam in `home.md` aanpassen.
 
 ## Kleur
 
-Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het bovenkopje boven Joosts naam, de lijntjes onder twee sectiekoppen, en het teken.
+Bijna wit (`rgb(250, 249, 246)`), antraciet (`#1E1E1C`), grijze haarlijnen. Rood (`#C8401E`) is **alleen accent in rust**: het bovenkopje en het teken. Geen rode lijnen onder koppen (geschrapt op 9 november 2026), en geen rood op het donkere vlak van de over-sectie.
 
 Knoppen worden bij hover **niet rood** maar keren om: de primaire knop (Plan een call) wordt wit met een antraciet outline, de ghost-knop (Bekijk het aanbod) wordt zwart. Rood bij hover leest als waarschuwing op precies de plek waar je iemand wilt geruststellen.
 

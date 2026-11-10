@@ -76,7 +76,7 @@ why:
   heading: "Een goed verhaal emotioneert, inspireert en activeert"
   body:
     - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia mensen en merken hun verhaal beter te vertellen, van startups tot multinationals. Een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
-    - "AI voegt pas iets toe als het fundament van jezelf is. Je Story System bestaat uit een database, een LLM en managed skills. Ik richt het in, het blijft van jou. We gebruiken AI nooit om te schrijven, te denken of te kiezen."
+    - "AI voegt pas iets toe als het fundament van jezelf is. Je Story System bestaat uit een database, een LLM en managed skills. Ik richt het in, het blijft van jou. AI doet de techniek; schrijven, denken en kiezen doen we zelf."
 
 # Reviews staan op twee plekken: de homepage toont per klant alleen de
 # 'highlight' (één zin), de pagina /reviews toont de volledige tekst ('full').
