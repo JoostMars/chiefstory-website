@@ -69,7 +69,7 @@ De secties, in de volgorde waarin ze op de pagina staan:
 | `problem` | Kop "Vóór Chief Story" (met accenten: het gaat om de tijd vóór, niet om "ten behoeve van") met daaronder de roterende quote-slider (5 quotes, in een bewuste boog), gecentreerd en zonder begeleidende tekst. De kop vormt een paar met "Na Chief Story" boven de reviews: zelfde opmaak, samen wijzigen. De twee alinea's probleemstelling zijn op 9 november 2026 geschrapt: `git show 5db94d6:src/content/pages/home.md` |
 | `reviews` | Kop "Na Chief Story" (`heading`; `/reviews` heeft een eigen `page_heading`). Vier opdrachtgevers: `full` op `/reviews`; wie een `highlight` (één zin) heeft, staat ook op de homepage. Dat zijn er drie: het raster heeft drie kolommen |
 | `why` | Over Joost, inclusief het AI-verhaal, foto links |
-| `offer` | De Route: drie stappen (Vinden, Vangen, Vertellen), elk met de kop in een zwart blok over de bovenrand van de kaart, een inleiding, een blok met kopje en tekst (`block`; bij stap 1 de Chief Story Test) en een vanaf-prijs |
+| `offer` | De Route: drie stappen (Vinden, Vangen, Vertellen), elk met de kop in een zwart blok over de bovenrand van de kaart, een korte inleiding en een vanaf-prijs. Het blok met kopje en tekst (`block`) is op 10 november 2026 geschrapt toen de copy korter werd |
 | `contact` | Tekst, e-mailadres, web3forms-sleutel, formulier (`Contact.astro`, ook op `/reviews`) |
 
 **Let op: de volgorde in de markup is `reviews`, `why`, `offer`**, terwijl ze in het bestand als `offer`, `why`, `reviews` staan.

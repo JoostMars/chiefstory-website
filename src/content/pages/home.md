@@ -60,22 +60,13 @@ offer:
   heading: "Wat kan ik voor je doen?"
   cards:
     - title: "Vinden"
-      description: "Je verhaal vinden begint met je positionering; de plek die jouw merk inneemt in het hoofd van de klant, ten opzichte van je concurrenten. Wat maakt jou de enige logische keuze voor hen? We beginnen niet met schrijven, maar met vragen."
-      block:
-        label: "MLS + Chief Story Test"
-        body: "Dan schrijven we een Minimum Lovable Story (MLS). Of dat verhaal klopt, testen we met de Chief Story Test, een mix van synthetische gebruikers en echte lezers. Voordat er een woord naar buiten gaat, weten we wat werkt."
-      price: "Vanaf €3.500"
+      description: "Positionering, een Minimum Lovable Story en de Chief Story Test, een mix van synthetische gebruikers en echte lezers. Voordat er een woord naar buiten gaat, weten we wat werkt."
+      price: "Vanaf € 3.500"
     - title: "Vangen"
-      description: "Uit je verhaal volgen je kernboodschappen, signature zinnen en tone-of-voice. Die leggen we vast, net als je contentstrategie. Herkenbare contentpijlers, formats en thema’s zorgen voor zichtbaarheid en vindbaarheid."
-      block:
-        label: "AI + Story System"
-        body: "We bouwen een AI-harnas dat je merk steeds beter leert kennen naarmate je er langer mee werkt. Ik help jullie met de inrichting, de mappenstructuur en de skills voor het Story System. Dat doen we samen, zodat het past bij jullie werkwijze en je er zelf mee verder kunt."
-      price: "Vanaf €7.500"
+      description: "Kernboodschappen, tone-of-voice en contentstrategie, vastgelegd in een Story System dat jullie zelf blijven gebruiken. Samen gebouwd, in jullie eigen omgeving."
+      price: "Vanaf € 5.000"
     - title: "Vertellen"
-      description: "Als jullie het willen, help ik je ook je verhalen te vertellen. Dat is optioneel en kunnen we precies invullen hoe jullie willen. Met een eigen schrijver of iemand uit mijn netwerk, of met mij, in een samenwerking van 6 tot 12 maanden. En het blijft natuurlijk niet bij schrijven."
-      block:
-        label: "Creative + Direction"
-        body: "Vertellen kan ook met video, animatie, een website of een commercial. Afhankelijk van de boodschap, de doelgroep en je doelen help ik je graag met creatieve strategie en ideeën die je verhaal nog verder versterken."
+      description: "Blogpost, website, campagne, animatie of podcast, met jullie eigen mensen of met mij. Als Chief Story Officer of creative director. Samenwerking van 3 tot 12 maanden."
       price: "In overleg"
 
 why:
@@ -84,9 +75,8 @@ why:
   linkedin: "https://www.linkedin.com/in/joost-marsman-4684b1"
   heading: "Een goed verhaal emotioneert, inspireert en activeert"
   body:
-    - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia merken hun verhaal beter te vertellen, van startups tot multinationals."
-    - "In welke fase je ook zit; een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
-    - "Als co-founder van Radicle AI heb ik hands-on ervaring met AI en agentic workflows voor consistente contentcreatie in lijn met je merkverhaal. Maar AI is pas waardevol als het verhaal klopt. En je verhaal klopt pas als het echt onderscheidend is. Ik gebruik AI daarom voor techniek, inspiratie en eindredactie; nooit om te schrijven, te denken of te kiezen."
+    - "Als copywriter, merkstrateeg en creatief ondernemer help ik al drie decennia mensen en merken hun verhaal beter te vertellen, van startups tot multinationals. Een bedrijf zonder verhaal is zielloos en een verhaal zonder systeem is zinloos. Daarom help ik je niet alleen het signaal te vinden, maar ook het te versterken."
+    - "AI voegt pas iets toe als het fundament van jezelf is. Je Story System bestaat uit een database, een LLM en managed skills. Ik richt het in, het blijft van jou. We gebruiken AI nooit om te schrijven, te denken of te kiezen."
 
 # Reviews staan op twee plekken: de homepage toont per klant alleen de
 # 'highlight' (één zin), de pagina /reviews toont de volledige tekst ('full').

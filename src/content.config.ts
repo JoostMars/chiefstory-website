@@ -36,9 +36,6 @@ const pages = defineCollection({
           z.object({
             title: z.string(),
             description: z.string(),
-            // Het blok onder de inleiding: een klein kopje met tekst. Bij
-            // stap 1 staat hier de Chief Story Test.
-            block: z.object({ label: z.string(), body: z.string() }),
             price: z.string(),
             price_note: z.string().optional(),
           })

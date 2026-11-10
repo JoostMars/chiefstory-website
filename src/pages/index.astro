@@ -167,10 +167,6 @@ const beeld = (pad: string) => {
             <div class="offer-card">
               <h3 class="offer-badge">{card.title}</h3>
               <p class="offer-intro">{card.description}</p>
-              <div class="offer-block">
-                <h4>{card.block.label}</h4>
-                <p>{card.block.body}</p>
-              </div>
               <div class="offer-footer">
                 <span class="price">{card.price}</span>
                 {card.price_note && <span class="price-note">{card.price_note}</span>}
@@ -455,47 +451,28 @@ const beeld = (pad: string) => {
 
   /* Lopende tekst links uitgelijnd: gecentreerd leest een alinea van
      deze lengte slecht. */
-  .offer-intro,
-  .offer-block p {
-    font-size: 0.9rem;
+  .offer-intro {
+    flex: 1;
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.65;
-  }
-
-  .offer-intro {
     margin-bottom: 1.5rem;
   }
 
-  .offer-block {
-    flex: 1;
-    padding-top: 1.5rem;
-    margin-bottom: 1.75rem;
-    border-top: 1px solid var(--border);
-  }
-
-  /* Het kopje valt op door kapitalen en gewicht, niet door kleur. */
-  .offer-block h4 {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text);
-    margin-bottom: 0.6rem;
-  }
-
-  /* De rijen van de drie kaarten delen één raster, zodat de kopjes en de
-     prijzen op één lijn staan, hoe lang de inleidingen ook zijn. */
+  /* De rijen van de drie kaarten delen één raster, zodat de prijzen op
+     één lijn staan, hoe lang de inleidingen ook zijn. */
   @supports (grid-template-rows: subgrid) {
     .offer-card {
       display: grid;
       grid-template-rows: subgrid;
-      grid-row: span 3;
+      grid-row: span 2;
       row-gap: 0;
     }
   }
 
   .offer-footer {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -702,7 +679,6 @@ const beeld = (pad: string) => {
     }
 
     .offer-intro,
-    .offer-block p,
     .btn-primary,
     .btn-ghost {
       font-size: 1rem;
